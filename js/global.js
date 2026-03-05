@@ -119,7 +119,7 @@ function initTiltCards(selector) {
 (function initMagneticButtons() {
   if (!window.matchMedia('(hover: hover)').matches) return;
 
-  document.querySelectorAll('.nav-links a, .btn').forEach(function(el) {
+  document.querySelectorAll('.nav-links-left a, .nav-links-right a, .nav-mobile-links a, .btn').forEach(function(el) {
     el.addEventListener('mousemove', function(e) {
       var rect = el.getBoundingClientRect();
       var x = e.clientX - rect.left - rect.width / 2;
@@ -163,7 +163,7 @@ function initTiltCards(selector) {
 
   // Active link
   var currentPage = window.location.pathname.split('/').pop() || 'index.html';
-  document.querySelectorAll('.nav-links a').forEach(function(link) {
+  document.querySelectorAll('.nav-links-left a, .nav-links-right a, .nav-mobile-links a').forEach(function(link) {
     var href = link.getAttribute('href');
     if (href === currentPage || (currentPage === '' && href === 'index.html')) {
       link.classList.add('active');
@@ -172,18 +172,18 @@ function initTiltCards(selector) {
 
   // Mobile hamburger
   var hamburger = document.querySelector('.nav-hamburger');
-  var navLinks = document.querySelector('.nav-links');
-  if (hamburger && navLinks) {
+  var mobileLinks = document.querySelector('.nav-mobile-links');
+  if (hamburger && mobileLinks) {
     hamburger.addEventListener('click', function() {
       hamburger.classList.toggle('active');
-      navLinks.classList.toggle('open');
+      mobileLinks.classList.toggle('open');
     });
 
     // Close on link click
-    navLinks.querySelectorAll('a').forEach(function(link) {
+    mobileLinks.querySelectorAll('a').forEach(function(link) {
       link.addEventListener('click', function() {
         hamburger.classList.remove('active');
-        navLinks.classList.remove('open');
+        mobileLinks.classList.remove('open');
       });
     });
 
@@ -191,7 +191,7 @@ function initTiltCards(selector) {
     document.addEventListener('click', function(e) {
       if (!navbar.contains(e.target)) {
         hamburger.classList.remove('active');
-        navLinks.classList.remove('open');
+        mobileLinks.classList.remove('open');
       }
     });
   }
@@ -222,15 +222,15 @@ function initTiltCards(selector) {
 
   // Check if we came from another page (sessionStorage flag)
   if (sessionStorage.getItem('bb-transitioning')) {
+    window.bbTransitioningIn = true;
     sessionStorage.removeItem('bb-transitioning');
     // Panels are covering — reveal
     panelLeft.style.transform = 'translateX(0)';
     panelRight.style.transform = 'translateX(0)';
     logo.style.opacity = '1';
-    logo.style.transform = 'scale(1)';
 
     var tl = gsap.timeline({ delay: 0.15 });
-    tl.to(logo, { opacity: 0, scale: 0.9, duration: 0.25, ease: 'power2.in' })
+    tl.to(logo, { opacity: 0, duration: 0.25, ease: 'power2.in' })
       .to(panelLeft, { x: '-100%', duration: 0.5, ease: 'power3.inOut' }, 0.2)
       .to(panelRight, { x: '100%', duration: 0.5, ease: 'power3.inOut' }, 0.2);
   }
@@ -246,15 +246,32 @@ function initTiltCards(selector) {
     if (href.startsWith('http') || href.startsWith('#') || href.startsWith('mailto:') || href.startsWith('tel:') || href.startsWith('javascript:')) return;
 
     e.preventDefault();
-    sessionStorage.setItem('bb-transitioning', '1');
-
-    var tl = gsap.timeline();
-    tl.to(panelLeft, { x: '0%', duration: 0.45, ease: 'power3.in' }, 0)
-      .to(panelRight, { x: '0%', duration: 0.45, ease: 'power3.in' }, 0)
-      .to(logo, { opacity: 1, scale: 1, duration: 0.3, ease: 'power2.out' }, 0.2)
-      .call(function() {
+    
+    // Check if target is home or logo
+    var isHome = href.includes('index.html') || href === 'index.html' || href === '/' || link.classList.contains('nav-logo');
+    
+    if (isHome) {
+      // Fade out for Home/Logo (leads to preloader)
+      gsap.to(document.body, {opacity: 0, duration: 0.2, ease: 'power2.out', onComplete: function() {
         window.location.href = href;
-      }, null, 0.6);
+      }});
+    } else {
+      // Smooth panel transition for other pages
+      sessionStorage.setItem('bb-transitioning', 'true');
+      
+      var tl = gsap.timeline({
+        onComplete: function() {
+          window.location.href = href;
+        }
+      });
+      
+      tl.to(panelLeft, { x: '0%', duration: 0.45, ease: 'power3.inOut' }, 0)
+        .to(panelRight, { x: '0%', duration: 0.45, ease: 'power3.inOut' }, 0);
+        
+      if (logo) {
+        tl.to(logo, { opacity: 1, duration: 0.3, ease: 'power2.out' }, 0.2);
+      }
+    }
   });
 })();
 

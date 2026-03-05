@@ -9,35 +9,35 @@
 /* ---------- CSS Custom Properties ---------- */
 :root {
   /* Backgrounds */
-  --color-bg:            #FFFFFF;
-  --color-bg-alt:        #F7F8FA;
-  --color-bg-subtle:     #F0F4F8;
+  --color-bg:            #0A1118;
+  --color-bg-alt:        #0D1620;
+  --color-bg-subtle:     #111C29;
 
   /* Surfaces */
-  --color-surface:       #FFFFFF;
-  --color-surface-2:     #F0F4F8;
-  --color-surface-3:     #E8EEF5;
+  --color-surface:       #0A1118;
+  --color-surface-2:     #111C29;
+  --color-surface-3:     #172638;
 
   /* Text */
-  --color-text:          #0D1B2A;
-  --color-text-secondary:#4A5568;
-  --color-text-muted:    #8A9BB0;
+  --color-text:          #F0F4F8;
+  --color-text-secondary:#A0AEC0;
+  --color-text-muted:    #718096;
 
-  /* Accent — Deep Blue */
-  --color-accent:        #1E40AF;
-  --color-accent-light:  #3B82F6;
-  --color-accent-dark:   #1A3A5C;
-  --color-accent-glow:   rgba(30, 64, 175, 0.12);
-  --color-accent-pale:   #DBEAFE;
+  /* Accent — Gold / Deep Blue */
+  --color-accent:        #D4AF37;
+  --color-accent-light:  #F3E5AB;
+  --color-accent-dark:   #AA8C2C;
+  --color-accent-glow:   rgba(212, 175, 55, 0.15);
+  --color-accent-pale:   rgba(212, 175, 55, 0.05);
 
   /* Borders */
-  --color-border:        rgba(30, 64, 175, 0.1);
-  --color-border-strong: rgba(30, 64, 175, 0.2);
+  --color-border:        rgba(255, 255, 255, 0.08);
+  --color-border-strong: rgba(255, 255, 255, 0.15);
 
   /* Gradients */
-  --gradient-accent:     linear-gradient(135deg, #1A3A5C 0%, #1E40AF 50%, #3B82F6 100%);
-  --gradient-accent-text:linear-gradient(90deg, #1E40AF, #3B82F6, #1E40AF);
-  --gradient-surface:    linear-gradient(180deg, #FFFFFF 0%, #F0F4F8 100%);
+  --gradient-accent:     linear-gradient(135deg, #AA8C2C 0%, #D4AF37 50%, #F3E5AB 100%);
+  --gradient-accent-text:linear-gradient(90deg, #D4AF37, #F3E5AB, #D4AF37);
+  --gradient-surface:    linear-gradient(180deg, #0A1118 0%, #111C29 100%);
 
   /* Transition panels stay dark for dramatic effect */
   --color-transition:    #0D1B2A;
@@ -82,7 +82,7 @@
   --space-4xl:  12rem;
 
   /* Layout */
-  --nav-height:  80px;
+  --nav-height:  90px;
   --container:   1320px;
   --container-narrow: 900px;
 
@@ -285,7 +285,7 @@ input, textarea, select {
 }
 
 .section--dark {
-  background: var(--color-surface-2);
+  background: linear-gradient(135deg, #0D1620 0%, #0A1118 50%, #111C29 100%);
 }
 
 .section-label {
@@ -387,7 +387,6 @@ input, textarea, select {
   height: 120px;
   object-fit: contain;
   opacity: 0;
-  transform: scale(0.8);
 }
 
 /* ---------- Selection ---------- */

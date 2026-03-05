@@ -19,13 +19,13 @@ document.addEventListener('DOMContentLoaded', function () {
         stagger: 0.04,
         duration: 0.5,
         ease: 'power2.out',
-        delay: 0.5
+        delay: 0.4
       });
     }
 
     // After ring draws + text reveals, split preloader
     gsap.to(preloader, {
-      delay: 2.2,
+      delay: 1.2,
       duration: 0.6,
       clipPath: 'inset(0 50% 0 50%)',
       ease: 'power3.inOut',

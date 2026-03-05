@@ -1,5 +1,5 @@
 /* ============================================================
-   Premium Navigation — Light Theme
+   Premium Navigation — Centered Logo Layout
    ============================================================ */
 
 #navbar {
@@ -28,39 +28,60 @@
   height: 100%;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
+  position: relative;
 }
 
-/* ---------- Logo ---------- */
+/* ---------- Logo (Centered) ---------- */
 .nav-logo {
   display: flex;
   align-items: center;
   flex-shrink: 0;
+  order: 2;
+  margin: 0 clamp(1rem, 3vw, 2.5rem);
 }
 
 .nav-logo img {
-  height: 72px;
+  height: 100px;
   width: auto;
   transition: filter 0.4s ease, transform 0.4s var(--ease-out);
+  filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.1));
 }
 
 .nav-logo:hover img {
-  filter: drop-shadow(0 0 12px rgba(30, 64, 175, 0.2));
-  transform: scale(1.03);
+  filter: drop-shadow(0 0 16px rgba(30, 64, 175, 0.25));
+  transform: scale(1.05);
 }
 
-/* ---------- Nav Links ---------- */
-.nav-links {
+/* ---------- Nav Links Groups ---------- */
+.nav-links-left,
+.nav-links-right {
   display: flex;
   align-items: center;
   gap: 0;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  flex: 1;
 }
 
-.nav-links li {
+.nav-links-left {
+  order: 1;
+  justify-content: flex-end;
+}
+
+.nav-links-right {
+  order: 3;
+  justify-content: flex-start;
+}
+
+.nav-links-left li,
+.nav-links-right li {
   position: relative;
 }
 
-.nav-links a {
+.nav-links-left a,
+.nav-links-right a {
   display: block;
   padding: 0.5rem 1.25rem;
   font-family: var(--font-body);
@@ -73,7 +94,8 @@
   position: relative;
 }
 
-.nav-links a::after {
+.nav-links-left a::after,
+.nav-links-right a::after {
   content: '';
   position: absolute;
   bottom: 0;
@@ -86,13 +108,17 @@
   transition: transform 0.4s var(--ease-out);
 }
 
-.nav-links a:hover,
-.nav-links a.active {
+.nav-links-left a:hover,
+.nav-links-left a.active,
+.nav-links-right a:hover,
+.nav-links-right a.active {
   color: var(--color-accent);
 }
 
-.nav-links a:hover::after,
-.nav-links a.active::after {
+.nav-links-left a:hover::after,
+.nav-links-left a.active::after,
+.nav-links-right a:hover::after,
+.nav-links-right a.active::after {
   transform: scaleX(1);
   transform-origin: left;
 }
@@ -141,6 +167,7 @@
   height: 44px;
   gap: 6px;
   padding: 8px;
+  order: 4;
 }
 
 .nav-hamburger span {
@@ -167,47 +194,100 @@
   background: var(--color-accent);
 }
 
-/* ---------- Mobile Menu ---------- */
+/* ---------- Mobile Menu (Hidden on Desktop) ---------- */
+.nav-mobile-links {
+  display: none;
+}
+
 @media (max-width: 1024px) {
-  .nav-hamburger {
-    display: flex;
+  .nav-container {
+    justify-content: space-between;
   }
 
-  .nav-links {
+  .nav-logo {
+    order: 1;
+    margin: 0;
+  }
+
+  .nav-logo img {
+    height: 70px;
+  }
+
+  .nav-hamburger {
+    display: flex;
+    order: 3;
+  }
+
+  .nav-links-left,
+  .nav-links-right {
+    display: none;
+  }
+
+  /* Mobile side panel */
+  .nav-mobile-links {
     position: fixed;
     top: 0;
     right: 0;
     width: min(380px, 85vw);
     height: 100vh;
     height: 100dvh;
+    display: flex;
     flex-direction: column;
     justify-content: center;
     gap: 0;
-    background: rgba(255, 255, 255, 0.98);
+    list-style: none;
+    background: rgba(10, 17, 24, 0.98);
     backdrop-filter: blur(40px);
     -webkit-backdrop-filter: blur(40px);
     border-left: 1px solid var(--color-border);
     transform: translateX(100%);
     transition: transform 0.5s var(--ease-out);
     padding: 2rem;
+    z-index: 999;
   }
 
-  .nav-links.open {
+  .nav-mobile-links.open {
     transform: translateX(0);
   }
 
-  .nav-links a {
+  .nav-mobile-links a {
+    display: block;
+    font-family: var(--font-body);
+    font-weight: 500;
     font-size: 1.1rem;
     padding: 1rem 1.5rem;
     letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--color-text-secondary);
+    transition: color 0.3s ease;
+    position: relative;
   }
 
-  .nav-links a::after {
+  .nav-mobile-links a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
     left: 1.5rem;
     right: 1.5rem;
+    height: 1.5px;
+    background: var(--color-accent);
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.4s var(--ease-out);
   }
 
-  .nav-cta {
+  .nav-mobile-links a:hover,
+  .nav-mobile-links a.active {
+    color: var(--color-accent);
+  }
+
+  .nav-mobile-links a:hover::after,
+  .nav-mobile-links a.active::after {
+    transform: scaleX(1);
+    transform-origin: left;
+  }
+
+  .nav-mobile-links .nav-cta {
     margin-left: 0 !important;
     margin-top: 1rem !important;
     text-align: center;

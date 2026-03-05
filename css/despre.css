@@ -13,7 +13,7 @@
   text-align: center;
   padding: calc(var(--nav-height) + 3rem) 2rem 4rem;
   overflow: hidden;
-  background: linear-gradient(160deg, #F0F6FF 0%, #FFFFFF 60%, #F7F9FF 100%);
+  background: linear-gradient(160deg, #0A1118 0%, #0D1620 60%, #111C29 100%);
 }
 
 .page-hero-logo {
@@ -28,7 +28,7 @@
   font-weight: 300;
   font-size: clamp(2.5rem, 6vw, 5rem);
   line-height: 1.1;
-  color: var(--color-text, #0D1B2A);
+  color: var(--color-text, #F0F4F8);
   margin-bottom: var(--space-sm);
 }
 
@@ -37,7 +37,7 @@
   font-style: italic;
   font-weight: 400;
   font-size: clamp(1rem, 1.5vw, 1.2rem);
-  color: var(--color-text-secondary, #4A5568);
+  color: var(--color-text-secondary, #A0AEC0);
   max-width: 500px;
 }
 
@@ -130,6 +130,7 @@
   padding: clamp(2rem, 3vw, 3rem);
   text-align: center;
   transform-style: preserve-3d;
+  background: var(--color-surface-2, rgba(255, 255, 255, 0.05));
 }
 
 .value-card-icon {

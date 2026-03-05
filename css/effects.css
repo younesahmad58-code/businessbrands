@@ -4,8 +4,8 @@
 
 /* ---------- Chrome / Metallic Text ---------- */
 .text-chrome {
-  background: var(--gradient-accent-text);
-  background-size: 200% auto;
+  background: linear-gradient(90deg, #AA8C2C, #D4AF37, #F3E5AB, #D4AF37, #AA8C2C);
+  background-size: 300% auto;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;

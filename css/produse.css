@@ -13,7 +13,7 @@
   text-align: center;
   padding: calc(var(--nav-height) + 3rem) 2rem 4rem;
   overflow: hidden;
-  background: linear-gradient(160deg, #F0F6FF 0%, #FFFFFF 60%, #F7F9FF 100%);
+  background: linear-gradient(160deg, #0A1118 0%, #0D1620 60%, #111C29 100%);
 }
 
 .page-hero-title {
@@ -21,7 +21,7 @@
   font-weight: 300;
   font-size: clamp(2.5rem, 6vw, 5rem);
   line-height: 1.1;
-  color: var(--color-text, #0D1B2A);
+  color: var(--color-text, #F0F4F8);
   margin-bottom: var(--space-sm);
   position: relative;
   z-index: 2;
@@ -32,7 +32,7 @@
   font-style: italic;
   font-weight: 400;
   font-size: clamp(1rem, 1.5vw, 1.2rem);
-  color: var(--color-text-secondary, #4A5568);
+  color: var(--color-text-secondary, #A0AEC0);
   max-width: 550px;
   position: relative;
   z-index: 2;
@@ -50,8 +50,8 @@
   text-align: center;
   border-radius: var(--radius-sm);
   transition: all 0.4s var(--ease-out);
-  background: white;
-  border: 1px solid var(--color-border, rgba(30, 64, 175, 0.1));
+  background: var(--color-surface-2, rgba(255, 255, 255, 0.05));
+  border: 1px solid var(--color-border);
 }
 
 .brand-card:hover {
@@ -64,12 +64,12 @@
   font-family: var(--font-heading);
   font-weight: 500;
   font-size: 0.95rem;
-  color: var(--color-text, #0D1B2A);
+  color: var(--color-text, #F0F4F8);
   transition: color 0.3s ease;
 }
 
 .brand-card:hover .brand-card-name {
-  color: var(--color-accent, #1E40AF);
+  color: var(--color-accent, #D4AF37);
 }
 
 .brand-card--featured {

@@ -23,18 +23,29 @@
 
   <!-- NAV -->
   <nav id="navbar">
-    <div class="nav-container">
-      <a href="index.html" class="nav-logo"><img src="images/products/logo.png" alt="Business Brands SRL"></a>
-      <ul class="nav-links">
-        <li><a href="index.html">Acasă</a></li>
-        <li><a href="despre.html">Despre Noi</a></li>
-        <li><a href="servicii.html">Servicii</a></li>
-        <li><a href="produse.html" class="active">Produse & Branduri</a></li>
-        <li><a href="contact.html" class="nav-cta">Contact</a></li>
-      </ul>
-      <button class="nav-hamburger" aria-label="Meniu"><span></span><span></span><span></span></button>
-    </div>
-  </nav>
+      <div class="nav-container">
+        <ul class="nav-links-left">
+          <li><a href="index.html" data-page="home">Acasă</a></li>
+          <li><a href="despre.html" data-page="despre">Despre Noi</a></li>
+        </ul>
+        <a href="index.html" class="nav-logo">
+          <img src="images/products/logo.png" alt="Business Brands SRL" style="width: 140px; height: 100px; object-fit: contain;">
+        </a>
+        <ul class="nav-links-right">
+          <li><a href="servicii.html" data-page="servicii">Servicii</a></li>
+          <li><a href="produse.html" data-page="produse">Produse &amp; Branduri</a></li>
+          <li><a href="contact.html" data-page="contact" class="nav-cta">Contact</a></li>
+        </ul>
+        <button class="nav-hamburger" aria-label="Meniu"><span></span><span></span><span></span></button>
+        <ul class="nav-mobile-links">
+          <li><a href="index.html">Acasă</a></li>
+          <li><a href="despre.html">Despre Noi</a></li>
+          <li><a href="servicii.html">Servicii</a></li>
+          <li><a href="produse.html">Produse &amp; Branduri</a></li>
+          <li><a href="contact.html" class="nav-cta">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
 
   <!-- PAGE HERO -->
   <section class="page-hero">
