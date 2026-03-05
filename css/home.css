@@ -143,7 +143,7 @@
   font-style: italic;
   font-weight: 400;
   font-size: clamp(1rem, 1.5vw, 1.25rem);
-  color: var(--color-text-secondary, #4a5568);
+  color: var(--color-text-secondary, #A0AEC0);
   max-width: 550px;
   line-height: 1.6;
 }
@@ -611,7 +611,7 @@
   font-weight: 500;
   font-size: 0.85rem;
   letter-spacing: 0.05em;
-  color: var(--color-text-secondary, #4a5568);
+  color: var(--color-text-secondary, #A0AEC0);
 }
 
 .why-item-spacer {

@@ -14,11 +14,18 @@
 }
 
 #navbar.scrolled {
-  background: rgba(255, 255, 255, 0.92);
-  backdrop-filter: blur(32px) saturate(1.4);
-  -webkit-backdrop-filter: blur(32px) saturate(1.4);
+  background: rgba(10, 17, 24, 0.85);
+  backdrop-filter: blur(28px) saturate(1.4);
+  -webkit-backdrop-filter: blur(28px) saturate(1.4);
   border-bottom-color: var(--color-border);
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.06);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+}
+
+@media (min-width: 1025px) {
+  #navbar.scrolled {
+    background: rgba(255, 255, 255, 0.92);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.06);
+  }
 }
 
 .nav-container {
