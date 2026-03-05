@@ -1,0 +1,324 @@
+/* ============================================================
+   Premium Visual Effects
+   ============================================================ */
+
+/* ---------- Chrome / Metallic Text ---------- */
+.text-chrome {
+  background: var(--gradient-gold-text);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.text-chrome--animated {
+  animation: shimmer-text 4s ease-in-out infinite;
+}
+
+@keyframes shimmer-text {
+  0%, 100% { background-position: 0% center; }
+  50% { background-position: 200% center; }
+}
+
+/* ---------- Outline Text ---------- */
+.text-outline {
+  -webkit-text-stroke: 1.5px var(--color-gold);
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
+.text-outline--large {
+  -webkit-text-stroke: 2px var(--color-gold);
+  font-family: var(--font-display);
+  font-weight: 300;
+  font-size: clamp(6rem, 15vw, 14rem);
+  line-height: 1;
+  opacity: 0.15;
+}
+
+/* ---------- Glassmorphism Card ---------- */
+.glass-card {
+  background: rgba(200, 164, 92, 0.02);
+  backdrop-filter: blur(20px) saturate(1.2);
+  -webkit-backdrop-filter: blur(20px) saturate(1.2);
+  border: 1px solid rgba(200, 164, 92, 0.08);
+  border-radius: var(--radius-md);
+  transition: all 0.5s var(--ease-out);
+}
+
+.glass-card:hover {
+  border-color: rgba(200, 164, 92, 0.18);
+  background: rgba(200, 164, 92, 0.04);
+}
+
+/* ---------- Glow Card (cursor-tracking glow) ---------- */
+.glow-card {
+  position: relative;
+  overflow: hidden;
+}
+
+.glow-card::before {
+  content: '';
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(circle, rgba(200, 164, 92, 0.12) 0%, transparent 70%);
+  left: var(--glow-x, 50%);
+  top: var(--glow-y, 50%);
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.glow-card:hover::before {
+  opacity: 1;
+}
+
+/* ---------- 3D Tilt Card ---------- */
+.tilt-card {
+  transform-style: preserve-3d;
+  transition: transform 0.15s ease-out;
+  will-change: transform;
+}
+
+.tilt-card > * {
+  position: relative;
+  z-index: 2;
+}
+
+/* ---------- Floating Gold Particles ---------- */
+.particles-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.particle {
+  position: absolute;
+  width: var(--size, 3px);
+  height: var(--size, 3px);
+  background: var(--color-gold);
+  border-radius: 50%;
+  opacity: 0;
+  animation: particle-float var(--duration, 8s) var(--delay, 0s) ease-in-out infinite;
+}
+
+@keyframes particle-float {
+  0% {
+    opacity: 0;
+    transform: translate(0, 0) scale(0);
+  }
+  10% {
+    opacity: var(--max-opacity, 0.4);
+    transform: scale(1);
+  }
+  50% {
+    transform: translate(var(--dx, 30px), var(--dy, -50px)) scale(1);
+  }
+  90% {
+    opacity: var(--max-opacity, 0.4);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(calc(var(--dx, 30px) * -0.5), calc(var(--dy, -50px) * 1.8)) scale(0);
+  }
+}
+
+/* ---------- Gold Pulse Glow ---------- */
+.glow-pulse {
+  animation: pulse-glow 3s ease-in-out infinite;
+}
+
+@keyframes pulse-glow {
+  0%, 100% {
+    filter: drop-shadow(0 0 12px rgba(200, 164, 92, 0.2));
+  }
+  50% {
+    filter: drop-shadow(0 0 28px rgba(200, 164, 92, 0.45));
+  }
+}
+
+/* ---------- Line Draw Animation ---------- */
+.line-draw {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+}
+
+.line-draw.is-visible {
+  animation: draw-line 2s ease-out forwards;
+}
+
+@keyframes draw-line {
+  to { stroke-dashoffset: 0; }
+}
+
+/* ---------- Reveal Animations ---------- */
+.reveal-up {
+  opacity: 0;
+  transform: translateY(60px);
+  transition: opacity 0.8s var(--ease-out), transform 0.8s var(--ease-out);
+}
+
+.reveal-up.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.reveal-left {
+  opacity: 0;
+  transform: translateX(-60px);
+  transition: opacity 0.8s var(--ease-out), transform 0.8s var(--ease-out);
+}
+
+.reveal-left.is-visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.reveal-right {
+  opacity: 0;
+  transform: translateX(60px);
+  transition: opacity 0.8s var(--ease-out), transform 0.8s var(--ease-out);
+}
+
+.reveal-right.is-visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.reveal-scale {
+  opacity: 0;
+  transform: scale(0.9);
+  transition: opacity 0.8s var(--ease-out), transform 0.8s var(--ease-out);
+}
+
+.reveal-scale.is-visible {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* ---------- Gradient Mesh Background ---------- */
+.gradient-mesh {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+  background:
+    radial-gradient(ellipse 60% 50% at 20% 30%, rgba(200, 164, 92, 0.06) 0%, transparent 70%),
+    radial-gradient(ellipse 40% 60% at 80% 70%, rgba(158, 123, 48, 0.04) 0%, transparent 70%),
+    radial-gradient(ellipse 50% 40% at 50% 50%, rgba(200, 164, 92, 0.03) 0%, transparent 60%);
+  animation: mesh-shift 20s ease-in-out infinite alternate;
+}
+
+@keyframes mesh-shift {
+  0% {
+    background:
+      radial-gradient(ellipse 60% 50% at 20% 30%, rgba(200, 164, 92, 0.06) 0%, transparent 70%),
+      radial-gradient(ellipse 40% 60% at 80% 70%, rgba(158, 123, 48, 0.04) 0%, transparent 70%),
+      radial-gradient(ellipse 50% 40% at 50% 50%, rgba(200, 164, 92, 0.03) 0%, transparent 60%);
+  }
+  100% {
+    background:
+      radial-gradient(ellipse 50% 60% at 70% 40%, rgba(200, 164, 92, 0.07) 0%, transparent 70%),
+      radial-gradient(ellipse 60% 40% at 30% 60%, rgba(158, 123, 48, 0.05) 0%, transparent 70%),
+      radial-gradient(ellipse 40% 50% at 60% 30%, rgba(200, 164, 92, 0.04) 0%, transparent 60%);
+  }
+}
+
+/* ---------- Noise Texture Overlay ---------- */
+.noise-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+  opacity: 0.03;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.5'/%3E%3C/svg%3E");
+  background-repeat: repeat;
+  background-size: 256px 256px;
+}
+
+/* ---------- Diamond Separator ---------- */
+.diamond-sep {
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  background: var(--color-gold);
+  transform: rotate(45deg);
+  margin: 0 1.5rem;
+  opacity: 0.6;
+  flex-shrink: 0;
+}
+
+/* ---------- Custom Cursor ---------- */
+.cursor-dot {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 8px;
+  height: 8px;
+  background: var(--color-gold);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 100000;
+  transform: translate(-50%, -50%);
+  transition: width 0.3s ease, height 0.3s ease, background 0.3s ease;
+  mix-blend-mode: difference;
+}
+
+.cursor-ring {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 36px;
+  height: 36px;
+  border: 1.5px solid var(--color-gold);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 99999;
+  transform: translate(-50%, -50%);
+  transition: width 0.35s var(--ease-out), height 0.35s var(--ease-out), border-color 0.3s ease, opacity 0.3s ease;
+  opacity: 0.5;
+}
+
+.cursor-hover .cursor-dot {
+  width: 0;
+  height: 0;
+}
+
+.cursor-hover .cursor-ring {
+  width: 56px;
+  height: 56px;
+  opacity: 0.8;
+  border-color: var(--color-gold-light);
+}
+
+@media (hover: none), (max-width: 768px) {
+  .cursor-dot, .cursor-ring {
+    display: none !important;
+  }
+}
+
+/* ---------- Prefers Reduced Motion ---------- */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+
+  .particle { display: none; }
+  .gradient-mesh { animation: none; }
+}

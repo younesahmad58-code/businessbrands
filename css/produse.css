@@ -1,0 +1,280 @@
+/* ============================================================
+   Produse & Branduri Page Styles
+   ============================================================ */
+
+/* ---------- Page Hero ---------- */
+.page-hero {
+  position: relative;
+  min-height: 55vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: calc(var(--nav-height) + 3rem) 2rem 4rem;
+  overflow: hidden;
+}
+
+.page-hero-title {
+  font-family: var(--font-display);
+  font-weight: 300;
+  font-size: clamp(2.5rem, 6vw, 5rem);
+  line-height: 1.1;
+  color: var(--color-white);
+  margin-bottom: var(--space-sm);
+  position: relative;
+  z-index: 2;
+}
+
+.page-hero-subtitle {
+  font-family: var(--font-heading);
+  font-style: italic;
+  font-weight: 400;
+  font-size: clamp(1rem, 1.5vw, 1.2rem);
+  color: var(--color-white-off);
+  max-width: 550px;
+  position: relative;
+  z-index: 2;
+}
+
+/* ---------- Brands Grid ---------- */
+.brands-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 1rem;
+}
+
+.brand-card {
+  padding: 1.25rem;
+  text-align: center;
+  border-radius: var(--radius-sm);
+  transition: all 0.4s var(--ease-out);
+}
+
+.brand-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(200, 164, 92, 0.3);
+  box-shadow: 0 12px 40px rgba(200, 164, 92, 0.1);
+}
+
+.brand-card-name {
+  font-family: var(--font-heading);
+  font-weight: 500;
+  font-size: 0.95rem;
+  color: var(--color-white-off);
+  transition: color 0.3s ease;
+}
+
+.brand-card:hover .brand-card-name {
+  background: var(--gradient-gold-text);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.brand-card--featured {
+  background: rgba(200, 164, 92, 0.08) !important;
+  border-color: rgba(200, 164, 92, 0.2) !important;
+}
+
+.brand-card--featured .brand-card-name {
+  color: var(--color-gold);
+}
+
+.brand-card-badge {
+  display: block;
+  font-size: 0.6rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-gold-dark);
+  margin-top: 0.35rem;
+}
+
+/* ---------- Filter Buttons ---------- */
+.filter-bar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-bottom: var(--space-xl);
+}
+
+.filter-btn {
+  padding: 0.55rem 1.5rem;
+  font-family: var(--font-body);
+  font-size: 0.78rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  border: 1px solid rgba(200, 164, 92, 0.2);
+  border-radius: 100px;
+  color: var(--color-white-off);
+  transition: all 0.35s var(--ease-out);
+  background: transparent;
+}
+
+.filter-btn:hover {
+  border-color: var(--color-gold);
+  color: var(--color-gold);
+  background: rgba(200, 164, 92, 0.05);
+}
+
+.filter-btn.active {
+  background: var(--gradient-gold);
+  color: var(--color-black);
+  border-color: transparent;
+}
+
+/* ---------- Products Grid ---------- */
+.products-full-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: clamp(1rem, 2vw, 1.5rem);
+}
+
+.product-full-card {
+  position: relative;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  background: var(--color-gray-mid);
+  aspect-ratio: 3 / 4;
+  transform-style: preserve-3d;
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.product-full-card.hidden {
+  display: none;
+}
+
+.product-full-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.7s var(--ease-out);
+}
+
+.product-full-card:hover img {
+  transform: scale(1.08);
+}
+
+.product-full-card-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 1.25rem;
+  background: linear-gradient(to top, rgba(6, 6, 6, 0.9), transparent);
+  transform: translateY(100%);
+  transition: transform 0.5s var(--ease-out);
+}
+
+.product-full-card:hover .product-full-card-overlay {
+  transform: translateY(0);
+}
+
+.product-full-card-category {
+  font-size: 0.65rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-gold);
+  padding: 0.2rem 0.5rem;
+  background: rgba(200, 164, 92, 0.1);
+  backdrop-filter: blur(8px);
+  border-radius: 3px;
+  display: inline-block;
+}
+
+.product-full-card-name {
+  font-family: var(--font-heading);
+  font-size: 0.9rem;
+  margin-top: 0.4rem;
+  color: var(--color-white);
+}
+
+/* ---------- HomeGate Section ---------- */
+.homegate-section {
+  position: relative;
+  overflow: hidden;
+}
+
+.homegate-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(2rem, 4vw, 4rem);
+  align-items: center;
+}
+
+.homegate-content h3 {
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: clamp(1.5rem, 2.5vw, 2rem);
+  color: var(--color-gold);
+  margin-bottom: 1rem;
+}
+
+.homegate-content p {
+  font-size: 1rem;
+  color: var(--color-white-off);
+  line-height: 1.8;
+  margin-bottom: 1.5rem;
+}
+
+.homegate-products {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.homegate-product-card {
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  aspect-ratio: 1;
+}
+
+.homegate-product-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s var(--ease-out);
+}
+
+.homegate-product-card:hover img {
+  transform: scale(1.06);
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 1024px) {
+  .products-full-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .homegate-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .products-full-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.75rem;
+  }
+
+  .product-full-card {
+    aspect-ratio: 1;
+  }
+
+  .brands-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .homegate-products {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .brands-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

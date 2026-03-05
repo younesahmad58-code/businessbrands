@@ -1,0 +1,421 @@
+/* ============================================================
+   BUSINESS BRANDS SRL — Global Design System
+   Premium Presentation Website 2026
+   ============================================================ */
+
+/* ---------- Google Fonts ---------- */
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap');
+
+/* ---------- CSS Custom Properties ---------- */
+:root {
+  /* Blacks */
+  --color-black:         #060606;
+  --color-black-rich:    #030303;
+  --color-gray-dark:     #0E0E0E;
+  --color-gray-mid:      #181818;
+  --color-gray-soft:     #242424;
+  --color-gray-border:   rgba(200, 164, 92, 0.08);
+  --color-gray-muted:    #6B6B6B;
+
+  /* Whites */
+  --color-white:         #F0EDE6;
+  --color-white-off:     #B8B0A2;
+  --color-white-pure:    #FFFFFF;
+
+  /* Golds */
+  --color-gold:          #C8A45C;
+  --color-gold-light:    #DFC07A;
+  --color-gold-pale:     #E8D5A3;
+  --color-gold-dark:     #9E7B30;
+  --color-gold-glow:     rgba(200, 164, 92, 0.15);
+  --color-champagne:     #F5E6C8;
+
+  /* Metallics */
+  --color-chrome:        #C0C0C8;
+  --color-bronze:        #8B6914;
+
+  /* Gradients */
+  --gradient-gold:       linear-gradient(135deg, #9E7B30 0%, #C8A45C 30%, #DFC07A 50%, #C8A45C 70%, #9E7B30 100%);
+  --gradient-gold-text:  linear-gradient(90deg, #C8A45C, #E8D5A3, #C8A45C);
+  --gradient-dark:       linear-gradient(180deg, #060606 0%, #0E0E0E 100%);
+  --gradient-chrome:     linear-gradient(135deg, #888 0%, #CCC 25%, #FFF 50%, #CCC 75%, #888 100%);
+
+  /* Typography */
+  --font-display: 'Cormorant Garamond', 'Playfair Display', Georgia, serif;
+  --font-heading: 'Playfair Display', Georgia, serif;
+  --font-body:    'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+
+  /* Spacing */
+  --space-xs:   0.5rem;
+  --space-sm:   1rem;
+  --space-md:   1.5rem;
+  --space-lg:   2.5rem;
+  --space-xl:   4rem;
+  --space-2xl:  6rem;
+  --space-3xl:  8rem;
+  --space-4xl:  12rem;
+
+  /* Layout */
+  --nav-height:  80px;
+  --container:   1320px;
+  --container-narrow: 900px;
+
+  /* Transitions */
+  --ease-out:    cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+
+  /* Border radius */
+  --radius-sm:  8px;
+  --radius-md:  16px;
+  --radius-lg:  24px;
+  --radius-xl:  32px;
+}
+
+/* ---------- Reset ---------- */
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+body {
+  font-family: var(--font-body);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.7;
+  color: var(--color-white);
+  background: var(--color-black);
+  overflow-x: hidden;
+  cursor: none;
+}
+
+@media (hover: none) {
+  body { cursor: auto; }
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  cursor: none;
+}
+
+@media (hover: none) {
+  a { cursor: pointer; }
+}
+
+button {
+  border: none;
+  background: none;
+  font-family: inherit;
+  cursor: none;
+  color: inherit;
+}
+
+@media (hover: none) {
+  button { cursor: pointer; }
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+input, textarea, select {
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+  background: none;
+  border: none;
+  outline: none;
+}
+
+/* ---------- Utility Classes ---------- */
+.container {
+  width: 100%;
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 0 clamp(1.5rem, 4vw, 3rem);
+}
+
+.container--narrow {
+  max-width: var(--container-narrow);
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* ---------- Typography ---------- */
+.text-display {
+  font-family: var(--font-display);
+  font-weight: 300;
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+}
+
+.text-heading {
+  font-family: var(--font-heading);
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+.text-body {
+  font-family: var(--font-body);
+  font-weight: 400;
+  line-height: 1.7;
+}
+
+.text-label {
+  font-family: var(--font-body);
+  font-weight: 500;
+  font-size: 0.75rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-gold);
+}
+
+.text-gold {
+  color: var(--color-gold);
+}
+
+.text-muted {
+  color: var(--color-white-off);
+}
+
+/* ---------- Buttons ---------- */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1rem 2.25rem;
+  font-family: var(--font-body);
+  font-weight: 500;
+  font-size: 0.85rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  border-radius: var(--radius-sm);
+  transition: all 0.4s var(--ease-out);
+  position: relative;
+  overflow: hidden;
+}
+
+.btn--gold {
+  background: var(--gradient-gold);
+  color: var(--color-black);
+  border: none;
+}
+
+.btn--gold:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 32px rgba(200, 164, 92, 0.3);
+}
+
+.btn--outline {
+  background: transparent;
+  color: var(--color-gold);
+  border: 1px solid var(--color-gold);
+}
+
+.btn--outline:hover {
+  background: rgba(200, 164, 92, 0.08);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 32px rgba(200, 164, 92, 0.15);
+}
+
+.btn--shimmer::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.25), transparent);
+  transition: left 0.6s ease;
+}
+
+.btn--shimmer:hover::after {
+  left: 100%;
+}
+
+.btn .btn-arrow {
+  transition: transform 0.4s var(--ease-out);
+  font-size: 1.1em;
+}
+
+.btn:hover .btn-arrow {
+  transform: translateX(4px);
+}
+
+/* ---------- Section Spacing ---------- */
+.section {
+  padding: clamp(5rem, 12vh, 10rem) 0;
+  position: relative;
+}
+
+.section--dark {
+  background: var(--color-gray-dark);
+}
+
+.section-label {
+  font-family: var(--font-body);
+  font-weight: 500;
+  font-size: 0.7rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--color-gold);
+  margin-bottom: var(--space-md);
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.section-label::before {
+  content: '';
+  display: block;
+  width: 40px;
+  height: 1px;
+  background: var(--color-gold);
+}
+
+.section-title {
+  font-family: var(--font-display);
+  font-weight: 300;
+  font-size: clamp(2.5rem, 5vw, 4.5rem);
+  line-height: 1.1;
+  margin-bottom: var(--space-lg);
+  color: var(--color-white);
+}
+
+.section-subtitle {
+  font-family: var(--font-body);
+  font-weight: 300;
+  font-size: clamp(1rem, 1.2vw, 1.15rem);
+  line-height: 1.8;
+  color: var(--color-white-off);
+  max-width: 600px;
+}
+
+/* ---------- Gold Divider ---------- */
+.divider-gold {
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--color-gold), transparent);
+  border: none;
+}
+
+/* ---------- Scroll Progress Bar ---------- */
+#scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background: var(--gradient-gold);
+  z-index: 10001;
+  pointer-events: none;
+  transition: none;
+}
+
+/* ---------- Page Transition Overlay ---------- */
+#page-transition {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 99999;
+  pointer-events: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.transition-panel {
+  position: absolute;
+  top: 0;
+  width: 50%;
+  height: 100%;
+  background: var(--color-black-rich);
+}
+
+.transition-panel--left {
+  left: 0;
+  transform: translateX(-100%);
+}
+
+.transition-panel--right {
+  right: 0;
+  transform: translateX(100%);
+}
+
+.transition-logo {
+  position: relative;
+  z-index: 2;
+  width: 120px;
+  height: 120px;
+  object-fit: contain;
+  opacity: 0;
+  transform: scale(0.8);
+}
+
+/* ---------- Selection ---------- */
+::selection {
+  background: rgba(200, 164, 92, 0.3);
+  color: var(--color-white);
+}
+
+::-moz-selection {
+  background: rgba(200, 164, 92, 0.3);
+  color: var(--color-white);
+}
+
+/* ---------- Scrollbar ---------- */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-black);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-gold-dark);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-gold);
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 768px) {
+  body {
+    font-size: 15px;
+    cursor: auto;
+  }
+
+  a, button { cursor: auto; }
+
+  .section {
+    padding: clamp(3rem, 8vh, 5rem) 0;
+  }
+}

@@ -3,742 +3,561 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Business Brands SRL — Import & Distribuție Națională FMCG</title>
-  <meta name="description" content="Business Brands SRL — peste 30 de ani de experiență în import-export și distribuție națională de produse FMCG în România. Partener de încredere pentru branduri internaționale.">
-  <meta name="keywords" content="Business Brands, import export, distribuție, FMCG, România, en-gros, HomeGate">
+  <title>Business Brands SRL — Patrimonie Comercială Românească din 1994</title>
+  <meta name="description" content="Trei decenii de excelență în distribuția națională. Import-export & distribuție FMCG în toate cele 42 de județe ale României. 50+ branduri internaționale de prestigiu.">
+  <meta name="keywords" content="Business Brands, distribuție națională, import export, FMCG, România, HomeGate, produse curățenie, produse îngrijire">
   <link rel="icon" type="image/png" href="images/products/logo.png">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/effects.css">
+  <link rel="stylesheet" href="css/nav.css">
+  <link rel="stylesheet" href="css/footer.css">
+  <link rel="stylesheet" href="css/home.css">
 </head>
 <body>
 
-  <!-- Preloader -->
+  <!-- Scroll Progress -->
+  <div id="scroll-progress"></div>
+
+  <!-- Page Transition Overlay -->
+  <div id="page-transition">
+    <div class="transition-panel transition-panel--left"></div>
+    <div class="transition-panel transition-panel--right"></div>
+    <img src="images/products/logo.png" class="transition-logo" alt="">
+  </div>
+
+  <!-- ==================== PRELOADER ==================== -->
   <div id="preloader">
-    <div class="preloader-inner">
-      <img src="images/products/logo.png" alt="Business Brands" class="preloader-logo">
-      <div class="preloader-bar">
-        <div class="preloader-fill"></div>
-      </div>
+    <div style="position:relative; display:flex; align-items:center; justify-content:center;">
+      <svg class="preloader-ring" viewBox="0 0 220 220">
+        <circle cx="110" cy="110" r="105"></circle>
+      </svg>
+      <img src="images/products/logo.png" alt="Business Brands SRL" class="preloader-logo">
+    </div>
+    <div class="preloader-text">
+      <span>B</span><span>U</span><span>S</span><span>I</span><span>N</span><span>E</span><span>S</span><span>S</span>
+      <span>&nbsp;</span>
+      <span>B</span><span>R</span><span>A</span><span>N</span><span>D</span><span>S</span>
     </div>
   </div>
 
-  <!-- Navbar -->
+  <!-- ==================== NAVIGATION ==================== -->
   <nav id="navbar">
     <div class="nav-container">
-      <a href="#hero" class="nav-logo">
+      <a href="index.html" class="nav-logo">
         <img src="images/products/logo.png" alt="Business Brands SRL">
       </a>
       <ul class="nav-links">
-        <li><a href="#despre">Despre Noi</a></li>
-        <li><a href="#servicii">Servicii</a></li>
-        <li><a href="#produse">Produse</a></li>
-        <li><a href="#branduri">Branduri</a></li>
-        <li><a href="#de-ce">De Ce Noi</a></li>
-        <li><a href="#contact" class="nav-cta">Contact</a></li>
+        <li><a href="index.html" data-page="home">Acasă</a></li>
+        <li><a href="despre.html" data-page="despre">Despre Noi</a></li>
+        <li><a href="servicii.html" data-page="servicii">Servicii</a></li>
+        <li><a href="produse.html" data-page="produse">Produse & Branduri</a></li>
+        <li><a href="contact.html" data-page="contact" class="nav-cta">Contact</a></li>
       </ul>
-      <button class="nav-hamburger" aria-label="Deschide meniul">
-        <span></span>
-        <span></span>
-        <span></span>
+      <button class="nav-hamburger" aria-label="Meniu">
+        <span></span><span></span><span></span>
       </button>
     </div>
   </nav>
 
-  <!-- ═══════════════════════════════════════════════════════════════ -->
-  <!-- HERO -->
-  <!-- ═══════════════════════════════════════════════════════════════ -->
-  <section id="hero">
-    <div class="hero-bg"></div>
-    <div class="hero-content">
-      <div class="hero-badge">EST. 1994 &mdash; BUCUREȘTI</div>
-      <h1 class="hero-title">
-        <span class="reveal-line">De peste trei decenii,</span>
-        <span class="reveal-line">aducem în România</span>
-        <span class="reveal-line">ceea ce contează cu adevărat:</span>
-        <span class="reveal-line gold">calitate, încredere, parteneriat.</span>
-      </h1>
-      <p class="hero-subtitle reveal-line">Import-Export &amp; Distribuție Națională de Produse FMCG</p>
-      <a href="#despre" class="hero-cta reveal-line">Descoperă Povestea Noastră
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14"/><path d="m19 12-7 7-7-7"/></svg>
-      </a>
+  <!-- ==================== HERO ==================== -->
+  <section class="hero">
+    <div class="hero-bg">
+      <div class="gradient-mesh"></div>
+      <div class="noise-overlay"></div>
+      <div class="particles-container" data-particles="18"></div>
     </div>
-    <div class="scroll-indicator">
+
+    <div class="hero-content">
+      <div class="hero-badge">EST. 1994 — BUCUREȘTI</div>
+
+      <img src="images/products/logo.png" alt="Business Brands SRL" class="hero-logo glow-pulse">
+
+      <h1 class="hero-title">
+        <span class="hero-title-line">Trei Decenii de</span><br>
+        <span class="hero-title-line text-chrome text-chrome--animated">Excelență</span><br>
+        <span class="hero-title-line">în Distribuția Națională</span>
+      </h1>
+
+      <p class="hero-subtitle">
+        Import-export & distribuție FMCG de prestigiu în toate cele 42 de județe ale României
+      </p>
+
+      <div class="hero-cta">
+        <a href="despre.html" class="btn btn--gold btn--shimmer">
+          Descoperă Povestea Noastră
+          <span class="btn-arrow">→</span>
+        </a>
+      </div>
+    </div>
+
+    <div class="hero-scroll-indicator">
+      <span>Scroll</span>
       <div class="scroll-line"></div>
     </div>
   </section>
 
-  <!-- ═══════════════════════════════════════════════════════════════ -->
-  <!-- DESPRE NOI -->
-  <!-- ═══════════════════════════════════════════════════════════════ -->
-  <section id="despre" class="section">
+  <!-- ==================== INTRO STATEMENT ==================== -->
+  <section class="section intro-section">
     <div class="container">
-      <div class="section-header fade-in">
-        <span class="section-label">Povestea Noastră</span>
-        <h2 class="section-heading">Despre Business Brands</h2>
-        <div class="heading-line"></div>
-      </div>
-
-      <div class="despre-grid">
-        <div class="despre-text fade-in">
-          <p>Business Brands este o companie românească cu o tradiție de peste <strong>30 de ani</strong> în import-export și distribuție națională de bunuri de larg consum. Fondată ca o afacere de familie, am crescut pas cu pas, construind relații solide cu producători internaționali și cu mii de parteneri comerciali din întreaga țară.</p>
-          <p>Astăzi, operăm o rețea de distribuție care acoperă România de la un capăt la altul — de la depozitele noastre centrale până la rafturile magazinelor locale. Suntem mândri că am rămas fideli valorilor cu care am pornit la drum: <em>seriozitate, corectitudine și grijă autentică</em> pentru fiecare partener.</p>
-          <p>Portofoliul nostru cuprinde branduri internaționale de referință, alături de marca proprie <strong>HomeGate</strong> — o gamă diversificată de produse pentru casă, electronice și lifestyle, creată pentru consumatorul modern.</p>
+      <div class="intro-grid">
+        <div class="intro-number" aria-hidden="true">
+          <span>30+</span>
+          <div class="intro-number-fill">30+</div>
         </div>
-        <div class="despre-stats">
-          <div class="stat-card fade-in">
-            <div class="stat-number" data-count="30" data-suffix="+">0</div>
-            <div class="stat-label">Ani de Experiență</div>
-          </div>
-          <div class="stat-card fade-in">
-            <div class="stat-number" data-count="50" data-suffix="+">0</div>
-            <div class="stat-label">Branduri Partenere</div>
-          </div>
-          <div class="stat-card fade-in">
-            <div class="stat-number" data-count="5000" data-suffix="+">0</div>
-            <div class="stat-label">Clienți Activi</div>
-          </div>
-          <div class="stat-card fade-in">
-            <div class="stat-number" data-count="42">0</div>
-            <div class="stat-label">Județe Acoperite</div>
-          </div>
+
+        <div class="intro-divider"></div>
+
+        <div class="intro-text">
+          <p>
+            Mai bine de <strong>trei decenii de prezență neîntreruptă</strong> pe piața românească.
+            Business Brands reprezintă podul de legătură dintre cei mai prestigioși producători
+            internaționali și consumatorul român.
+          </p>
+          <p>
+            O rețea de distribuție care acoperă <strong>fiecare colț al țării</strong>, cu un portofoliu
+            de peste 50 de branduri de renume mondial, deservind mai mult de 5.000 de parteneri comerciali
+            cu dedicare și excelență.
+          </p>
+          <a href="despre.html" class="btn btn--outline btn--shimmer">
+            Află Mai Multe
+            <span class="btn-arrow">→</span>
+          </a>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ═══════════════════════════════════════════════════════════════ -->
-  <!-- SERVICII -->
-  <!-- ═══════════════════════════════════════════════════════════════ -->
-  <section id="servicii" class="section section-dark">
-    <div class="container">
-      <div class="section-header fade-in">
-        <span class="section-label">Ce Facem</span>
-        <h2 class="section-heading">Serviciile Noastre</h2>
-        <div class="heading-line"></div>
-      </div>
-
-      <div class="servicii-grid">
-        <div class="service-card fade-in">
-          <div class="service-icon">
-            <svg width="48" height="48" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-              <circle cx="24" cy="24" r="20"/>
-              <path d="M4 24h40"/>
-              <path d="M24 4c-5.3 6-8 12.5-8 20s2.7 14 8 20"/>
-              <path d="M24 4c5.3 6 8 12.5 8 20s-2.7 14-8 20"/>
-              <path d="M8 12h32"/>
-              <path d="M8 36h32"/>
-            </svg>
-          </div>
-          <h3>Import Direct</h3>
-          <p>Colaborăm direct cu producători din Europa și nu numai, aducând în România produse de calitate la prețuri competitive, fără intermediari.</p>
-        </div>
-
-        <div class="service-card fade-in">
-          <div class="service-icon">
-            <svg width="48" height="48" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-              <rect x="2" y="22" width="28" height="18" rx="2"/>
-              <path d="M30 28h10l6 8v8H30"/>
-              <circle cx="12" cy="40" r="4"/>
-              <circle cx="38" cy="40" r="4"/>
-              <path d="M16 40h14"/>
-              <path d="M2 40h4"/>
-            </svg>
-          </div>
-          <h3>Distribuție Națională</h3>
-          <p>Rețeaua noastră logistică acoperă toate cele 42 de județe, asigurând livrări rapide și stocuri permanente pentru partenerii noștri comerciali.</p>
-        </div>
-
-        <div class="service-card fade-in">
-          <div class="service-icon">
-            <svg width="48" height="48" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-              <rect x="4" y="14" width="40" height="28" rx="2"/>
-              <path d="M4 22h40"/>
-              <path d="M16 14V6h16v8"/>
-              <path d="M24 30v6"/>
-              <path d="M20 30h8"/>
-              <rect x="10" y="28" width="28" height="10" rx="1" stroke-dasharray="3 3" opacity="0.5"/>
-            </svg>
-          </div>
-          <h3>Vânzări En-Gros</h3>
-          <p>Oferim condiții avantajoase pentru achiziții en-gros — cantități mari, prețuri negociate și flexibilitate în termeni de livrare și plată.</p>
-        </div>
-
-        <div class="service-card fade-in">
-          <div class="service-icon">
-            <svg width="48" height="48" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-              <circle cx="18" cy="42" r="3"/>
-              <circle cx="38" cy="42" r="3"/>
-              <path d="M4 4h6l4 24h28l4-16H16"/>
-              <path d="M24 16v-6"/>
-              <path d="M21 13h6"/>
-            </svg>
-          </div>
-          <h3>Retail Online</h3>
-          <p>Prin magazinul nostru <strong>homegate.ro</strong>, punem la dispoziția consumatorilor finali întreaga gamă de produse, cu livrare la domiciliu în toată țara.</p>
-        </div>
-      </div>
+  <!-- ==================== SERVICES HORIZONTAL SCROLL ==================== -->
+  <section class="section section--dark services-horizontal">
+    <div class="container services-horizontal-header">
+      <span class="section-label">Ce Facem</span>
+      <h2 class="section-title">Servicii de <span class="text-chrome text-chrome--animated">Elită</span></h2>
+      <p class="section-subtitle" style="margin: 0 auto;">Soluții complete de import, distribuție și comerț pentru piața românească</p>
     </div>
-  </section>
 
-  <!-- ═══════════════════════════════════════════════════════════════ -->
-  <!-- PRODUSE -->
-  <!-- ═══════════════════════════════════════════════════════════════ -->
-  <section id="produse" class="section">
-    <div class="container">
-      <div class="section-header fade-in">
-        <span class="section-label">Portofoliul Nostru</span>
-        <h2 class="section-heading">Produsele Noastre</h2>
-        <div class="heading-line"></div>
-        <p class="section-description">O gamă variată de produse pe care le importăm și le distribuim în România, inclusiv brandul propriu <strong>HomeGate</strong>.</p>
-      </div>
-
-      <div class="product-filters fade-in">
-        <button class="filter-btn active" data-filter="all">Toate</button>
-        <button class="filter-btn" data-filter="curatenie">Curățenie</button>
-        <button class="filter-btn" data-filter="ingrijire">Îngrijire</button>
-        <button class="filter-btn" data-filter="casa">Casă &amp; Grădină</button>
-        <button class="filter-btn" data-filter="electronice">Electronice HomeGate</button>
-      </div>
-
-      <div class="products-grid">
-        <!-- Curățenie -->
-        <div class="product-card fade-in" data-category="curatenie">
-          <div class="product-image">
-            <img src="images/products/Web_Photo_Editor%20-%202026-02-27T154206.270.jpg" alt="Set produse curățenie: Persil, Chanteclair, Pantene" loading="lazy">
-            <div class="product-overlay"><span class="product-tag">Curățenie & Întreținere</span></div>
-          </div>
-        </div>
-        <div class="product-card fade-in" data-category="curatenie">
-          <div class="product-image">
-            <img src="images/products/Web_Photo_Editor%20-%202026-02-27T160053.652.jpg" alt="Set produse curățenie: Ariel, Semana, Malizia, Fairy" loading="lazy">
-            <div class="product-overlay"><span class="product-tag">Curățenie & Întreținere</span></div>
-          </div>
-        </div>
-        <div class="product-card fade-in" data-category="curatenie">
-          <div class="product-image">
-            <img src="images/products/Web_Photo_Editor%20-%202026-02-27T163232.343.jpg" alt="Fairy detergent vase, șervețele și bureți" loading="lazy">
-            <div class="product-overlay"><span class="product-tag">Curățenie & Întreținere</span></div>
-          </div>
-        </div>
-        <div class="product-card fade-in" data-category="curatenie">
-          <div class="product-image">
-            <img src="images/products/Web_Photo_Editor%20-%202026-03-03T133049.977.jpg" alt="Asevi soluție pardoseli concentrat ceară" loading="lazy">
-            <div class="product-overlay"><span class="product-tag">Curățenie & Întreținere</span></div>
-          </div>
-        </div>
-
-        <!-- Îngrijire -->
-        <div class="product-card fade-in" data-category="ingrijire">
-          <div class="product-image">
-            <img src="images/products/Web_Photo_Editor%20-%202026-03-03T134647.066.jpg" alt="TRESemmé balsam păr Revitalise Colour" loading="lazy">
-            <div class="product-overlay"><span class="product-tag">Îngrijire Personală</span></div>
-          </div>
-        </div>
-
-        <!-- Casă & Grădină -->
-        <div class="product-card fade-in" data-category="casa">
-          <div class="product-image">
-            <img src="images/products/Web_Photo_Editor%20-%202026-02-24T160251.103.jpg" alt="Papuci de casă gri, model raiete" loading="lazy">
-            <div class="product-overlay"><span class="product-tag">Casă & Grădină</span></div>
-          </div>
-        </div>
-        <div class="product-card fade-in" data-category="casa">
-          <div class="product-image">
-            <img src="images/products/Web_Photo_Editor%20-%202026-02-24T161742.744.jpg" alt="Papuci de casă gri, model matlasate" loading="lazy">
-            <div class="product-overlay"><span class="product-tag">Casă & Grădină</span></div>
-          </div>
-        </div>
-        <div class="product-card fade-in" data-category="casa">
-          <div class="product-image">
-            <img src="images/products/Web_Photo_Editor%20-%202026-02-24T162831.940.jpg" alt="Papuci de casă albi, model matlasate" loading="lazy">
-            <div class="product-overlay"><span class="product-tag">Casă & Grădină</span></div>
-          </div>
-        </div>
-        <div class="product-card fade-in" data-category="casa">
-          <div class="product-image">
-            <img src="images/products/Web_Photo_Editor%20-%202026-03-03T122719.254.jpg" alt="Papuci de casă cu buline, brand HomeGate" loading="lazy">
-            <div class="product-overlay"><span class="product-tag">Casă & Grădină</span></div>
-          </div>
-        </div>
-        <div class="product-card fade-in" data-category="casa">
-          <div class="product-image">
-            <img src="images/products/Web_Photo_Editor%20-%202026-02-27T161734.555.jpg" alt="Set cuțite bucătărie premium cu tirbușon cadou" loading="lazy">
-            <div class="product-overlay"><span class="product-tag">Casă & Grădină</span></div>
-          </div>
-        </div>
-
-        <!-- Electronice HomeGate -->
-        <div class="product-card fade-in" data-category="electronice">
-          <div class="product-image">
-            <img src="images/products/Web_Photo_Editor%20-%202026-02-27T121153.238.jpg" alt="Boxe portabile Bluetooth cilindrice, 4 culori" loading="lazy">
-            <div class="product-overlay"><span class="product-tag">Electronice HomeGate</span></div>
-          </div>
-        </div>
-        <div class="product-card fade-in" data-category="electronice">
-          <div class="product-image">
-            <img src="images/products/Web_Photo_Editor%20-%202026-03-02T115310.156.jpg" alt="Colecție boxe HomeGate P PRO11" loading="lazy">
-            <div class="product-overlay"><span class="product-tag">Electronice HomeGate</span></div>
-          </div>
-        </div>
-        <div class="product-card fade-in" data-category="electronice">
-          <div class="product-image">
-            <img src="images/products/Web_Photo_Editor%20-%202026-03-02T115624.026.jpg" alt="Boxă HomeGate P PRO11 neagră" loading="lazy">
-            <div class="product-overlay"><span class="product-tag">Electronice HomeGate</span></div>
-          </div>
-        </div>
-        <div class="product-card fade-in" data-category="electronice">
-          <div class="product-image">
-            <img src="images/products/Web_Photo_Editor%20-%202026-03-02T115823.027.jpg" alt="Boxă HomeGate P PRO11 mov" loading="lazy">
-            <div class="product-overlay"><span class="product-tag">Electronice HomeGate</span></div>
-          </div>
-        </div>
-        <div class="product-card fade-in" data-category="electronice">
-          <div class="product-image">
-            <img src="images/products/Web_Photo_Editor%20-%202026-03-02T120029.722.jpg" alt="Boxe HomeGate P PRO11, 4 modele cu ambalaje" loading="lazy">
-            <div class="product-overlay"><span class="product-tag">Electronice HomeGate</span></div>
-          </div>
-        </div>
-        <div class="product-card fade-in" data-category="electronice">
-          <div class="product-image">
-            <img src="images/products/Web_Photo_Editor%20-%202026-03-02T122600.367.jpg" alt="Boxă HomeGate P PRO11 crem" loading="lazy">
-            <div class="product-overlay"><span class="product-tag">Electronice HomeGate</span></div>
-          </div>
-        </div>
-        <div class="product-card fade-in" data-category="electronice">
-          <div class="product-image">
-            <img src="images/products/Web_Photo_Editor%20-%202026-03-02T122757.994.jpg" alt="Boxă HomeGate P PRO11 camuflaj verde" loading="lazy">
-            <div class="product-overlay"><span class="product-tag">Electronice HomeGate</span></div>
-          </div>
-        </div>
-        <div class="product-card fade-in" data-category="electronice">
-          <div class="product-image">
-            <img src="images/products/Web_Photo_Editor%20-%202026-03-02T123004.683.jpg" alt="Boxă HomeGate P PRO11 bleumarin" loading="lazy">
-            <div class="product-overlay"><span class="product-tag">Electronice HomeGate</span></div>
-          </div>
-        </div>
-        <div class="product-card fade-in" data-category="electronice">
-          <div class="product-image">
-            <img src="images/products/Web_Photo_Editor%20-%202026-03-02T125001.972.jpg" alt="Boxă HomeGate HA10 20W albastră" loading="lazy">
-            <div class="product-overlay"><span class="product-tag">Electronice HomeGate</span></div>
-          </div>
-        </div>
-        <div class="product-card fade-in" data-category="electronice">
-          <div class="product-image">
-            <img src="images/products/Web_Photo_Editor%20-%202026-03-02T125142.031.jpg" alt="Boxă HomeGate HA10 20W roșie" loading="lazy">
-            <div class="product-overlay"><span class="product-tag">Electronice HomeGate</span></div>
-          </div>
-        </div>
-        <div class="product-card fade-in" data-category="electronice">
-          <div class="product-image">
-            <img src="images/products/Web_Photo_Editor%20-%202026-03-02T125321.850.jpg" alt="Boxă HomeGate HA10 20W neagră" loading="lazy">
-            <div class="product-overlay"><span class="product-tag">Electronice HomeGate</span></div>
-          </div>
-        </div>
-        <div class="product-card fade-in" data-category="electronice">
-          <div class="product-image">
-            <img src="images/products/Web_Photo_Editor%20-%202026-03-02T125539.531.jpg" alt="Colecție boxe HomeGate HA10 20W" loading="lazy">
-            <div class="product-overlay"><span class="product-tag">Electronice HomeGate</span></div>
-          </div>
-        </div>
-        <div class="product-card fade-in" data-category="electronice">
-          <div class="product-image">
-            <img src="images/products/Web_Photo_Editor%20-%202026-03-02T155638.912.jpg" alt="Colecție boxe HomeGate BS-13" loading="lazy">
-            <div class="product-overlay"><span class="product-tag">Electronice HomeGate</span></div>
-          </div>
-        </div>
-        <div class="product-card fade-in" data-category="electronice">
-          <div class="product-image">
-            <img src="images/products/Web_Photo_Editor%20-%202026-03-02T161339.536.jpg" alt="Boxe HomeGate BS-13 bleumarin cu ambalaje" loading="lazy">
-            <div class="product-overlay"><span class="product-tag">Electronice HomeGate</span></div>
-          </div>
-        </div>
-        <div class="product-card fade-in" data-category="electronice">
-          <div class="product-image">
-            <img src="images/products/Web_Photo_Editor%20-%202026-03-02T161917.791.jpg" alt="Boxe HomeGate BS-13 roșu și albastru" loading="lazy">
-            <div class="product-overlay"><span class="product-tag">Electronice HomeGate</span></div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ═══════════════════════════════════════════════════════════════ -->
-  <!-- BRANDURI PARTENERE -->
-  <!-- ═══════════════════════════════════════════════════════════════ -->
-  <section id="branduri" class="section section-dark">
-    <div class="container">
-      <div class="section-header fade-in">
-        <span class="section-label">Partenerii Noștri</span>
-        <h2 class="section-heading">Branduri de Încredere</h2>
-        <div class="heading-line"></div>
-      </div>
-    </div>
-    <div class="brands-marquee">
-      <div class="marquee-track">
-        <span class="brand-item">Persil</span>
-        <span class="brand-dot"></span>
-        <span class="brand-item">Ariel</span>
-        <span class="brand-dot"></span>
-        <span class="brand-item">Fairy</span>
-        <span class="brand-dot"></span>
-        <span class="brand-item">Lenor</span>
-        <span class="brand-dot"></span>
-        <span class="brand-item">Domestos</span>
-        <span class="brand-dot"></span>
-        <span class="brand-item">Perwoll</span>
-        <span class="brand-dot"></span>
-        <span class="brand-item">Chanteclair</span>
-        <span class="brand-dot"></span>
-        <span class="brand-item">Dove</span>
-        <span class="brand-dot"></span>
-        <span class="brand-item">CIF</span>
-        <span class="brand-dot"></span>
-        <span class="brand-item">Calgon</span>
-        <span class="brand-dot"></span>
-        <span class="brand-item">ACE</span>
-        <span class="brand-dot"></span>
-        <span class="brand-item">Duracell</span>
-        <span class="brand-dot"></span>
-        <span class="brand-item">BIC</span>
-        <span class="brand-dot"></span>
-        <span class="brand-item">Dermomed</span>
-        <span class="brand-dot"></span>
-        <span class="brand-item">TRESemmé</span>
-        <span class="brand-dot"></span>
-        <span class="brand-item">Pantene</span>
-        <span class="brand-dot"></span>
-        <span class="brand-item">Asevi</span>
-        <span class="brand-dot"></span>
-        <span class="brand-item">HomeGate</span>
-        <span class="brand-dot"></span>
-        <!-- Duplicate for seamless loop -->
-        <span class="brand-item">Persil</span>
-        <span class="brand-dot"></span>
-        <span class="brand-item">Ariel</span>
-        <span class="brand-dot"></span>
-        <span class="brand-item">Fairy</span>
-        <span class="brand-dot"></span>
-        <span class="brand-item">Lenor</span>
-        <span class="brand-dot"></span>
-        <span class="brand-item">Domestos</span>
-        <span class="brand-dot"></span>
-        <span class="brand-item">Perwoll</span>
-        <span class="brand-dot"></span>
-        <span class="brand-item">Chanteclair</span>
-        <span class="brand-dot"></span>
-        <span class="brand-item">Dove</span>
-        <span class="brand-dot"></span>
-        <span class="brand-item">CIF</span>
-        <span class="brand-dot"></span>
-        <span class="brand-item">Calgon</span>
-        <span class="brand-dot"></span>
-        <span class="brand-item">ACE</span>
-        <span class="brand-dot"></span>
-        <span class="brand-item">Duracell</span>
-        <span class="brand-dot"></span>
-        <span class="brand-item">BIC</span>
-        <span class="brand-dot"></span>
-        <span class="brand-item">Dermomed</span>
-        <span class="brand-dot"></span>
-        <span class="brand-item">TRESemmé</span>
-        <span class="brand-dot"></span>
-        <span class="brand-item">Pantene</span>
-        <span class="brand-dot"></span>
-        <span class="brand-item">Asevi</span>
-        <span class="brand-dot"></span>
-        <span class="brand-item">HomeGate</span>
-        <span class="brand-dot"></span>
-      </div>
-    </div>
-    <div class="brands-marquee brands-marquee-reverse">
-      <div class="marquee-track">
-        <span class="brand-item">Malizia</span>
-        <span class="brand-dot"></span>
-        <span class="brand-item">Semana</span>
-        <span class="brand-dot"></span>
-        <span class="brand-item">Narcisa</span>
-        <span class="brand-dot"></span>
-        <span class="brand-item">Viantic</span>
-        <span class="brand-dot"></span>
-        <span class="brand-item">Persil</span>
-        <span class="brand-dot"></span>
-        <span class="brand-item">Fairy</span>
-        <span class="brand-dot"></span>
-        <span class="brand-item">Ariel</span>
-        <span class="brand-dot"></span>
-        <span class="brand-item">Domestos</span>
-        <span class="brand-dot"></span>
-        <span class="brand-item">CIF</span>
-        <span class="brand-dot"></span>
-        <span class="brand-item">Dove</span>
-        <span class="brand-dot"></span>
-        <span class="brand-item">Calgon</span>
-        <span class="brand-dot"></span>
-        <span class="brand-item">Duracell</span>
-        <span class="brand-dot"></span>
-        <span class="brand-item">HomeGate</span>
-        <span class="brand-dot"></span>
-        <span class="brand-item">Chanteclair</span>
-        <span class="brand-dot"></span>
-        <!-- Duplicate -->
-        <span class="brand-item">Malizia</span>
-        <span class="brand-dot"></span>
-        <span class="brand-item">Semana</span>
-        <span class="brand-dot"></span>
-        <span class="brand-item">Narcisa</span>
-        <span class="brand-dot"></span>
-        <span class="brand-item">Viantic</span>
-        <span class="brand-dot"></span>
-        <span class="brand-item">Persil</span>
-        <span class="brand-dot"></span>
-        <span class="brand-item">Fairy</span>
-        <span class="brand-dot"></span>
-        <span class="brand-item">Ariel</span>
-        <span class="brand-dot"></span>
-        <span class="brand-item">Domestos</span>
-        <span class="brand-dot"></span>
-        <span class="brand-item">CIF</span>
-        <span class="brand-dot"></span>
-        <span class="brand-item">Dove</span>
-        <span class="brand-dot"></span>
-        <span class="brand-item">Calgon</span>
-        <span class="brand-dot"></span>
-        <span class="brand-item">Duracell</span>
-        <span class="brand-dot"></span>
-        <span class="brand-item">HomeGate</span>
-        <span class="brand-dot"></span>
-        <span class="brand-item">Chanteclair</span>
-        <span class="brand-dot"></span>
-      </div>
-    </div>
-  </section>
-
-  <!-- ═══════════════════════════════════════════════════════════════ -->
-  <!-- DE CE SĂ NE ALEGI -->
-  <!-- ═══════════════════════════════════════════════════════════════ -->
-  <section id="de-ce" class="section">
-    <div class="container">
-      <div class="section-header fade-in">
-        <span class="section-label">Avantajele Noastre</span>
-        <h2 class="section-heading">De Ce Business Brands</h2>
-        <div class="heading-line"></div>
-      </div>
-
-      <div class="reasons-grid">
-        <div class="reason-card fade-in">
-          <div class="reason-icon">
-            <svg width="40" height="40" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M20 4l4 8 8 1.5-5.5 6 1 8.5L20 24l-7.5 4 1-8.5L8 13.5l8-1.5z"/>
-              <circle cx="20" cy="20" r="18" opacity="0.3"/>
-            </svg>
-          </div>
-          <div class="reason-number" data-count="30" data-suffix="+">0</div>
-          <h3>Ani de Tradiție</h3>
-          <p>Peste trei decenii de prezență constantă pe piața românească, cu o reputație construită pas cu pas.</p>
-        </div>
-
-        <div class="reason-card fade-in">
-          <div class="reason-icon">
-            <svg width="40" height="40" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M6 20c4-4 8-4 14 0s10-4 14-4"/>
-              <path d="M6 28c4-4 8-4 14 0s10-4 14-4"/>
-              <path d="M6 12c4-4 8-4 14 0s10-4 14-4"/>
-            </svg>
-          </div>
-          <div class="reason-number" data-count="50" data-suffix="+">0</div>
-          <h3>Branduri Partenere</h3>
-          <p>Colaborări directe cu cei mai importanți producători internaționali din industria FMCG.</p>
-        </div>
-
-        <div class="reason-card fade-in">
-          <div class="reason-icon">
-            <svg width="40" height="40" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M20 4v4"/>
-              <circle cx="20" cy="16" r="6"/>
-              <path d="M12 36c0-6 4-10 8-12"/>
-              <path d="M28 36c0-6-4-10-8-12"/>
-              <path d="M4 32h32"/>
-            </svg>
-          </div>
-          <div class="reason-number" data-count="42">0</div>
-          <h3>Județe Acoperite</h3>
-          <p>Distribuție națională completă, de la un capăt la altul al țării, cu logistică eficientă.</p>
-        </div>
-
-        <div class="reason-card fade-in">
-          <div class="reason-icon">
-            <svg width="40" height="40" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M28 14c0-4.4-3.6-8-8-8s-8 3.6-8 8c0 6 8 16 8 16s8-10 8-16z"/>
-              <circle cx="20" cy="14" r="3"/>
-              <rect x="4" y="32" width="32" height="4" rx="1" opacity="0.3"/>
-            </svg>
-          </div>
-          <div class="reason-number" data-count="5000" data-suffix="+">0</div>
-          <h3>Clienți Mulțumiți</h3>
-          <p>Mii de parteneri comerciali care ne acordă încrederea lor an de an, de la mici retaileri la lanțuri naționale.</p>
-        </div>
-
-        <div class="reason-card fade-in">
-          <div class="reason-icon">
-            <svg width="40" height="40" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-              <rect x="6" y="6" width="28" height="28" rx="3"/>
-              <path d="M14 20l4 4 8-8"/>
-            </svg>
-          </div>
-          <div class="reason-number" data-count="100" data-suffix="%">0</div>
-          <h3>Calitate Garantată</h3>
-          <p>Selectăm doar produse care respectă cele mai înalte standarde, cu trasabilitate completă.</p>
-        </div>
-
-        <div class="reason-card fade-in">
-          <div class="reason-icon">
-            <svg width="40" height="40" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-              <circle cx="20" cy="20" r="16"/>
-              <path d="M20 10v10l6 4"/>
-            </svg>
-          </div>
-          <div class="reason-number" data-count="24" data-suffix="h">0</div>
-          <h3>Livrare Rapidă</h3>
-          <p>Stocuri permanente și logistică optimizată pentru livrări în cel mai scurt timp posibil.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ═══════════════════════════════════════════════════════════════ -->
-  <!-- CONTACT -->
-  <!-- ═══════════════════════════════════════════════════════════════ -->
-  <section id="contact" class="section section-dark">
-    <div class="container">
-      <div class="section-header fade-in">
-        <span class="section-label">Contactați-ne</span>
-        <h2 class="section-heading">Hai Să Vorbim</h2>
-        <div class="heading-line"></div>
-      </div>
-
-      <div class="contact-grid">
-        <div class="contact-info fade-in">
-          <div class="contact-item">
-            <div class="contact-icon">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.362 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.338 1.85.573 2.81.7A2 2 0 0122 16.92z"/>
-              </svg>
-            </div>
-            <div>
-              <h3>Telefon</h3>
-              <a href="tel:+40792628227">0792 628 227</a>
-            </div>
-          </div>
-
-          <div class="contact-item">
-            <div class="contact-icon">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                <rect x="2" y="4" width="20" height="16" rx="2"/>
-                <path d="M22 4l-10 8L2 4"/>
-              </svg>
-            </div>
-            <div>
-              <h3>Email</h3>
-              <a href="mailto:comenzi@homegate.ro">comenzi@homegate.ro</a>
-            </div>
-          </div>
-
-          <div class="contact-item">
-            <div class="contact-icon">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/>
-                <circle cx="12" cy="10" r="3"/>
-              </svg>
-            </div>
-            <div>
-              <h3>Sediu</h3>
-              <p>București, România</p>
-            </div>
-          </div>
-
-          <div class="contact-item">
-            <div class="contact-icon">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                <circle cx="12" cy="12" r="10"/>
-                <path d="M2 12h20"/>
-                <path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/>
-              </svg>
-            </div>
-            <div>
-              <h3>Magazin Online</h3>
-              <a href="https://homegate.ro" target="_blank" rel="noopener">homegate.ro</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="contact-form-wrapper fade-in">
-          <form class="contact-form" id="contactForm">
-            <div class="form-group">
-              <label for="name">Numele Dvs.</label>
-              <input type="text" id="name" name="name" required autocomplete="name">
-            </div>
-            <div class="form-group">
-              <label for="email">Adresa de Email</label>
-              <input type="email" id="email" name="email" required autocomplete="email">
-            </div>
-            <div class="form-group">
-              <label for="message">Mesajul Dvs.</label>
-              <textarea id="message" name="message" rows="5" required></textarea>
-            </div>
-            <button type="submit" class="form-submit">
-              Trimite Mesajul
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 2L11 13"/><path d="M22 2l-7 20-4-9-9-4z"/></svg>
-            </button>
-          </form>
-        </div>
-      </div>
-
-      <div class="map-container fade-in">
-        <div class="map-placeholder">
-          <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" opacity="0.4">
-            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/>
-            <circle cx="12" cy="10" r="3"/>
+    <div class="services-track">
+      <!-- Service 1 -->
+      <div class="service-panel glass-card">
+        <div class="service-panel-gold-line"></div>
+        <div class="service-panel-number">01</div>
+        <div class="service-panel-icon">
+          <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="40" cy="40" r="30" stroke="url(#gold-grad)" stroke-width="1.5" stroke-dasharray="4 4"/>
+            <path d="M25 40 C25 28 35 20 40 20 C45 20 55 28 55 40 C55 52 45 60 40 60 C35 60 25 52 25 40Z" stroke="url(#gold-grad)" stroke-width="1.5" fill="none"/>
+            <line x1="10" y1="40" x2="70" y2="40" stroke="url(#gold-grad)" stroke-width="1"/>
+            <line x1="40" y1="10" x2="40" y2="70" stroke="url(#gold-grad)" stroke-width="1"/>
+            <defs><linearGradient id="gold-grad" x1="0" y1="0" x2="80" y2="80"><stop offset="0%" stop-color="#9E7B30"/><stop offset="50%" stop-color="#DFC07A"/><stop offset="100%" stop-color="#9E7B30"/></linearGradient></defs>
           </svg>
-          <p>București, România</p>
-          <span>Harta va fi disponibilă în curând</span>
+        </div>
+        <div class="service-panel-content">
+          <h3>Import Direct</h3>
+          <p>Parteneriate strategice cu producătorii europeni de top. Eliminăm intermediarii, garantăm autenticitatea și oferim cele mai competitive prețuri de pe piață.</p>
+        </div>
+      </div>
+
+      <!-- Service 2 -->
+      <div class="service-panel glass-card">
+        <div class="service-panel-gold-line"></div>
+        <div class="service-panel-number">02</div>
+        <div class="service-panel-icon">
+          <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="8" y="35" width="40" height="25" rx="3" stroke="url(#gold-grad2)" stroke-width="1.5"/>
+            <rect x="48" y="40" width="20" height="20" rx="2" stroke="url(#gold-grad2)" stroke-width="1.5"/>
+            <line x1="48" y1="50" x2="68" y2="40" stroke="url(#gold-grad2)" stroke-width="1.5"/>
+            <circle cx="22" cy="63" r="5" stroke="url(#gold-grad2)" stroke-width="1.5"/>
+            <circle cx="58" cy="63" r="5" stroke="url(#gold-grad2)" stroke-width="1.5"/>
+            <path d="M15 35 L15 22 L45 22 L55 35" stroke="url(#gold-grad2)" stroke-width="1" stroke-dasharray="3 3"/>
+            <defs><linearGradient id="gold-grad2" x1="0" y1="0" x2="80" y2="80"><stop offset="0%" stop-color="#9E7B30"/><stop offset="50%" stop-color="#DFC07A"/><stop offset="100%" stop-color="#9E7B30"/></linearGradient></defs>
+          </svg>
+        </div>
+        <div class="service-panel-content">
+          <h3>Distribuție Națională</h3>
+          <p>O rețea logistică performantă ce acoperă toate cele 42 de județe ale României. Livrări rapide, stocuri permanente și o acoperire națională fără precedent.</p>
+        </div>
+      </div>
+
+      <!-- Service 3 -->
+      <div class="service-panel glass-card">
+        <div class="service-panel-gold-line"></div>
+        <div class="service-panel-number">03</div>
+        <div class="service-panel-icon">
+          <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="15" y="25" width="50" height="35" rx="4" stroke="url(#gold-grad3)" stroke-width="1.5"/>
+            <rect x="22" y="32" width="36" height="8" rx="2" stroke="url(#gold-grad3)" stroke-width="1"/>
+            <rect x="22" y="44" width="20" height="8" rx="2" stroke="url(#gold-grad3)" stroke-width="1"/>
+            <path d="M15 18 L40 10 L65 18" stroke="url(#gold-grad3)" stroke-width="1.5" fill="none"/>
+            <line x1="40" y1="10" x2="40" y2="25" stroke="url(#gold-grad3)" stroke-width="1" stroke-dasharray="3 3"/>
+            <defs><linearGradient id="gold-grad3" x1="0" y1="0" x2="80" y2="80"><stop offset="0%" stop-color="#9E7B30"/><stop offset="50%" stop-color="#DFC07A"/><stop offset="100%" stop-color="#9E7B30"/></linearGradient></defs>
+          </svg>
+        </div>
+        <div class="service-panel-content">
+          <h3>Vânzări En-Gros</h3>
+          <p>Prețuri de producător, cantități adaptate nevoilor dumneavoastră. Peste trei decenii de experiență în comerțul angro, cu condiții comerciale de excepție.</p>
+        </div>
+      </div>
+
+      <!-- Service 4 -->
+      <div class="service-panel glass-card">
+        <div class="service-panel-gold-line"></div>
+        <div class="service-panel-number">04</div>
+        <div class="service-panel-icon">
+          <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="18" y="15" width="44" height="50" rx="6" stroke="url(#gold-grad4)" stroke-width="1.5"/>
+            <rect x="24" y="22" width="32" height="20" rx="3" stroke="url(#gold-grad4)" stroke-width="1"/>
+            <circle cx="40" cy="54" r="4" stroke="url(#gold-grad4)" stroke-width="1.5"/>
+            <line x1="30" y1="32" x2="50" y2="32" stroke="url(#gold-grad4)" stroke-width="1" stroke-dasharray="2 2"/>
+            <defs><linearGradient id="gold-grad4" x1="0" y1="0" x2="80" y2="80"><stop offset="0%" stop-color="#9E7B30"/><stop offset="50%" stop-color="#DFC07A"/><stop offset="100%" stop-color="#9E7B30"/></linearGradient></defs>
+          </svg>
+        </div>
+        <div class="service-panel-content">
+          <h3>Retail Online — HomeGate.ro</h3>
+          <p>Magazinul nostru online, HomeGate.ro, pune la dispoziția consumatorului final întregul portofoliu de produse premium, cu livrare rapidă în toată România.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="container services-link">
+      <a href="servicii.html" class="btn btn--outline btn--shimmer">
+        Toate Serviciile Noastre
+        <span class="btn-arrow">→</span>
+      </a>
+    </div>
+  </section>
+
+  <!-- ==================== BRANDS SHOWCASE ==================== -->
+  <section class="section brands-section">
+    <div class="container brands-header">
+      <span class="section-label">Parteneri de Renume</span>
+      <h2 class="section-title">Branduri de <span class="kinetic-word text-chrome text-chrome--animated">Încredere</span></h2>
+    </div>
+
+    <!-- Marquee Row 1 -->
+    <div class="marquee-wrapper">
+      <div class="marquee-track" style="--duration: 45s;">
+        <span class="marquee-item">Persil</span><span class="diamond-sep"></span>
+        <span class="marquee-item">Ariel</span><span class="diamond-sep"></span>
+        <span class="marquee-item">Fairy</span><span class="diamond-sep"></span>
+        <span class="marquee-item">Lenor</span><span class="diamond-sep"></span>
+        <span class="marquee-item">Domestos</span><span class="diamond-sep"></span>
+        <span class="marquee-item">Perwoll</span><span class="diamond-sep"></span>
+        <span class="marquee-item">Chanteclair</span><span class="diamond-sep"></span>
+        <span class="marquee-item">Dove</span><span class="diamond-sep"></span>
+        <span class="marquee-item">CIF</span><span class="diamond-sep"></span>
+        <span class="marquee-item">Calgon</span><span class="diamond-sep"></span>
+        <!-- Duplicate for seamless loop -->
+        <span class="marquee-item">Persil</span><span class="diamond-sep"></span>
+        <span class="marquee-item">Ariel</span><span class="diamond-sep"></span>
+        <span class="marquee-item">Fairy</span><span class="diamond-sep"></span>
+        <span class="marquee-item">Lenor</span><span class="diamond-sep"></span>
+        <span class="marquee-item">Domestos</span><span class="diamond-sep"></span>
+        <span class="marquee-item">Perwoll</span><span class="diamond-sep"></span>
+        <span class="marquee-item">Chanteclair</span><span class="diamond-sep"></span>
+        <span class="marquee-item">Dove</span><span class="diamond-sep"></span>
+        <span class="marquee-item">CIF</span><span class="diamond-sep"></span>
+        <span class="marquee-item">Calgon</span><span class="diamond-sep"></span>
+      </div>
+    </div>
+
+    <!-- Marquee Row 2 (Reverse) -->
+    <div class="marquee-wrapper">
+      <div class="marquee-track marquee-track--reverse" style="--duration: 50s;">
+        <span class="marquee-item">ACE</span><span class="diamond-sep"></span>
+        <span class="marquee-item">Duracell</span><span class="diamond-sep"></span>
+        <span class="marquee-item">BIC</span><span class="diamond-sep"></span>
+        <span class="marquee-item">Dermomed</span><span class="diamond-sep"></span>
+        <span class="marquee-item">TRESemmé</span><span class="diamond-sep"></span>
+        <span class="marquee-item">Pantene</span><span class="diamond-sep"></span>
+        <span class="marquee-item">Asevi</span><span class="diamond-sep"></span>
+        <span class="marquee-item">Malizia</span><span class="diamond-sep"></span>
+        <span class="marquee-item">Semana</span><span class="diamond-sep"></span>
+        <span class="marquee-item">HomeGate</span><span class="diamond-sep"></span>
+        <!-- Duplicate -->
+        <span class="marquee-item">ACE</span><span class="diamond-sep"></span>
+        <span class="marquee-item">Duracell</span><span class="diamond-sep"></span>
+        <span class="marquee-item">BIC</span><span class="diamond-sep"></span>
+        <span class="marquee-item">Dermomed</span><span class="diamond-sep"></span>
+        <span class="marquee-item">TRESemmé</span><span class="diamond-sep"></span>
+        <span class="marquee-item">Pantene</span><span class="diamond-sep"></span>
+        <span class="marquee-item">Asevi</span><span class="diamond-sep"></span>
+        <span class="marquee-item">Malizia</span><span class="diamond-sep"></span>
+        <span class="marquee-item">Semana</span><span class="diamond-sep"></span>
+        <span class="marquee-item">HomeGate</span><span class="diamond-sep"></span>
+      </div>
+    </div>
+
+    <!-- Stats Bar -->
+    <div class="container">
+      <div class="brands-stats">
+        <div class="brands-stat">
+          <div class="brands-stat-number" data-count="50" data-suffix="+">0</div>
+          <div class="brands-stat-label">Branduri Partenere</div>
+        </div>
+        <div class="brands-stat-sep"></div>
+        <div class="brands-stat">
+          <div class="brands-stat-number" data-count="42">0</div>
+          <div class="brands-stat-label">Județe Acoperite</div>
+        </div>
+        <div class="brands-stat-sep"></div>
+        <div class="brands-stat">
+          <div class="brands-stat-number" data-count="5000" data-suffix="+">0</div>
+          <div class="brands-stat-label">Clienți Activi</div>
+        </div>
+        <div class="brands-stat-sep"></div>
+        <div class="brands-stat">
+          <div class="brands-stat-number" data-count="30" data-suffix="+">0</div>
+          <div class="brands-stat-label">Ani de Tradiție</div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ═══════════════════════════════════════════════════════════════ -->
-  <!-- FOOTER -->
-  <!-- ═══════════════════════════════════════════════════════════════ -->
-  <footer id="footer">
-    <div class="container footer-container">
-      <div class="footer-top">
-        <div class="footer-brand">
-          <img src="images/products/logo.png" alt="Business Brands SRL" class="footer-logo">
-          <p class="footer-tagline">Tradiție. Încredere. Excelență.</p>
+  <!-- ==================== PRODUCTS TEASER ==================== -->
+  <section class="section section--dark products-teaser">
+    <div class="container">
+      <span class="section-label">Portofoliu</span>
+      <h2 class="section-title">Produse de <span class="text-chrome text-chrome--animated">Prestigiu</span></h2>
+      <p class="section-subtitle">Cele mai apreciate branduri internaționale, disponibile prin rețeaua noastră de distribuție</p>
+
+      <div class="products-grid" style="margin-top: var(--space-xl);">
+        <div class="product-card tilt-card glow-card">
+          <img src="images/products/Web_Photo_Editor%20-%202026-02-27T154206.270.jpg" alt="Set Persil, Chanteclair, Pantene" loading="lazy">
+          <div class="product-card-overlay">
+            <span class="product-card-category">Curățenie</span>
+            <div class="product-card-name">Persil & Chanteclair</div>
+          </div>
         </div>
-        <div class="footer-nav">
-          <h4>Navigare</h4>
-          <a href="#despre">Despre Noi</a>
-          <a href="#servicii">Servicii</a>
-          <a href="#produse">Produse</a>
-          <a href="#contact">Contact</a>
+        <div class="product-card tilt-card glow-card">
+          <img src="images/products/Web_Photo_Editor%20-%202026-02-27T160053.652.jpg" alt="Set Ariel, Semana, Malizia, Fairy" loading="lazy">
+          <div class="product-card-overlay">
+            <span class="product-card-category">Curățenie</span>
+            <div class="product-card-name">Ariel & Fairy</div>
+          </div>
         </div>
-        <div class="footer-contact-col">
-          <h4>Contact</h4>
-          <a href="tel:+40792628227">0792 628 227</a>
-          <a href="mailto:comenzi@homegate.ro">comenzi@homegate.ro</a>
-          <a href="https://homegate.ro" target="_blank" rel="noopener">homegate.ro</a>
+        <div class="product-card tilt-card glow-card">
+          <img src="images/products/Web_Photo_Editor%20-%202026-02-27T163232.343.jpg" alt="Fairy detergent vase" loading="lazy">
+          <div class="product-card-overlay">
+            <span class="product-card-category">Curățenie</span>
+            <div class="product-card-name">Fairy</div>
+          </div>
+        </div>
+        <div class="product-card tilt-card glow-card">
+          <img src="images/products/Web_Photo_Editor%20-%202026-03-03T133049.977.jpg" alt="Asevi soluție pardoseli" loading="lazy">
+          <div class="product-card-overlay">
+            <span class="product-card-category">Curățenie</span>
+            <div class="product-card-name">Asevi</div>
+          </div>
+        </div>
+        <div class="product-card tilt-card glow-card">
+          <img src="images/products/Web_Photo_Editor%20-%202026-03-02T115310.156.jpg" alt="Colecție boxe HomeGate P PRO11" loading="lazy">
+          <div class="product-card-overlay">
+            <span class="product-card-category">Electronice HomeGate</span>
+            <div class="product-card-name">HomeGate P PRO11</div>
+          </div>
+        </div>
+        <div class="product-card tilt-card glow-card">
+          <img src="images/products/Web_Photo_Editor%20-%202026-03-03T134647.066.jpg" alt="TRESemmé balsam păr" loading="lazy">
+          <div class="product-card-overlay">
+            <span class="product-card-category">Îngrijire</span>
+            <div class="product-card-name">TRESemmé</div>
+          </div>
+        </div>
+        <div class="product-card tilt-card glow-card">
+          <img src="images/products/Web_Photo_Editor%20-%202026-02-24T160251.103.jpg" alt="Papuci de casă" loading="lazy">
+          <div class="product-card-overlay">
+            <span class="product-card-category">Casă & Grădină</span>
+            <div class="product-card-name">Papuci de Casă</div>
+          </div>
+        </div>
+        <div class="product-card tilt-card glow-card">
+          <img src="images/products/Web_Photo_Editor%20-%202026-03-02T125001.972.jpg" alt="Boxă HomeGate HA10" loading="lazy">
+          <div class="product-card-overlay">
+            <span class="product-card-category">Electronice HomeGate</span>
+            <div class="product-card-name">HomeGate HA10</div>
+          </div>
         </div>
       </div>
-      <div class="footer-divider"></div>
-      <div class="footer-bottom">
-        <p>&copy; 2026 Business Brands SRL. Toate drepturile rezervate.</p>
+
+      <div class="products-cta">
+        <a href="produse.html" class="btn btn--outline btn--shimmer">
+          Explorează Portofoliul Complet
+          <span class="btn-arrow">→</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== WHY CHOOSE US ==================== -->
+  <section class="section why-section">
+    <div class="container">
+      <div style="text-align: center; margin-bottom: var(--space-2xl);">
+        <span class="section-label" style="justify-content: center;">De Ce Noi</span>
+        <h2 class="section-title">Excelență Confirmată <br>prin <span class="text-chrome text-chrome--animated">Rezultate</span></h2>
+      </div>
+
+      <div class="why-timeline">
+        <div class="why-timeline-line">
+          <div class="why-timeline-line-inner"></div>
+        </div>
+
+        <div class="why-item">
+          <div class="why-item-content">
+            <div class="why-item-number" data-count="30" data-suffix="+">0</div>
+            <div class="why-item-label">Ani de Tradiție Neîntreruptă</div>
+          </div>
+          <div class="why-item-dot"></div>
+          <div class="why-item-spacer"></div>
+        </div>
+
+        <div class="why-item">
+          <div class="why-item-content">
+            <div class="why-item-number" data-count="50" data-suffix="+">0</div>
+            <div class="why-item-label">Branduri Internaționale de Prestigiu</div>
+          </div>
+          <div class="why-item-dot"></div>
+          <div class="why-item-spacer"></div>
+        </div>
+
+        <div class="why-item">
+          <div class="why-item-content">
+            <div class="why-item-number" data-count="42">0</div>
+            <div class="why-item-label">Județe cu Acoperire Completă</div>
+          </div>
+          <div class="why-item-dot"></div>
+          <div class="why-item-spacer"></div>
+        </div>
+
+        <div class="why-item">
+          <div class="why-item-content">
+            <div class="why-item-number" data-count="5000" data-suffix="+">0</div>
+            <div class="why-item-label">Parteneri Comerciali Activi</div>
+          </div>
+          <div class="why-item-dot"></div>
+          <div class="why-item-spacer"></div>
+        </div>
+
+        <div class="why-item">
+          <div class="why-item-content">
+            <div class="why-item-number" data-count="100" data-suffix="%">0</div>
+            <div class="why-item-label">Calitate Garantată, Fără Compromis</div>
+          </div>
+          <div class="why-item-dot"></div>
+          <div class="why-item-spacer"></div>
+        </div>
+
+        <div class="why-item">
+          <div class="why-item-content">
+            <div class="why-item-number" data-count="24" data-suffix="h">0</div>
+            <div class="why-item-label">Livrare Rapidă pe Teritoriul Național</div>
+          </div>
+          <div class="why-item-dot"></div>
+          <div class="why-item-spacer"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== CTA BANNER ==================== -->
+  <section class="section section--dark cta-banner">
+    <div class="gradient-mesh"></div>
+    <div class="noise-overlay"></div>
+    <div class="particles-container" data-particles="10"></div>
+
+    <div class="container" style="position:relative; z-index:2;">
+      <h2 class="cta-banner-title">Pregătiți pentru un parteneriat de succes?</h2>
+      <a href="contact.html" class="btn btn--gold btn--shimmer">
+        Contactați-ne Astăzi
+        <span class="btn-arrow">→</span>
+      </a>
+    </div>
+  </section>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="site-footer">
+    <div class="footer-top-line"></div>
+    <div class="footer-main">
+      <div class="container">
+        <div class="footer-grid">
+          <!-- Brand Column -->
+          <div class="footer-brand">
+            <img src="images/products/logo.png" alt="Business Brands SRL" class="footer-logo">
+            <p class="footer-tagline">Patrimonie Comercială Românească din 1994</p>
+            <p class="footer-description">
+              Din 1994, construim punți între producătorii internaționali de renume și piața românească.
+              Excelență în fiecare detaliu al lanțului de distribuție.
+            </p>
+          </div>
+
+          <!-- Navigation -->
+          <div class="footer-column">
+            <h4>Navigare</h4>
+            <ul>
+              <li><a href="index.html">Acasă</a></li>
+              <li><a href="despre.html">Despre Noi</a></li>
+              <li><a href="servicii.html">Servicii</a></li>
+              <li><a href="produse.html">Produse & Branduri</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </div>
+
+          <!-- Contact -->
+          <div class="footer-column">
+            <h4>Contact</h4>
+            <ul>
+              <li class="footer-contact-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+                <a href="tel:+40792628227">0792 628 227</a>
+              </li>
+              <li class="footer-contact-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 7l-10 7L2 7"/></svg>
+                <a href="mailto:comenzi@homegate.ro">comenzi@homegate.ro</a>
+              </li>
+              <li class="footer-contact-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                <span>București, România</span>
+              </li>
+              <li class="footer-contact-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg>
+                <a href="https://homegate.ro" target="_blank" rel="noopener">homegate.ro</a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Brands -->
+          <div class="footer-column">
+            <h4>Branduri Partenere</h4>
+            <div class="footer-brands-list">
+              <span class="footer-brand-tag">Persil</span>
+              <span class="footer-brand-tag">Ariel</span>
+              <span class="footer-brand-tag">Fairy</span>
+              <span class="footer-brand-tag">Dove</span>
+              <span class="footer-brand-tag">Duracell</span>
+              <span class="footer-brand-tag">BIC</span>
+              <span class="footer-brand-tag">TRESemmé</span>
+              <span class="footer-brand-tag">Pantene</span>
+              <span class="footer-brand-tag">HomeGate</span>
+              <span class="footer-brand-tag">+40 altele</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container">
+        <div class="footer-bottom-inner">
+          <span class="footer-copyright">© 2026 Business Brands SRL. Toate drepturile rezervate.</span>
+          <span class="footer-legal">RONY BRANDS DISTRIBUTION S.R.L. &nbsp;·&nbsp; <a href="https://homegate.ro" target="_blank" rel="noopener">homegate.ro</a></span>
+        </div>
       </div>
     </div>
   </footer>
 
-  <script src="script.js"></script>
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+  <script src="js/global.js"></script>
+  <script src="js/home.js"></script>
 </body>
 </html>
