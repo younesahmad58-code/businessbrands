@@ -1,5 +1,5 @@
 /* ============================================================
-   Produse & Branduri Page Styles
+   Produse & Branduri Page Styles — Light Theme
    ============================================================ */
 
 /* ---------- Page Hero ---------- */
@@ -13,6 +13,7 @@
   text-align: center;
   padding: calc(var(--nav-height) + 3rem) 2rem 4rem;
   overflow: hidden;
+  background: linear-gradient(160deg, #F0F6FF 0%, #FFFFFF 60%, #F7F9FF 100%);
 }
 
 .page-hero-title {
@@ -20,7 +21,7 @@
   font-weight: 300;
   font-size: clamp(2.5rem, 6vw, 5rem);
   line-height: 1.1;
-  color: var(--color-white);
+  color: var(--color-text, #0D1B2A);
   margin-bottom: var(--space-sm);
   position: relative;
   z-index: 2;
@@ -31,7 +32,7 @@
   font-style: italic;
   font-weight: 400;
   font-size: clamp(1rem, 1.5vw, 1.2rem);
-  color: var(--color-white-off);
+  color: var(--color-text-secondary, #4A5568);
   max-width: 550px;
   position: relative;
   z-index: 2;
@@ -49,37 +50,35 @@
   text-align: center;
   border-radius: var(--radius-sm);
   transition: all 0.4s var(--ease-out);
+  background: white;
+  border: 1px solid var(--color-border, rgba(30, 64, 175, 0.1));
 }
 
 .brand-card:hover {
   transform: translateY(-6px);
-  border-color: rgba(200, 164, 92, 0.3);
-  box-shadow: 0 12px 40px rgba(200, 164, 92, 0.1);
+  border-color: var(--color-accent, #1E40AF);
+  box-shadow: 0 12px 40px rgba(30, 64, 175, 0.1);
 }
 
 .brand-card-name {
   font-family: var(--font-heading);
   font-weight: 500;
   font-size: 0.95rem;
-  color: var(--color-white-off);
+  color: var(--color-text, #0D1B2A);
   transition: color 0.3s ease;
 }
 
 .brand-card:hover .brand-card-name {
-  background: var(--gradient-gold-text);
-  background-size: 200% auto;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  color: var(--color-accent, #1E40AF);
 }
 
 .brand-card--featured {
-  background: rgba(200, 164, 92, 0.08) !important;
-  border-color: rgba(200, 164, 92, 0.2) !important;
+  background: var(--color-accent-pale, #DBEAFE) !important;
+  border-color: var(--color-accent, #1E40AF) !important;
 }
 
 .brand-card--featured .brand-card-name {
-  color: var(--color-gold);
+  color: var(--color-accent, #1E40AF);
 }
 
 .brand-card-badge {
@@ -87,7 +86,7 @@
   font-size: 0.6rem;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: var(--color-gold-dark);
+  color: var(--color-accent-dark, #1A3A5C);
   margin-top: 0.35rem;
 }
 
@@ -107,22 +106,23 @@
   font-weight: 500;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  border: 1px solid rgba(200, 164, 92, 0.2);
+  border: 1px solid var(--color-border, rgba(30, 64, 175, 0.1));
   border-radius: 100px;
-  color: var(--color-white-off);
+  color: var(--color-text-secondary, #4A5568);
   transition: all 0.35s var(--ease-out);
   background: transparent;
+  cursor: pointer;
 }
 
 .filter-btn:hover {
-  border-color: var(--color-gold);
-  color: var(--color-gold);
-  background: rgba(200, 164, 92, 0.05);
+  border-color: var(--color-accent, #1E40AF);
+  color: var(--color-accent, #1E40AF);
+  background: var(--color-accent-pale, #DBEAFE);
 }
 
 .filter-btn.active {
-  background: var(--gradient-gold);
-  color: var(--color-black);
+  background: var(--gradient-accent);
+  color: #FFFFFF;
   border-color: transparent;
 }
 
@@ -137,8 +137,8 @@
   position: relative;
   border-radius: var(--radius-md);
   overflow: hidden;
-  background: var(--color-gray-mid);
-  aspect-ratio: 3 / 4;
+  background: var(--color-surface-2, #F0F4F8);
+  border: 1px solid var(--color-border, rgba(30, 64, 175, 0.1));
   transform-style: preserve-3d;
   transition: opacity 0.4s ease, transform 0.4s ease;
 }
@@ -149,13 +149,14 @@
 
 .product-full-card img {
   width: 100%;
-  height: 100%;
-  object-fit: cover;
+  height: 260px;
+  object-fit: contain;
+  padding: 0.75rem;
   transition: transform 0.7s var(--ease-out);
 }
 
 .product-full-card:hover img {
-  transform: scale(1.08);
+  transform: scale(1.05);
 }
 
 .product-full-card-overlay {
@@ -164,7 +165,7 @@
   left: 0;
   right: 0;
   padding: 1.25rem;
-  background: linear-gradient(to top, rgba(6, 6, 6, 0.9), transparent);
+  background: linear-gradient(to top, rgba(13, 27, 42, 0.85), transparent);
   transform: translateY(100%);
   transition: transform 0.5s var(--ease-out);
 }
@@ -177,9 +178,9 @@
   font-size: 0.65rem;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: var(--color-gold);
+  color: #DBEAFE;
   padding: 0.2rem 0.5rem;
-  background: rgba(200, 164, 92, 0.1);
+  background: rgba(30, 64, 175, 0.3);
   backdrop-filter: blur(8px);
   border-radius: 3px;
   display: inline-block;
@@ -189,7 +190,7 @@
   font-family: var(--font-heading);
   font-size: 0.9rem;
   margin-top: 0.4rem;
-  color: var(--color-white);
+  color: #FFFFFF;
 }
 
 /* ---------- HomeGate Section ---------- */
@@ -209,13 +210,13 @@
   font-family: var(--font-heading);
   font-weight: 600;
   font-size: clamp(1.5rem, 2.5vw, 2rem);
-  color: var(--color-gold);
+  color: var(--color-accent, #1E40AF);
   margin-bottom: 1rem;
 }
 
 .homegate-content p {
   font-size: 1rem;
-  color: var(--color-white-off);
+  color: var(--color-text-secondary, #4A5568);
   line-height: 1.8;
   margin-bottom: 1.5rem;
 }
@@ -230,12 +231,15 @@
   border-radius: var(--radius-sm);
   overflow: hidden;
   aspect-ratio: 1;
+  background: var(--color-surface-2, #F0F4F8);
+  border: 1px solid var(--color-border, rgba(30, 64, 175, 0.1));
 }
 
 .homegate-product-card img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
+  padding: 0.5rem;
   transition: transform 0.5s var(--ease-out);
 }
 
@@ -260,8 +264,8 @@
     gap: 0.75rem;
   }
 
-  .product-full-card {
-    aspect-ratio: 1;
+  .product-full-card img {
+    height: 200px;
   }
 
   .brands-grid {

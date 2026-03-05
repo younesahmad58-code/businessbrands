@@ -115,60 +115,6 @@ function initTiltCards(selector) {
   });
 }
 
-/* ---------- Custom Cursor ---------- */
-(function initCursor() {
-  if (!window.matchMedia('(hover: hover)').matches) return;
-
-  var dot = document.createElement('div');
-  dot.className = 'cursor-dot';
-  var ring = document.createElement('div');
-  ring.className = 'cursor-ring';
-  document.body.appendChild(dot);
-  document.body.appendChild(ring);
-
-  var mouseX = 0, mouseY = 0;
-  var ringX = 0, ringY = 0;
-
-  document.addEventListener('mousemove', function(e) {
-    mouseX = e.clientX;
-    mouseY = e.clientY;
-    dot.style.left = mouseX + 'px';
-    dot.style.top = mouseY + 'px';
-  });
-
-  function animateRing() {
-    ringX += (mouseX - ringX) * 0.15;
-    ringY += (mouseY - ringY) * 0.15;
-    ring.style.left = ringX + 'px';
-    ring.style.top = ringY + 'px';
-    requestAnimationFrame(animateRing);
-  }
-  animateRing();
-
-  // Hover detection
-  var interactiveSelectors = 'a, button, input, textarea, select, .tilt-card, .glow-card, [data-cursor-hover]';
-  document.addEventListener('mouseover', function(e) {
-    if (e.target.closest(interactiveSelectors)) {
-      document.body.classList.add('cursor-hover');
-    }
-  });
-  document.addEventListener('mouseout', function(e) {
-    if (e.target.closest(interactiveSelectors)) {
-      document.body.classList.remove('cursor-hover');
-    }
-  });
-
-  // Hide cursor when leaving window
-  document.addEventListener('mouseleave', function() {
-    dot.style.opacity = '0';
-    ring.style.opacity = '0';
-  });
-  document.addEventListener('mouseenter', function() {
-    dot.style.opacity = '1';
-    ring.style.opacity = '0.5';
-  });
-})();
-
 /* ---------- Magnetic Buttons ---------- */
 (function initMagneticButtons() {
   if (!window.matchMedia('(hover: hover)').matches) return;

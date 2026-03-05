@@ -1,5 +1,5 @@
 /* ============================================================
-   Servicii (Services) Page Styles
+   Servicii (Services) Page Styles — Light Theme
    ============================================================ */
 
 /* ---------- Page Hero ---------- */
@@ -13,6 +13,7 @@
   text-align: center;
   padding: calc(var(--nav-height) + 3rem) 2rem 4rem;
   overflow: hidden;
+  background: linear-gradient(160deg, #F0F6FF 0%, #FFFFFF 60%, #F7F9FF 100%);
 }
 
 .page-hero-title {
@@ -20,7 +21,7 @@
   font-weight: 300;
   font-size: clamp(2.5rem, 6vw, 5rem);
   line-height: 1.1;
-  color: var(--color-white);
+  color: var(--color-text, #0D1B2A);
   margin-bottom: var(--space-sm);
   position: relative;
   z-index: 2;
@@ -31,7 +32,7 @@
   font-style: italic;
   font-weight: 400;
   font-size: clamp(1rem, 1.5vw, 1.2rem);
-  color: var(--color-white-off);
+  color: var(--color-text-secondary, #4A5568);
   max-width: 550px;
   position: relative;
   z-index: 2;
@@ -46,7 +47,7 @@
   font-weight: 300;
   font-size: clamp(15rem, 30vw, 28rem);
   line-height: 1;
-  -webkit-text-stroke: 2px rgba(200, 164, 92, 0.06);
+  -webkit-text-stroke: 2px rgba(30, 64, 175, 0.06);
   -webkit-text-fill-color: transparent;
   pointer-events: none;
   z-index: 0;
@@ -80,7 +81,7 @@
   font-family: var(--font-display);
   font-weight: 300;
   font-size: clamp(5rem, 10vw, 9rem);
-  -webkit-text-stroke: 1.5px rgba(200, 164, 92, 0.12);
+  -webkit-text-stroke: 1.5px rgba(30, 64, 175, 0.1);
   -webkit-text-fill-color: transparent;
   line-height: 1;
   margin-bottom: 1.5rem;
@@ -90,13 +91,13 @@
   font-family: var(--font-heading);
   font-weight: 600;
   font-size: clamp(1.75rem, 3vw, 2.5rem);
-  color: var(--color-white);
+  color: var(--color-text, #0D1B2A);
   margin-bottom: 1.25rem;
 }
 
 .service-full-desc {
   font-size: 1rem;
-  color: var(--color-white-off);
+  color: var(--color-text-secondary, #4A5568);
   line-height: 1.8;
   margin-bottom: 2rem;
   max-width: 500px;
@@ -114,7 +115,7 @@
   align-items: flex-start;
   gap: 0.75rem;
   font-size: 0.92rem;
-  color: var(--color-white-off);
+  color: var(--color-text-secondary, #4A5568);
   line-height: 1.5;
 }
 
@@ -123,7 +124,7 @@
   display: block;
   width: 6px;
   height: 6px;
-  background: var(--color-gold);
+  background: var(--color-accent, #1E40AF);
   border-radius: 50%;
   flex-shrink: 0;
   margin-top: 0.45rem;
@@ -143,7 +144,7 @@
 
 /* ---------- Alternating backgrounds ---------- */
 .service-full:nth-child(even) {
-  background: var(--color-gray-dark);
+  background: var(--color-surface-2, #F0F4F8);
 }
 
 /* ---------- CTA Section ---------- */
@@ -152,13 +153,14 @@
   text-align: center;
   padding: clamp(5rem, 12vh, 8rem) 2rem;
   overflow: hidden;
+  background: #1A3A5C;
 }
 
 .services-cta-title {
   font-family: var(--font-display);
   font-weight: 300;
   font-size: clamp(2rem, 4vw, 3.5rem);
-  color: var(--color-white);
+  color: #FFFFFF;
   margin-bottom: var(--space-lg);
 }
 

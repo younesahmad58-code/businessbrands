@@ -1,5 +1,5 @@
 /* ============================================================
-   Contact Page Styles
+   Contact Page Styles — Light Theme
    ============================================================ */
 
 /* ---------- Page Hero ---------- */
@@ -13,6 +13,7 @@
   text-align: center;
   padding: calc(var(--nav-height) + 3rem) 2rem 4rem;
   overflow: hidden;
+  background: linear-gradient(160deg, #F0F6FF 0%, #FFFFFF 60%, #F7F9FF 100%);
 }
 
 .page-hero-title {
@@ -20,7 +21,7 @@
   font-weight: 300;
   font-size: clamp(2.5rem, 6vw, 5rem);
   line-height: 1.1;
-  color: var(--color-white);
+  color: var(--color-text, #0D1B2A);
   margin-bottom: var(--space-sm);
   position: relative;
   z-index: 2;
@@ -31,7 +32,7 @@
   font-style: italic;
   font-weight: 400;
   font-size: clamp(1rem, 1.5vw, 1.2rem);
-  color: var(--color-white-off);
+  color: var(--color-text-secondary, #4A5568);
   max-width: 500px;
   position: relative;
   z-index: 2;
@@ -57,7 +58,7 @@
   align-items: flex-start;
   gap: 1rem;
   padding-bottom: 2rem;
-  border-bottom: 1px solid rgba(200, 164, 92, 0.08);
+  border-bottom: 1px solid var(--color-border, rgba(30, 64, 175, 0.1));
 }
 
 .contact-info-item:last-child {
@@ -78,20 +79,20 @@
 .contact-info-icon svg {
   width: 22px;
   height: 22px;
-  stroke: var(--color-gold);
+  stroke: var(--color-accent, #1E40AF);
 }
 
 .contact-info-label {
   font-size: 0.68rem;
   letter-spacing: 0.15em;
   text-transform: uppercase;
-  color: var(--color-gold);
+  color: var(--color-accent, #1E40AF);
   margin-bottom: 0.3rem;
 }
 
 .contact-info-value {
   font-size: 1.05rem;
-  color: var(--color-white);
+  color: var(--color-text, #0D1B2A);
   line-height: 1.5;
 }
 
@@ -100,7 +101,7 @@
 }
 
 .contact-info-value a:hover {
-  color: var(--color-gold);
+  color: var(--color-accent, #1E40AF);
 }
 
 /* ---------- Contact Form Card ---------- */
@@ -119,7 +120,7 @@
   left: 0;
   font-family: var(--font-body);
   font-size: 0.88rem;
-  color: var(--color-gray-muted);
+  color: var(--color-text-muted, #8A9BB0);
   pointer-events: none;
   transition: all 0.3s var(--ease-out);
   transform-origin: left center;
@@ -130,8 +131,8 @@
   width: 100%;
   padding: 1rem 0;
   font-size: 1rem;
-  color: var(--color-white);
-  border-bottom: 1px solid rgba(200, 164, 92, 0.15);
+  color: var(--color-text, #0D1B2A);
+  border-bottom: 1px solid var(--color-border-strong, rgba(30, 64, 175, 0.2));
   transition: border-color 0.3s ease, box-shadow 0.3s ease;
   background: transparent;
 }
@@ -143,8 +144,8 @@
 
 .form-input:focus,
 .form-textarea:focus {
-  border-bottom-color: var(--color-gold);
-  box-shadow: 0 2px 8px rgba(200, 164, 92, 0.1);
+  border-bottom-color: var(--color-accent, #1E40AF);
+  box-shadow: 0 2px 8px rgba(30, 64, 175, 0.08);
 }
 
 .form-input:focus + .form-label,
@@ -153,7 +154,7 @@
 .form-textarea.has-value + .form-label {
   top: -0.5rem;
   font-size: 0.68rem;
-  color: var(--color-gold);
+  color: var(--color-accent, #1E40AF);
   letter-spacing: 0.1em;
   text-transform: uppercase;
 }
@@ -178,7 +179,7 @@
   width: 56px;
   height: 56px;
   margin: 0 auto 1.25rem;
-  border: 2px solid var(--color-gold);
+  border: 2px solid var(--color-accent, #1E40AF);
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -188,19 +189,19 @@
 .form-success-icon svg {
   width: 28px;
   height: 28px;
-  stroke: var(--color-gold);
+  stroke: var(--color-accent, #1E40AF);
 }
 
 .form-success h3 {
   font-family: var(--font-heading);
   font-size: 1.25rem;
-  color: var(--color-gold);
+  color: var(--color-accent, #1E40AF);
   margin-bottom: 0.5rem;
 }
 
 .form-success p {
   font-size: 0.92rem;
-  color: var(--color-white-off);
+  color: var(--color-text-secondary, #4A5568);
 }
 
 /* ---------- Map Section ---------- */
@@ -219,7 +220,7 @@
   font-family: var(--font-display);
   font-weight: 300;
   font-size: clamp(4rem, 10vw, 8rem);
-  -webkit-text-stroke: 1.5px rgba(200, 164, 92, 0.1);
+  -webkit-text-stroke: 1.5px rgba(30, 64, 175, 0.08);
   -webkit-text-fill-color: transparent;
   line-height: 1;
   margin-bottom: 1rem;
@@ -234,14 +235,24 @@
 .map-pin svg {
   width: 100%;
   height: 100%;
-  stroke: var(--color-gold);
+  stroke: var(--color-accent, #1E40AF);
   fill: none;
 }
 
 .map-address {
   font-size: 0.92rem;
-  color: var(--color-white-off);
+  color: var(--color-text-secondary, #4A5568);
   line-height: 1.6;
+}
+
+.map-embed {
+  margin-top: var(--space-lg);
+  width: 100%;
+  max-width: 900px;
+}
+
+.map-embed iframe {
+  border-radius: var(--radius-md);
 }
 
 /* ---------- Responsive ---------- */

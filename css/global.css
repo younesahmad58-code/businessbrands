@@ -8,37 +8,63 @@
 
 /* ---------- CSS Custom Properties ---------- */
 :root {
-  /* Blacks */
-  --color-black:         #060606;
-  --color-black-rich:    #030303;
-  --color-gray-dark:     #0E0E0E;
-  --color-gray-mid:      #181818;
-  --color-gray-soft:     #242424;
-  --color-gray-border:   rgba(200, 164, 92, 0.08);
-  --color-gray-muted:    #6B6B6B;
+  /* Backgrounds */
+  --color-bg:            #FFFFFF;
+  --color-bg-alt:        #F7F8FA;
+  --color-bg-subtle:     #F0F4F8;
 
-  /* Whites */
-  --color-white:         #F0EDE6;
-  --color-white-off:     #B8B0A2;
-  --color-white-pure:    #FFFFFF;
+  /* Surfaces */
+  --color-surface:       #FFFFFF;
+  --color-surface-2:     #F0F4F8;
+  --color-surface-3:     #E8EEF5;
 
-  /* Golds */
-  --color-gold:          #C8A45C;
-  --color-gold-light:    #DFC07A;
-  --color-gold-pale:     #E8D5A3;
-  --color-gold-dark:     #9E7B30;
-  --color-gold-glow:     rgba(200, 164, 92, 0.15);
-  --color-champagne:     #F5E6C8;
+  /* Text */
+  --color-text:          #0D1B2A;
+  --color-text-secondary:#4A5568;
+  --color-text-muted:    #8A9BB0;
 
-  /* Metallics */
-  --color-chrome:        #C0C0C8;
-  --color-bronze:        #8B6914;
+  /* Accent — Deep Blue */
+  --color-accent:        #1E40AF;
+  --color-accent-light:  #3B82F6;
+  --color-accent-dark:   #1A3A5C;
+  --color-accent-glow:   rgba(30, 64, 175, 0.12);
+  --color-accent-pale:   #DBEAFE;
+
+  /* Borders */
+  --color-border:        rgba(30, 64, 175, 0.1);
+  --color-border-strong: rgba(30, 64, 175, 0.2);
 
   /* Gradients */
-  --gradient-gold:       linear-gradient(135deg, #9E7B30 0%, #C8A45C 30%, #DFC07A 50%, #C8A45C 70%, #9E7B30 100%);
-  --gradient-gold-text:  linear-gradient(90deg, #C8A45C, #E8D5A3, #C8A45C);
-  --gradient-dark:       linear-gradient(180deg, #060606 0%, #0E0E0E 100%);
-  --gradient-chrome:     linear-gradient(135deg, #888 0%, #CCC 25%, #FFF 50%, #CCC 75%, #888 100%);
+  --gradient-accent:     linear-gradient(135deg, #1A3A5C 0%, #1E40AF 50%, #3B82F6 100%);
+  --gradient-accent-text:linear-gradient(90deg, #1E40AF, #3B82F6, #1E40AF);
+  --gradient-surface:    linear-gradient(180deg, #FFFFFF 0%, #F0F4F8 100%);
+
+  /* Transition panels stay dark for dramatic effect */
+  --color-transition:    #0D1B2A;
+
+  /* Legacy aliases for compatibility */
+  --color-black:         #0D1B2A;
+  --color-black-rich:    #0D1B2A;
+  --color-gray-dark:     #F0F4F8;
+  --color-gray-mid:      #F0F4F8;
+  --color-gray-soft:     #E8EEF5;
+  --color-gray-border:   rgba(30, 64, 175, 0.08);
+  --color-gray-muted:    #8A9BB0;
+  --color-white:         #0D1B2A;
+  --color-white-off:     #4A5568;
+  --color-white-pure:    #FFFFFF;
+  --color-gold:          #1E40AF;
+  --color-gold-light:    #3B82F6;
+  --color-gold-pale:     #DBEAFE;
+  --color-gold-dark:     #1A3A5C;
+  --color-gold-glow:     rgba(30, 64, 175, 0.12);
+  --color-champagne:     #DBEAFE;
+  --color-chrome:        #1E40AF;
+  --color-bronze:        #1A3A5C;
+  --gradient-gold:       linear-gradient(135deg, #1A3A5C 0%, #1E40AF 50%, #3B82F6 100%);
+  --gradient-gold-text:  linear-gradient(90deg, #1E40AF, #3B82F6, #1E40AF);
+  --gradient-dark:       linear-gradient(180deg, #FFFFFF 0%, #F0F4F8 100%);
+  --gradient-chrome:     linear-gradient(135deg, #1A3A5C 0%, #1E40AF 50%, #3B82F6 100%);
 
   /* Typography */
   --font-display: 'Cormorant Garamond', 'Playfair Display', Georgia, serif;
@@ -90,36 +116,23 @@ body {
   font-weight: 400;
   font-size: 16px;
   line-height: 1.7;
-  color: var(--color-white);
-  background: var(--color-black);
+  color: var(--color-text);
+  background: var(--color-bg);
   overflow-x: hidden;
-  cursor: none;
-}
-
-@media (hover: none) {
-  body { cursor: auto; }
 }
 
 a {
   color: inherit;
   text-decoration: none;
-  cursor: none;
-}
-
-@media (hover: none) {
-  a { cursor: pointer; }
+  cursor: pointer;
 }
 
 button {
   border: none;
   background: none;
   font-family: inherit;
-  cursor: none;
+  cursor: pointer;
   color: inherit;
-}
-
-@media (hover: none) {
-  button { cursor: pointer; }
 }
 
 img {
@@ -190,15 +203,15 @@ input, textarea, select {
   font-size: 0.75rem;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: var(--color-gold);
+  color: var(--color-accent);
 }
 
 .text-gold {
-  color: var(--color-gold);
+  color: var(--color-accent);
 }
 
 .text-muted {
-  color: var(--color-white-off);
+  color: var(--color-text-secondary);
 }
 
 /* ---------- Buttons ---------- */
@@ -219,26 +232,26 @@ input, textarea, select {
 }
 
 .btn--gold {
-  background: var(--gradient-gold);
-  color: var(--color-black);
+  background: var(--gradient-accent);
+  color: #FFFFFF;
   border: none;
 }
 
 .btn--gold:hover {
   transform: translateY(-2px);
-  box-shadow: 0 8px 32px rgba(200, 164, 92, 0.3);
+  box-shadow: 0 8px 32px rgba(30, 64, 175, 0.3);
 }
 
 .btn--outline {
   background: transparent;
-  color: var(--color-gold);
-  border: 1px solid var(--color-gold);
+  color: var(--color-accent);
+  border: 1px solid var(--color-accent);
 }
 
 .btn--outline:hover {
-  background: rgba(200, 164, 92, 0.08);
+  background: var(--color-accent-pale);
   transform: translateY(-2px);
-  box-shadow: 0 8px 32px rgba(200, 164, 92, 0.15);
+  box-shadow: 0 8px 32px rgba(30, 64, 175, 0.15);
 }
 
 .btn--shimmer::after {
@@ -272,7 +285,7 @@ input, textarea, select {
 }
 
 .section--dark {
-  background: var(--color-gray-dark);
+  background: var(--color-surface-2);
 }
 
 .section-label {
@@ -281,7 +294,7 @@ input, textarea, select {
   font-size: 0.7rem;
   letter-spacing: 0.2em;
   text-transform: uppercase;
-  color: var(--color-gold);
+  color: var(--color-accent);
   margin-bottom: var(--space-md);
   display: flex;
   align-items: center;
@@ -293,7 +306,7 @@ input, textarea, select {
   display: block;
   width: 40px;
   height: 1px;
-  background: var(--color-gold);
+  background: var(--color-accent);
 }
 
 .section-title {
@@ -302,7 +315,7 @@ input, textarea, select {
   font-size: clamp(2.5rem, 5vw, 4.5rem);
   line-height: 1.1;
   margin-bottom: var(--space-lg);
-  color: var(--color-white);
+  color: var(--color-text);
 }
 
 .section-subtitle {
@@ -310,15 +323,15 @@ input, textarea, select {
   font-weight: 300;
   font-size: clamp(1rem, 1.2vw, 1.15rem);
   line-height: 1.8;
-  color: var(--color-white-off);
+  color: var(--color-text-secondary);
   max-width: 600px;
 }
 
-/* ---------- Gold Divider ---------- */
+/* ---------- Divider ---------- */
 .divider-gold {
   width: 100%;
   height: 1px;
-  background: linear-gradient(90deg, transparent, var(--color-gold), transparent);
+  background: linear-gradient(90deg, transparent, var(--color-accent), transparent);
   border: none;
 }
 
@@ -329,7 +342,7 @@ input, textarea, select {
   left: 0;
   width: 0%;
   height: 2px;
-  background: var(--gradient-gold);
+  background: var(--gradient-accent);
   z-index: 10001;
   pointer-events: none;
   transition: none;
@@ -354,7 +367,7 @@ input, textarea, select {
   top: 0;
   width: 50%;
   height: 100%;
-  background: var(--color-black-rich);
+  background: var(--color-transition);
 }
 
 .transition-panel--left {
@@ -379,13 +392,13 @@ input, textarea, select {
 
 /* ---------- Selection ---------- */
 ::selection {
-  background: rgba(200, 164, 92, 0.3);
-  color: var(--color-white);
+  background: rgba(30, 64, 175, 0.15);
+  color: var(--color-text);
 }
 
 ::-moz-selection {
-  background: rgba(200, 164, 92, 0.3);
-  color: var(--color-white);
+  background: rgba(30, 64, 175, 0.15);
+  color: var(--color-text);
 }
 
 /* ---------- Scrollbar ---------- */
@@ -394,26 +407,23 @@ input, textarea, select {
 }
 
 ::-webkit-scrollbar-track {
-  background: var(--color-black);
+  background: var(--color-bg-alt);
 }
 
 ::-webkit-scrollbar-thumb {
-  background: var(--color-gold-dark);
+  background: var(--color-accent);
   border-radius: 3px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--color-gold);
+  background: var(--color-accent-light);
 }
 
 /* ---------- Responsive ---------- */
 @media (max-width: 768px) {
   body {
     font-size: 15px;
-    cursor: auto;
   }
-
-  a, button { cursor: auto; }
 
   .section {
     padding: clamp(3rem, 8vh, 5rem) 0;

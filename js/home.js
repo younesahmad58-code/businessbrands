@@ -46,15 +46,6 @@ document.addEventListener('DOMContentLoaded', function () {
     // Badge
     tl.from('.hero-badge', { y: -30, opacity: 0, duration: 0.7 }, 0);
 
-    // Logo 3D flip
-    tl.from('.hero-logo', {
-      rotateY: 90,
-      scale: 0.7,
-      opacity: 0,
-      duration: 1,
-      ease: 'back.out(1.4)'
-    }, 0.15);
-
     // Title character reveal
     var titleLines = document.querySelectorAll('.hero-title-line');
     titleLines.forEach(function (line, i) {
@@ -92,16 +83,6 @@ document.addEventListener('DOMContentLoaded', function () {
         ease: 'none'
       });
 
-      gsap.to('.hero-logo', {
-        scrollTrigger: {
-          trigger: '.hero',
-          start: 'top top',
-          end: 'bottom top',
-          scrub: 0.5
-        },
-        y: -60,
-        ease: 'none'
-      });
     }
   }
 
@@ -156,44 +137,20 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   })();
 
-  /* ---------- Services Horizontal Scroll ---------- */
-  (function initHorizontalScroll() {
-    var container = document.querySelector('.services-horizontal');
-    var track = document.querySelector('.services-track');
-    if (!container || !track) return;
-
-    var panels = gsap.utils.toArray('.service-panel');
-    if (panels.length === 0) return;
-
-    // Calculate total scroll width
-    var totalWidth = track.scrollWidth - window.innerWidth + 100;
-
-    gsap.to(track, {
-      x: function () { return -totalWidth; },
-      ease: 'none',
-      scrollTrigger: {
-        trigger: container,
-        start: 'top top',
-        end: function () { return '+=' + totalWidth; },
-        pin: true,
-        scrub: 1,
-        anticipatePin: 1,
-        invalidateOnRefresh: true
-      }
-    });
-
-    // Animate each panel as it enters
-    panels.forEach(function (panel) {
-      gsap.from(panel, {
+  /* ---------- Services Grid ---------- */
+  (function initServicesGrid() {
+    gsap.utils.toArray('.service-card').forEach(function (card, i) {
+      gsap.from(card, {
         scrollTrigger: {
-          trigger: panel,
-          containerAnimation: gsap.getById && gsap.getById('hscroll'),
-          start: 'left 80%',
-          toggleActions: 'play none none none'
+          trigger: card,
+          start: 'top 90%'
         },
+        y: 60,
+        opacity: 0,
         scale: 0.95,
-        opacity: 0.5,
-        duration: 0.6
+        duration: 0.8,
+        delay: i * 0.1,
+        ease: 'power3.out'
       });
     });
   })();

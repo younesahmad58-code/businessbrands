@@ -1,5 +1,5 @@
 /* ============================================================
-   Premium Navigation
+   Premium Navigation — Light Theme
    ============================================================ */
 
 #navbar {
@@ -14,11 +14,11 @@
 }
 
 #navbar.scrolled {
-  background: rgba(6, 6, 6, 0.88);
+  background: rgba(255, 255, 255, 0.92);
   backdrop-filter: blur(32px) saturate(1.4);
   -webkit-backdrop-filter: blur(32px) saturate(1.4);
-  border-bottom-color: rgba(200, 164, 92, 0.12);
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+  border-bottom-color: var(--color-border);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.06);
 }
 
 .nav-container {
@@ -39,14 +39,13 @@
 }
 
 .nav-logo img {
-  height: 56px;
+  height: 72px;
   width: auto;
   transition: filter 0.4s ease, transform 0.4s var(--ease-out);
-  filter: drop-shadow(0 0 0px transparent);
 }
 
 .nav-logo:hover img {
-  filter: drop-shadow(0 0 12px rgba(200, 164, 92, 0.35));
+  filter: drop-shadow(0 0 12px rgba(30, 64, 175, 0.2));
   transform: scale(1.03);
 }
 
@@ -69,7 +68,7 @@
   font-size: 0.78rem;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: var(--color-white-off);
+  color: var(--color-text-secondary);
   transition: color 0.3s ease;
   position: relative;
 }
@@ -81,7 +80,7 @@
   left: 1.25rem;
   right: 1.25rem;
   height: 1.5px;
-  background: var(--color-gold);
+  background: var(--color-accent);
   transform: scaleX(0);
   transform-origin: right;
   transition: transform 0.4s var(--ease-out);
@@ -89,7 +88,7 @@
 
 .nav-links a:hover,
 .nav-links a.active {
-  color: var(--color-gold);
+  color: var(--color-accent);
 }
 
 .nav-links a:hover::after,
@@ -102,9 +101,9 @@
 .nav-cta {
   margin-left: 0.75rem !important;
   padding: 0.6rem 1.5rem !important;
-  border: 1px solid var(--color-gold) !important;
+  border: 1px solid var(--color-accent) !important;
   border-radius: var(--radius-sm) !important;
-  color: var(--color-gold) !important;
+  color: var(--color-accent) !important;
   position: relative;
   overflow: hidden;
 }
@@ -116,7 +115,7 @@
   left: -100%;
   width: 100%;
   height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(200, 164, 92, 0.15), transparent);
+  background: linear-gradient(90deg, transparent, rgba(30, 64, 175, 0.1), transparent);
   transition: left 0.6s ease;
 }
 
@@ -129,7 +128,7 @@
 }
 
 .nav-cta:hover {
-  background: rgba(200, 164, 92, 0.08) !important;
+  background: var(--color-accent-pale) !important;
 }
 
 /* ---------- Hamburger ---------- */
@@ -148,14 +147,14 @@
   display: block;
   width: 24px;
   height: 1.5px;
-  background: var(--color-white);
+  background: var(--color-text);
   transition: transform 0.4s var(--ease-out), opacity 0.3s ease, background 0.3s ease;
   transform-origin: center;
 }
 
 .nav-hamburger.active span:nth-child(1) {
   transform: translateY(7.5px) rotate(45deg);
-  background: var(--color-gold);
+  background: var(--color-accent);
 }
 
 .nav-hamburger.active span:nth-child(2) {
@@ -165,7 +164,7 @@
 
 .nav-hamburger.active span:nth-child(3) {
   transform: translateY(-7.5px) rotate(-45deg);
-  background: var(--color-gold);
+  background: var(--color-accent);
 }
 
 /* ---------- Mobile Menu ---------- */
@@ -184,10 +183,10 @@
     flex-direction: column;
     justify-content: center;
     gap: 0;
-    background: rgba(3, 3, 3, 0.97);
+    background: rgba(255, 255, 255, 0.98);
     backdrop-filter: blur(40px);
     -webkit-backdrop-filter: blur(40px);
-    border-left: 1px solid rgba(200, 164, 92, 0.1);
+    border-left: 1px solid var(--color-border);
     transform: translateX(100%);
     transition: transform 0.5s var(--ease-out);
     padding: 2rem;
