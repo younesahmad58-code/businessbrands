@@ -660,24 +660,24 @@
 .cta-banner-title {
   font-family: var(--font-display);
   font-weight: 300;
-  font-size: clamp(2rem, 4.5vw, 4rem);
-  line-height: 1.3;
+  font-size: clamp(2rem, 3.5vw, 3.5rem);
+  line-height: 1.2;
   color: #ffffff;
   margin-bottom: var(--space-lg);
-  max-width: 900px;
   margin-left: auto;
   margin-right: auto;
-  padding: 0 1rem;
-  overflow-wrap: break-word;
-  word-break: break-word;
+  padding: 0 2rem;
   text-align: center;
+  white-space: nowrap;
 }
 
 @media (max-width: 768px) {
   .cta-banner-title {
-    font-size: clamp(1.4rem, 5.5vw, 2rem);
+    font-size: clamp(1.3rem, 5vw, 2rem);
     line-height: 1.35;
     padding: 0 0.5rem;
+    white-space: normal;
+    overflow-wrap: break-word;
   }
 }
 
