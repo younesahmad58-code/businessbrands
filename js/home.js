@@ -9,6 +9,14 @@ document.addEventListener('DOMContentLoaded', function () {
     var preloader = document.getElementById('preloader');
     if (!preloader) return;
 
+    // Skip preloader if coming from another page (transition already covers entry)
+    if (window.bbTransitioningIn || sessionStorage.getItem('bb-skip-preloader')) {
+      preloader.style.display = 'none';
+      sessionStorage.removeItem('bb-skip-preloader');
+      initHeroAnimations();
+      return;
+    }
+
     // Animate preloader text letters
     var textEl = preloader.querySelector('.preloader-text');
     if (textEl) {

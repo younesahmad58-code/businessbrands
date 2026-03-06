@@ -97,6 +97,12 @@
   --radius-xl:  32px;
 }
 
+@media (max-width: 768px) {
+  :root {
+    --nav-height: 70px;
+  }
+}
+
 /* ---------- Reset ---------- */
 *, *::before, *::after {
   margin: 0;
@@ -378,6 +384,19 @@ input, textarea, select {
 .transition-panel--right {
   right: 0;
   transform: translateX(100%);
+}
+
+/* When arriving from another page, panels cover screen immediately */
+html.bb-entering .transition-panel--left {
+  transform: translateX(0);
+}
+
+html.bb-entering .transition-panel--right {
+  transform: translateX(0);
+}
+
+html.bb-entering .transition-logo {
+  opacity: 1;
 }
 
 .transition-logo {

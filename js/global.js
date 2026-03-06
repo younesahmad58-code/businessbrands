@@ -220,16 +220,17 @@ function initTiltCards(selector) {
   var panelRight = transition.querySelector('.transition-panel--right');
   var logo = transition.querySelector('.transition-logo');
 
-  // Check if we came from another page (sessionStorage flag)
-  if (sessionStorage.getItem('bb-transitioning')) {
+  // Ensure body is visible (fix for home fade-out navigation)
+  document.body.style.opacity = '1';
+
+  // Check if we came from another page (CSS class set by inline head script)
+  if (document.documentElement.classList.contains('bb-entering')) {
     window.bbTransitioningIn = true;
     sessionStorage.removeItem('bb-transitioning');
-    // Panels are covering — reveal
-    panelLeft.style.transform = 'translateX(0)';
-    panelRight.style.transform = 'translateX(0)';
-    logo.style.opacity = '1';
 
-    var tl = gsap.timeline({ delay: 0.15 });
+    var tl = gsap.timeline({ delay: 0.15, onComplete: function() {
+      document.documentElement.classList.remove('bb-entering');
+    }});
     tl.to(logo, { opacity: 0, duration: 0.25, ease: 'power2.in' })
       .to(panelLeft, { x: '-100%', duration: 0.5, ease: 'power3.inOut' }, 0.2)
       .to(panelRight, { x: '100%', duration: 0.5, ease: 'power3.inOut' }, 0.2);
@@ -251,7 +252,8 @@ function initTiltCards(selector) {
     var isHome = href.includes('index.html') || href === 'index.html' || href === '/' || link.classList.contains('nav-logo');
     
     if (isHome) {
-      // Fade out for Home/Logo (leads to preloader)
+      // Fade out for Home/Logo — skip preloader on internal navigation
+      sessionStorage.setItem('bb-skip-preloader', 'true');
       gsap.to(document.body, {opacity: 0, duration: 0.2, ease: 'power2.out', onComplete: function() {
         window.location.href = href;
       }});
