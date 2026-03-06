@@ -16,6 +16,7 @@
   align-items: center;
   justify-content: center;
   gap: 2.5rem;
+  clip-path: inset(0 0% 0 0%);
 }
 
 .preloader-logo {
@@ -132,10 +133,19 @@
   line-height: 1.05;
   color: var(--color-text, #0d1b2a);
   perspective: 600px;
+  overflow-wrap: break-word;
 }
 
 .hero-title .char {
   transform-origin: bottom center;
+}
+
+.hero-title-highlight .char {
+  background: var(--gradient-accent-text);
+  background-size: 300% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 .hero-subtitle {
@@ -652,6 +662,7 @@
   margin-left: auto;
   margin-right: auto;
   padding: 0 1rem;
+  overflow-wrap: break-word;
 }
 
 @media (max-width: 768px) {
@@ -749,13 +760,21 @@
 
 @media (max-width: 480px) {
   .hero-title {
-    font-size: 2.5rem;
+    font-size: clamp(1.6rem, 7vw, 2.2rem);
   }
   .cta-banner-title {
-    font-size: 1.5rem;
+    font-size: clamp(1.2rem, 5.5vw, 1.5rem);
   }
   .brands-stat {
     flex: 1 1 100%;
+  }
+  .preloader-logo {
+    width: 140px;
+    height: 140px;
+  }
+  .preloader-ring {
+    width: 210px;
+    height: 210px;
   }
 }
 

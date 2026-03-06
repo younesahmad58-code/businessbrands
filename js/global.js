@@ -13,20 +13,39 @@ function splitText(element) {
   element.setAttribute('aria-label', text);
 
   const chars = [];
-  for (let i = 0; i < text.length; i++) {
-    const span = document.createElement('span');
-    span.classList.add('char');
-    span.style.display = 'inline-block';
-    span.setAttribute('aria-hidden', 'true');
-    if (text[i] === ' ') {
-      span.innerHTML = '&nbsp;';
-      span.style.width = '0.3em';
-    } else {
-      span.textContent = text[i];
+  const words = text.split(' ');
+
+  words.forEach(function(word, wi) {
+    // Create word wrapper to prevent mid-word line breaks
+    var wordSpan = document.createElement('span');
+    wordSpan.classList.add('word');
+    wordSpan.style.display = 'inline-block';
+    wordSpan.style.whiteSpace = 'nowrap';
+
+    for (var i = 0; i < word.length; i++) {
+      var span = document.createElement('span');
+      span.classList.add('char');
+      span.style.display = 'inline-block';
+      span.setAttribute('aria-hidden', 'true');
+      span.textContent = word[i];
+      wordSpan.appendChild(span);
+      chars.push(span);
     }
-    element.appendChild(span);
-    chars.push(span);
-  }
+    element.appendChild(wordSpan);
+
+    // Add space between words (not after last word)
+    if (wi < words.length - 1) {
+      var space = document.createElement('span');
+      space.classList.add('char');
+      space.style.display = 'inline-block';
+      space.setAttribute('aria-hidden', 'true');
+      space.innerHTML = '&nbsp;';
+      space.style.width = '0.3em';
+      element.appendChild(space);
+      chars.push(space);
+    }
+  });
+
   return chars;
 }
 

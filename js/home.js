@@ -31,6 +31,12 @@ document.addEventListener('DOMContentLoaded', function () {
       });
     }
 
+    // Safety timeout — if GSAP or clipPath fails, force-hide after 4s
+    var preloaderTimeout = setTimeout(function () {
+      preloader.style.display = 'none';
+      initHeroAnimations();
+    }, 4000);
+
     // After ring draws + text reveals, split preloader
     gsap.to(preloader, {
       delay: 1.2,
@@ -38,6 +44,7 @@ document.addEventListener('DOMContentLoaded', function () {
       clipPath: 'inset(0 50% 0 50%)',
       ease: 'power3.inOut',
       onComplete: function () {
+        clearTimeout(preloaderTimeout);
         preloader.style.display = 'none';
         initHeroAnimations();
       }
