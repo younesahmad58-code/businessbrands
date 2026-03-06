@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contact — Business Brands SRL</title>
-  <meta name="description" content="Contactați Business Brands SRL — Telefon: 0792 628 227, Email: comenzi@homegate.ro. Suntem pregătiți pentru noi colaborări de succes.">
+  <meta name="description" content="Contactați Business Brands SRL — Telefon: 0787 747 939, Email: businessbrand40@yahoo.com. Suntem pregătiți pentru noi colaborări de succes.">
   <link rel="icon" type="image/png" href="images/products/logo.png">
   <script>if(sessionStorage.getItem('bb-transitioning'))document.documentElement.classList.add('bb-entering');</script>
   <link rel="stylesheet" href="css/global.css">
@@ -26,24 +26,40 @@
   <nav id="navbar">
       <div class="nav-container">
         <ul class="nav-links-left">
-          <li><a href="index.html" data-page="home">Acasă</a></li>
-          <li><a href="despre.html" data-page="despre">Despre Noi</a></li>
+          <li><a href="index.html" data-page="home" data-i18n="nav.home">Acasă</a></li>
+          <li><a href="despre.html" data-page="despre" data-i18n="nav.about">Despre Noi</a></li>
         </ul>
         <a href="index.html" class="nav-logo">
           <img src="images/products/logo.png" alt="Business Brands SRL" style="width: auto; object-fit: contain;">
         </a>
         <ul class="nav-links-right">
-          <li><a href="servicii.html" data-page="servicii">Servicii</a></li>
-          <li><a href="produse.html" data-page="produse">Produse &amp; Branduri</a></li>
-          <li><a href="contact.html" data-page="contact" class="nav-cta">Contact</a></li>
+          <li><a href="servicii.html" data-page="servicii" data-i18n="nav.services">Servicii</a></li>
+          <li><a href="produse.html" data-page="produse" data-i18n="nav.products">Produse &amp; Branduri</a></li>
+          <li><a href="contact.html" data-page="contact" class="nav-cta" data-i18n="nav.contact">Contact</a></li>
         </ul>
+        <div class="lang-switcher">
+          <button class="lang-btn" aria-expanded="false" aria-label="Schimbă limba">
+            <img src="images/flags/ro.svg" alt="" class="lang-flag"> RO
+            <svg class="lang-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <ul class="lang-dropdown">
+            <li><a href="#" data-lang="ro"><img src="images/flags/ro.svg" alt="" class="lang-flag"> Română</a></li>
+            <li><a href="#" data-lang="en"><img src="images/flags/gb.svg" alt="" class="lang-flag"> English</a></li>
+            <li><a href="#" data-lang="ar"><img src="images/flags/ae.svg" alt="" class="lang-flag"> العربية</a></li>
+          </ul>
+        </div>
         <button class="nav-hamburger" aria-label="Meniu"><span></span><span></span><span></span></button>
         <ul class="nav-mobile-links">
-          <li><a href="index.html">Acasă</a></li>
-          <li><a href="despre.html">Despre Noi</a></li>
-          <li><a href="servicii.html">Servicii</a></li>
-          <li><a href="produse.html">Produse &amp; Branduri</a></li>
-          <li><a href="contact.html" class="nav-cta">Contact</a></li>
+          <li><a href="index.html" data-i18n="nav.home">Acasă</a></li>
+          <li><a href="despre.html" data-i18n="nav.about">Despre Noi</a></li>
+          <li><a href="servicii.html" data-i18n="nav.services">Servicii</a></li>
+          <li><a href="produse.html" data-i18n="nav.products">Produse &amp; Branduri</a></li>
+          <li><a href="contact.html" class="nav-cta" data-i18n="nav.contact">Contact</a></li>
+          <li class="lang-mobile-switcher">
+            <a href="#" data-lang="ro"><img src="images/flags/ro.svg" alt="" class="lang-flag"> RO</a>
+            <a href="#" data-lang="en"><img src="images/flags/gb.svg" alt="" class="lang-flag"> EN</a>
+            <a href="#" data-lang="ar"><img src="images/flags/ae.svg" alt="" class="lang-flag"> AR</a>
+          </li>
         </ul>
       </div>
     </nav>
@@ -55,8 +71,8 @@
       <div class="noise-overlay"></div>
       <div class="particles-container" data-particles="12"></div>
     </div>
-    <h1 class="page-hero-title">Hai Să Vorbim</h1>
-    <p class="page-hero-subtitle">Suntem întotdeauna pregătiți pentru noi colaborări de succes</p>
+    <h1 class="page-hero-title" data-i18n="contact.hero.title">Hai Să Vorbim</h1>
+    <p class="page-hero-subtitle" data-i18n="contact.hero.subtitle">Suntem întotdeauna pregătiți pentru noi colaborări de succes</p>
   </section>
 
   <!-- CONTACT SECTION -->
@@ -67,11 +83,21 @@
         <div class="contact-info">
           <div class="contact-info-item">
             <div class="contact-info-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+            </div>
+            <div>
+              <div class="contact-info-label" data-i18n="contact.ceo.label">CEO</div>
+              <div class="contact-info-value">Husein Adnan</div>
+            </div>
+          </div>
+
+          <div class="contact-info-item">
+            <div class="contact-info-icon">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
             </div>
             <div>
-              <div class="contact-info-label">Telefon</div>
-              <div class="contact-info-value"><a href="tel:+40792628227">0792 628 227</a></div>
+              <div class="contact-info-label" data-i18n="contact.phone.label">Telefon</div>
+              <div class="contact-info-value"><a href="tel:+40787747939">0787 747 939</a></div>
             </div>
           </div>
 
@@ -80,8 +106,8 @@
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 7l-10 7L2 7"/></svg>
             </div>
             <div>
-              <div class="contact-info-label">Email</div>
-              <div class="contact-info-value"><a href="mailto:comenzi@homegate.ro">comenzi@homegate.ro</a></div>
+              <div class="contact-info-label" data-i18n="contact.email.label">Email</div>
+              <div class="contact-info-value"><a href="mailto:businessbrand40@yahoo.com">businessbrand40@yahoo.com</a></div>
             </div>
           </div>
 
@@ -90,8 +116,8 @@
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
             </div>
             <div>
-              <div class="contact-info-label">Sediu</div>
-              <div class="contact-info-value">Bulevardul Voluntari 86, Smart Expo Flora, București</div>
+              <div class="contact-info-label" data-i18n="contact.address.label">Sediu</div>
+              <div class="contact-info-value" data-i18n="contact.address.value">Bulevardul Voluntari 86, Smart Expo Flora, Voluntari, Ilfov</div>
             </div>
           </div>
 
@@ -100,8 +126,8 @@
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg>
             </div>
             <div>
-              <div class="contact-info-label">Magazin Online</div>
-              <div class="contact-info-value"><a href="https://homegate.ro" target="_blank" rel="noopener">homegate.ro</a></div>
+              <div class="contact-info-label" data-i18n="contact.shop.label">Magazin Online</div>
+              <div class="contact-info-value"><a href="https://homegate.ro" target="_blank" rel="noopener">homegate.ro (Brand Partener)</a></div>
             </div>
           </div>
 
@@ -110,8 +136,8 @@
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
             </div>
             <div>
-              <div class="contact-info-label">Program</div>
-              <div class="contact-info-value">Luni — Vineri: 08:00 – 17:00</div>
+              <div class="contact-info-label" data-i18n="contact.hours.label">Program</div>
+              <div class="contact-info-value" data-i18n="contact.hours.value">Luni — Vineri: 08:00 – 17:00</div>
             </div>
           </div>
         </div>
@@ -122,26 +148,26 @@
             <div class="contact-form-inner">
               <div class="form-group">
                 <input type="text" class="form-input" id="name" name="name" required autocomplete="name">
-                <label for="name" class="form-label">Numele Dvs.</label>
+                <label for="name" class="form-label" data-i18n="contact.form.name">Numele Dvs.</label>
               </div>
 
               <div class="form-group">
                 <input type="email" class="form-input" id="email" name="email" required autocomplete="email">
-                <label for="email" class="form-label">Adresa de Email</label>
+                <label for="email" class="form-label" data-i18n="contact.form.email">Adresa de Email</label>
               </div>
 
               <div class="form-group">
                 <input type="text" class="form-input" id="subject" name="subject">
-                <label for="subject" class="form-label">Subiect</label>
+                <label for="subject" class="form-label" data-i18n="contact.form.subject">Subiect</label>
               </div>
 
               <div class="form-group">
                 <textarea class="form-textarea" id="message" name="message" rows="4" required></textarea>
-                <label for="message" class="form-label">Mesajul Dvs.</label>
+                <label for="message" class="form-label" data-i18n="contact.form.message">Mesajul Dvs.</label>
               </div>
 
               <button type="submit" class="btn btn--gold btn--shimmer form-submit">
-                Trimite Mesajul
+                <span data-i18n="contact.form.submit">Trimite Mesajul</span>
                 <span class="btn-arrow">→</span>
               </button>
             </div>
@@ -151,8 +177,8 @@
             <div class="form-success-icon">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
             </div>
-            <h3>Mesaj Trimis cu Succes</h3>
-            <p>Vă mulțumim pentru interes. Echipa noastră vă va contacta în cel mai scurt timp posibil.</p>
+            <h3 data-i18n="contact.form.success.title">Mesaj Trimis cu Succes</h3>
+            <p data-i18n="contact.form.success.text">Vă mulțumim pentru interes. Echipa noastră vă va contacta în cel mai scurt timp posibil.</p>
           </div>
         </div>
       </div>
@@ -162,14 +188,14 @@
   <!-- MAP SECTION -->
   <section class="section map-section" style="background: linear-gradient(135deg, #0D1B2A 0%, #1A3A5C 50%, #0D2847 100%); padding-bottom: 0;">
     <div style="position:relative; z-index:2; text-align:center; padding: 0 2rem;">
-      <div class="map-deco-text" style="color: rgba(91,155,213,0.12); -webkit-text-stroke-color: rgba(91,155,213,0.15);">BUCUREȘTI</div>
+      <div class="map-deco-text" data-i18n="contact.map.title" style="color: rgba(91,155,213,0.12); -webkit-text-stroke-color: rgba(91,155,213,0.15);">DEPOZIT CENTRAL</div>
       <div class="map-pin" style="margin: 0 auto 1rem;">
         <svg viewBox="0 0 24 24" stroke-width="2" style="stroke: #5B9BD5; fill: none;"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
       </div>
       <p class="map-address" style="color: #8A9BB0;">
         Business Brands SRL<br>
-        Bulevardul Voluntari 86, Smart Expo Flora, București<br>
-        <a href="tel:+40792628227" style="color: #5B9BD5;">0792 628 227</a> · <a href="mailto:comenzi@homegate.ro" style="color: #5B9BD5;">comenzi@homegate.ro</a>
+        Bulevardul Voluntari 86, Smart Expo Flora, Voluntari, Ilfov<br>
+        <a href="tel:+40787747939" style="color: #5B9BD5;">0787 747 939</a> · <a href="mailto:businessbrand40@yahoo.com" style="color: #5B9BD5;">businessbrand40@yahoo.com</a>
       </p>
       <div class="map-embed" style="margin: 2.5rem auto 0; max-width: 1000px;">
         <iframe
@@ -193,42 +219,46 @@
         <div class="footer-grid">
           <div class="footer-brand">
             <div class="footer-logo-wrap"><img src="images/products/logo.png" alt="Business Brands SRL" class="footer-logo"></div>
-            <p class="footer-tagline">Distribuție națională de produse FMCG de calitate</p>
-            <p class="footer-description">Construim punți între producătorii internaționali de renume și piața românească.</p>
+            <p class="footer-tagline" data-i18n="footer.tagline">Distribuție națională de produse FMCG de calitate</p>
+            <p class="footer-description" data-i18n="footer.description.short">Construim punți între producătorii internaționali de renume și piața românească.</p>
           </div>
           <div class="footer-column">
-            <h4>Navigare</h4>
+            <h4 data-i18n="footer.nav">Navigare</h4>
             <ul>
-              <li><a href="index.html">Acasă</a></li>
-              <li><a href="despre.html">Despre Noi</a></li>
-              <li><a href="servicii.html">Servicii</a></li>
-              <li><a href="produse.html">Produse & Branduri</a></li>
-              <li><a href="contact.html">Contact</a></li>
+              <li><a href="index.html" data-i18n="nav.home">Acasă</a></li>
+              <li><a href="despre.html" data-i18n="nav.about">Despre Noi</a></li>
+              <li><a href="servicii.html" data-i18n="nav.services">Servicii</a></li>
+              <li><a href="produse.html" data-i18n="nav.products">Produse & Branduri</a></li>
+              <li><a href="contact.html" data-i18n="nav.contact">Contact</a></li>
             </ul>
           </div>
           <div class="footer-column">
-            <h4>Contact</h4>
+            <h4 data-i18n="footer.contact">Contact</h4>
             <ul>
               <li class="footer-contact-item">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
-                <a href="tel:+40792628227">0792 628 227</a>
+                <a href="tel:+40787747939">0787 747 939</a>
               </li>
               <li class="footer-contact-item">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 7l-10 7L2 7"/></svg>
-                <a href="mailto:comenzi@homegate.ro">comenzi@homegate.ro</a>
+                <a href="mailto:businessbrand40@yahoo.com">businessbrand40@yahoo.com</a>
               </li>
               <li class="footer-contact-item">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
-                <span>București, România</span>
+                <span data-i18n="footer.location">Voluntari, Ilfov, România</span>
               </li>
             </ul>
           </div>
           <div class="footer-column">
-            <h4>Hai Să Colaborăm</h4>
-            <p class="footer-cta-text">Sunteți interesat de un parteneriat? Contactați-ne pentru a discuta despre oportunitățile de colaborare.</p>
+            <h4 data-i18n="footer.collaborate">Hai Să Colaborăm</h4>
+            <p class="footer-cta-text" data-i18n="footer.cta.text">CEO: Husein Adnan<br>Sunteți interesat de un parteneriat? Contactați-ne pentru a discuta despre oportunitățile de colaborare.</p>
             <a href="contact.html" class="btn btn--outline btn--shimmer" style="margin-top: 0.75rem; font-size: 0.8rem; padding: 0.5rem 1.2rem;">
-              Contactați-ne
+              <span data-i18n="footer.cta.btn">Contactați-ne</span>
               <span class="btn-arrow">→</span>
+            </a>
+            <a href="https://www.google.com/maps/place/Bd.+Voluntari+86,+Voluntari+077190" target="_blank" rel="noopener noreferrer" class="btn btn--outline btn--shimmer" style="margin-top: 0.5rem; font-size: 0.75rem; padding: 0.4rem 1rem; display: inline-flex; align-items: center; gap: 0.4rem;">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              <span data-i18n="footer.map.btn">Locația pe Hartă</span> <span class="btn-arrow">→</span>
             </a>
           </div>
         </div>
@@ -237,8 +267,8 @@
     <div class="footer-bottom">
       <div class="container">
         <div class="footer-bottom-inner">
-          <span class="footer-copyright">© 2026 Business Brands SRL. Toate drepturile rezervate.</span>
-          <span class="footer-legal"><a href="https://homegate.ro" target="_blank" rel="noopener">homegate.ro</a></span>
+          <span class="footer-copyright" data-i18n="footer.copyright">© 2026 Business Brands SRL. Toate drepturile rezervate.</span>
+          <span class="footer-legal"><a href="https://homegate.ro" target="_blank" rel="noopener">homegate.ro (Brand Partener)</a></span>
         </div>
       </div>
     </div>
@@ -246,6 +276,7 @@
 
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+  <script src="js/translations.js"></script>
   <script src="js/global.js"></script>
   <script src="js/contact.js"></script>
 </body>

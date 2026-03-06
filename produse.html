@@ -26,24 +26,40 @@
   <nav id="navbar">
       <div class="nav-container">
         <ul class="nav-links-left">
-          <li><a href="index.html" data-page="home">Acasă</a></li>
-          <li><a href="despre.html" data-page="despre">Despre Noi</a></li>
+          <li><a href="index.html" data-page="home" data-i18n="nav.home">Acasă</a></li>
+          <li><a href="despre.html" data-page="despre" data-i18n="nav.about">Despre Noi</a></li>
         </ul>
         <a href="index.html" class="nav-logo">
           <img src="images/products/logo.png" alt="Business Brands SRL" style="width: auto; object-fit: contain;">
         </a>
         <ul class="nav-links-right">
-          <li><a href="servicii.html" data-page="servicii">Servicii</a></li>
-          <li><a href="produse.html" data-page="produse">Produse &amp; Branduri</a></li>
-          <li><a href="contact.html" data-page="contact" class="nav-cta">Contact</a></li>
+          <li><a href="servicii.html" data-page="servicii" data-i18n="nav.services">Servicii</a></li>
+          <li><a href="produse.html" data-page="produse" data-i18n="nav.products">Produse &amp; Branduri</a></li>
+          <li><a href="contact.html" data-page="contact" class="nav-cta" data-i18n="nav.contact">Contact</a></li>
         </ul>
+        <div class="lang-switcher">
+          <button class="lang-btn" aria-expanded="false" aria-label="Schimbă limba">
+            <img src="images/flags/ro.svg" alt="" class="lang-flag"> RO
+            <svg class="lang-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <ul class="lang-dropdown">
+            <li><a href="#" data-lang="ro"><img src="images/flags/ro.svg" alt="" class="lang-flag"> Română</a></li>
+            <li><a href="#" data-lang="en"><img src="images/flags/gb.svg" alt="" class="lang-flag"> English</a></li>
+            <li><a href="#" data-lang="ar"><img src="images/flags/ae.svg" alt="" class="lang-flag"> العربية</a></li>
+          </ul>
+        </div>
         <button class="nav-hamburger" aria-label="Meniu"><span></span><span></span><span></span></button>
         <ul class="nav-mobile-links">
-          <li><a href="index.html">Acasă</a></li>
-          <li><a href="despre.html">Despre Noi</a></li>
-          <li><a href="servicii.html">Servicii</a></li>
-          <li><a href="produse.html">Produse &amp; Branduri</a></li>
-          <li><a href="contact.html" class="nav-cta">Contact</a></li>
+          <li><a href="index.html" data-i18n="nav.home">Acasă</a></li>
+          <li><a href="despre.html" data-i18n="nav.about">Despre Noi</a></li>
+          <li><a href="servicii.html" data-i18n="nav.services">Servicii</a></li>
+          <li><a href="produse.html" data-i18n="nav.products">Produse &amp; Branduri</a></li>
+          <li><a href="contact.html" class="nav-cta" data-i18n="nav.contact">Contact</a></li>
+          <li class="lang-mobile-switcher">
+            <a href="#" data-lang="ro"><img src="images/flags/ro.svg" alt="" class="lang-flag"> RO</a>
+            <a href="#" data-lang="en"><img src="images/flags/gb.svg" alt="" class="lang-flag"> EN</a>
+            <a href="#" data-lang="ar"><img src="images/flags/ae.svg" alt="" class="lang-flag"> AR</a>
+          </li>
         </ul>
       </div>
     </nav>
@@ -55,44 +71,72 @@
       <div class="noise-overlay"></div>
       <div class="particles-container" data-particles="12"></div>
     </div>
-    <h1 class="page-hero-title">Produse & Branduri</h1>
-    <p class="page-hero-subtitle">Portofoliul nostru cuprinde cele mai apreciate branduri internaționale, disponibile pe întreg teritoriul României</p>
+    <h1 class="page-hero-title" data-i18n="prod.hero.title">Produse & Branduri</h1>
+    <p class="page-hero-subtitle" data-i18n="prod.hero.subtitle">Portofoliul nostru cuprinde cele mai apreciate branduri internaționale, disponibile pe întreg teritoriul României</p>
   </section>
 
   <!-- BRANDS GRID -->
   <section class="section">
     <div class="container">
       <div style="text-align:center; margin-bottom: var(--space-2xl);">
-        <span class="section-label" style="justify-content:center;">Parteneriate de Prestigiu</span>
-        <h2 class="section-title">Branduri <span class="text-chrome text-chrome--animated">Partenere</span></h2>
-        <p class="section-subtitle" style="margin: 0 auto;">Peste 50 de branduri internaționale de renume, fiecare selectat pentru calitatea și prestigiul său</p>
+        <span class="section-label" style="justify-content:center;" data-i18n="prod.brands.label">Parteneriate de Prestigiu</span>
+        <h2 class="section-title"><span data-i18n="prod.brands.title">Branduri</span> <span class="text-chrome text-chrome--animated" data-i18n="prod.brands.title.accent">Partenere</span></h2>
+        <p class="section-subtitle" style="margin: 0 auto;" data-i18n="prod.brands.subtitle">Peste 50 de branduri internaționale de renume, fiecare selectat pentru calitatea și prestigiul său</p>
       </div>
 
       <div class="brands-grid">
-        <div class="brand-card glass-card"><span class="brand-card-name">Persil</span></div>
-        <div class="brand-card glass-card"><span class="brand-card-name">Ariel</span></div>
-        <div class="brand-card glass-card"><span class="brand-card-name">Fairy</span></div>
-        <div class="brand-card glass-card"><span class="brand-card-name">Lenor</span></div>
-        <div class="brand-card glass-card"><span class="brand-card-name">Domestos</span></div>
-        <div class="brand-card glass-card"><span class="brand-card-name">Perwoll</span></div>
-        <div class="brand-card glass-card"><span class="brand-card-name">Chanteclair</span></div>
-        <div class="brand-card glass-card"><span class="brand-card-name">Dove</span></div>
-        <div class="brand-card glass-card"><span class="brand-card-name">CIF</span></div>
-        <div class="brand-card glass-card"><span class="brand-card-name">Calgon</span></div>
-        <div class="brand-card glass-card"><span class="brand-card-name">ACE</span></div>
-        <div class="brand-card glass-card"><span class="brand-card-name">Duracell</span></div>
-        <div class="brand-card glass-card"><span class="brand-card-name">BIC</span></div>
-        <div class="brand-card glass-card"><span class="brand-card-name">Dermomed</span></div>
-        <div class="brand-card glass-card"><span class="brand-card-name">TRESemmé</span></div>
-        <div class="brand-card glass-card"><span class="brand-card-name">Pantene</span></div>
-        <div class="brand-card glass-card"><span class="brand-card-name">Asevi</span></div>
-        <div class="brand-card glass-card"><span class="brand-card-name">Malizia</span></div>
-        <div class="brand-card glass-card"><span class="brand-card-name">Semana</span></div>
-        <div class="brand-card glass-card"><span class="brand-card-name">Narcisa</span></div>
-        <div class="brand-card glass-card"><span class="brand-card-name">Viantic</span></div>
-        <div class="brand-card glass-card brand-card--featured">
+        <div class="brand-card glass-card brand-card--with-logo">
+          <img src="images/brands/P&G_logo.png" alt="Procter & Gamble" class="brand-card-logo" loading="lazy">
+          <span class="brand-card-name">Procter & Gamble</span>
+        </div>
+        <div class="brand-card glass-card brand-card--with-logo">
+          <img src="images/brands/Henkel-Logo.svg.png" alt="Henkel" class="brand-card-logo" loading="lazy">
+          <span class="brand-card-name">Henkel</span>
+        </div>
+        <div class="brand-card glass-card brand-card--with-logo">
+          <img src="images/brands/Unilever-Logo.wine.png" alt="Unilever" class="brand-card-logo" loading="lazy">
+          <span class="brand-card-name">Unilever</span>
+        </div>
+        <div class="brand-card glass-card brand-card--with-logo">
+          <img src="images/brands/images%20(1).png" alt="Reckitt" class="brand-card-logo" loading="lazy">
+          <span class="brand-card-name">Reckitt</span>
+        </div>
+        <div class="brand-card glass-card brand-card--with-logo">
+          <img src="images/brands/Duracell_logo.svg" alt="Duracell" class="brand-card-logo" loading="lazy">
+          <span class="brand-card-name">Duracell</span>
+        </div>
+        <div class="brand-card glass-card brand-card--with-logo">
+          <img src="images/brands/images%20(3).png" alt="BIC" class="brand-card-logo" loading="lazy">
+          <span class="brand-card-name">BIC</span>
+        </div>
+        <div class="brand-card glass-card brand-card--with-logo">
+          <img src="images/brands/images%20(2).png" alt="Fater" class="brand-card-logo" loading="lazy">
+          <span class="brand-card-name">Fater</span>
+        </div>
+        <div class="brand-card glass-card brand-card--with-logo">
+          <img src="images/brands/Logo_Mirato_italia_web.png" alt="Mirato" class="brand-card-logo" loading="lazy">
+          <span class="brand-card-name">Mirato</span>
+        </div>
+        <div class="brand-card glass-card brand-card--with-logo">
+          <img src="images/brands/real-chimica.png" alt="Realchimica" class="brand-card-logo" loading="lazy">
+          <span class="brand-card-name">Realchimica</span>
+        </div>
+        <div class="brand-card glass-card brand-card--with-logo">
+          <img src="images/brands/dermomed%20logo.jpg" alt="Dermomed" class="brand-card-logo" loading="lazy">
+          <span class="brand-card-name">Dermomed</span>
+        </div>
+        <div class="brand-card glass-card brand-card--with-logo">
+          <img src="images/brands/images.jpg" alt="Pons Químicas" class="brand-card-logo" loading="lazy">
+          <span class="brand-card-name">Pons Químicas</span>
+        </div>
+        <div class="brand-card glass-card brand-card--with-logo">
+          <img src="images/brands/Farmec_logo.svg.png" alt="Farmec" class="brand-card-logo" loading="lazy">
+          <span class="brand-card-name">Farmec</span>
+        </div>
+        <div class="brand-card glass-card brand-card--featured brand-card--with-logo">
+          <img src="images/products/logo.png" alt="HomeGate" class="brand-card-logo" loading="lazy">
           <span class="brand-card-name">HomeGate</span>
-          <span class="brand-card-badge">Brandul Nostru</span>
+          <span class="brand-card-badge" data-i18n="prod.homegate.label">Brand Partener</span>
         </div>
       </div>
     </div>
@@ -102,203 +146,28 @@
   <section class="section section--dark">
     <div class="container">
       <div style="text-align:center; margin-bottom: var(--space-lg);">
-        <span class="section-label" style="justify-content:center;">Galerie Produse</span>
-        <h2 class="section-title">Portofoliul <span class="text-chrome text-chrome--animated">Complet</span></h2>
+        <span class="section-label" style="justify-content:center;" data-i18n="prod.gallery.label">Galerie Produse</span>
+        <h2 class="section-title"><span data-i18n="prod.gallery.title">Portofoliul</span> <span class="text-chrome text-chrome--animated" data-i18n="prod.gallery.title.accent">Complet</span></h2>
       </div>
 
       <!-- Filters -->
       <div class="filter-bar">
-        <button class="filter-btn active" data-filter="toate">Toate</button>
-        <button class="filter-btn" data-filter="curatenie">Curățenie</button>
-        <button class="filter-btn" data-filter="ingrijire">Îngrijire</button>
-        <button class="filter-btn" data-filter="casa">Casă & Grădină</button>
-        <button class="filter-btn" data-filter="electronice">Electronice HomeGate</button>
+        <button class="filter-btn active" data-filter="toate" data-i18n="prod.filter.all">Toate</button>
+        <button class="filter-btn" data-filter="curatenie" data-i18n="prod.filter.cleaning">Curățenie</button>
+        <button class="filter-btn" data-filter="ingrijire" data-i18n="prod.filter.care">Îngrijire</button>
+        <button class="filter-btn" data-filter="casa" data-i18n="prod.filter.home">Casă & Grădină</button>
+        <button class="filter-btn" data-filter="electronice" data-i18n="prod.filter.electronics">Electronice HomeGate</button>
+        <button class="filter-btn" data-filter="altele" data-i18n="prod.filter.other">Altele</button>
       </div>
 
-      <!-- Products Grid -->
-      <div class="products-full-grid">
-        <!-- Curatenie -->
-        <div class="product-full-card tilt-card glow-card" data-category="curatenie">
-          <img src="images/products/Web_Photo_Editor%20-%202026-02-27T154206.270.jpg" alt="Set Persil, Chanteclair, Pantene" loading="lazy">
-          <div class="product-full-card-overlay">
-            <span class="product-full-card-category">Curățenie</span>
-            <div class="product-full-card-name">Persil & Chanteclair</div>
-          </div>
-        </div>
-        <div class="product-full-card tilt-card glow-card" data-category="curatenie">
-          <img src="images/products/Web_Photo_Editor%20-%202026-02-27T160053.652.jpg" alt="Set Ariel, Semana, Malizia, Fairy" loading="lazy">
-          <div class="product-full-card-overlay">
-            <span class="product-full-card-category">Curățenie</span>
-            <div class="product-full-card-name">Ariel & Fairy</div>
-          </div>
-        </div>
-        <div class="product-full-card tilt-card glow-card" data-category="curatenie">
-          <img src="images/products/Web_Photo_Editor%20-%202026-02-27T163232.343.jpg" alt="Fairy detergent vase" loading="lazy">
-          <div class="product-full-card-overlay">
-            <span class="product-full-card-category">Curățenie</span>
-            <div class="product-full-card-name">Fairy</div>
-          </div>
-        </div>
-        <div class="product-full-card tilt-card glow-card" data-category="curatenie">
-          <img src="images/products/Web_Photo_Editor%20-%202026-03-03T133049.977.jpg" alt="Asevi soluție pardoseli" loading="lazy">
-          <div class="product-full-card-overlay">
-            <span class="product-full-card-category">Curățenie</span>
-            <div class="product-full-card-name">Asevi</div>
-          </div>
-        </div>
+      <!-- Products Grid (rendered dynamically from products-data.js) -->
+      <div id="products-grid" class="products-full-grid"></div>
 
-        <!-- Ingrijire -->
-        <div class="product-full-card tilt-card glow-card" data-category="ingrijire">
-          <img src="images/products/Web_Photo_Editor%20-%202026-03-03T134647.066.jpg" alt="TRESemmé balsam păr" loading="lazy">
-          <div class="product-full-card-overlay">
-            <span class="product-full-card-category">Îngrijire</span>
-            <div class="product-full-card-name">TRESemmé</div>
-          </div>
-        </div>
-
-        <!-- Casa & Gradina -->
-        <div class="product-full-card tilt-card glow-card" data-category="casa">
-          <img src="images/products/Web_Photo_Editor%20-%202026-02-24T160251.103.jpg" alt="Papuci de casă gri" loading="lazy">
-          <div class="product-full-card-overlay">
-            <span class="product-full-card-category">Casă & Grădină</span>
-            <div class="product-full-card-name">Papuci de Casă</div>
-          </div>
-        </div>
-        <div class="product-full-card tilt-card glow-card" data-category="casa">
-          <img src="images/products/Web_Photo_Editor%20-%202026-02-24T161742.744.jpg" alt="Papuci de casă matlasate" loading="lazy">
-          <div class="product-full-card-overlay">
-            <span class="product-full-card-category">Casă & Grădină</span>
-            <div class="product-full-card-name">Papuci Matlasați</div>
-          </div>
-        </div>
-        <div class="product-full-card tilt-card glow-card" data-category="casa">
-          <img src="images/products/Web_Photo_Editor%20-%202026-02-24T162831.940.jpg" alt="Papuci de casă albi" loading="lazy">
-          <div class="product-full-card-overlay">
-            <span class="product-full-card-category">Casă & Grădină</span>
-            <div class="product-full-card-name">Papuci Albi Premium</div>
-          </div>
-        </div>
-        <div class="product-full-card tilt-card glow-card" data-category="casa">
-          <img src="images/products/Web_Photo_Editor%20-%202026-03-03T122719.254.jpg" alt="Papuci HomeGate cu buline" loading="lazy">
-          <div class="product-full-card-overlay">
-            <span class="product-full-card-category">Casă & Grădină</span>
-            <div class="product-full-card-name">Papuci HomeGate</div>
-          </div>
-        </div>
-        <div class="product-full-card tilt-card glow-card" data-category="casa">
-          <img src="images/products/Web_Photo_Editor%20-%202026-02-27T161734.555.jpg" alt="Set cuțite bucătărie" loading="lazy">
-          <div class="product-full-card-overlay">
-            <span class="product-full-card-category">Casă & Grădină</span>
-            <div class="product-full-card-name">Set Cuțite Premium</div>
-          </div>
-        </div>
-
-        <!-- Electronice HomeGate -->
-        <div class="product-full-card tilt-card glow-card" data-category="electronice">
-          <img src="images/products/Web_Photo_Editor%20-%202026-02-27T121153.238.jpg" alt="Boxe portabile Bluetooth" loading="lazy">
-          <div class="product-full-card-overlay">
-            <span class="product-full-card-category">Electronice HomeGate</span>
-            <div class="product-full-card-name">Boxe Bluetooth</div>
-          </div>
-        </div>
-        <div class="product-full-card tilt-card glow-card" data-category="electronice">
-          <img src="images/products/Web_Photo_Editor%20-%202026-03-02T115310.156.jpg" alt="Colecție HomeGate P PRO11" loading="lazy">
-          <div class="product-full-card-overlay">
-            <span class="product-full-card-category">Electronice HomeGate</span>
-            <div class="product-full-card-name">HomeGate P PRO11</div>
-          </div>
-        </div>
-        <div class="product-full-card tilt-card glow-card" data-category="electronice">
-          <img src="images/products/Web_Photo_Editor%20-%202026-03-02T115624.026.jpg" alt="HomeGate P PRO11 neagră" loading="lazy">
-          <div class="product-full-card-overlay">
-            <span class="product-full-card-category">Electronice HomeGate</span>
-            <div class="product-full-card-name">P PRO11 Negru</div>
-          </div>
-        </div>
-        <div class="product-full-card tilt-card glow-card" data-category="electronice">
-          <img src="images/products/Web_Photo_Editor%20-%202026-03-02T115823.027.jpg" alt="HomeGate P PRO11 mov" loading="lazy">
-          <div class="product-full-card-overlay">
-            <span class="product-full-card-category">Electronice HomeGate</span>
-            <div class="product-full-card-name">P PRO11 Mov</div>
-          </div>
-        </div>
-        <div class="product-full-card tilt-card glow-card" data-category="electronice">
-          <img src="images/products/Web_Photo_Editor%20-%202026-03-02T120029.722.jpg" alt="HomeGate P PRO11 colecție" loading="lazy">
-          <div class="product-full-card-overlay">
-            <span class="product-full-card-category">Electronice HomeGate</span>
-            <div class="product-full-card-name">P PRO11 Colecție</div>
-          </div>
-        </div>
-        <div class="product-full-card tilt-card glow-card" data-category="electronice">
-          <img src="images/products/Web_Photo_Editor%20-%202026-03-02T122600.367.jpg" alt="HomeGate P PRO11 crem" loading="lazy">
-          <div class="product-full-card-overlay">
-            <span class="product-full-card-category">Electronice HomeGate</span>
-            <div class="product-full-card-name">P PRO11 Crem</div>
-          </div>
-        </div>
-        <div class="product-full-card tilt-card glow-card" data-category="electronice">
-          <img src="images/products/Web_Photo_Editor%20-%202026-03-02T122757.994.jpg" alt="HomeGate P PRO11 camuflaj" loading="lazy">
-          <div class="product-full-card-overlay">
-            <span class="product-full-card-category">Electronice HomeGate</span>
-            <div class="product-full-card-name">P PRO11 Camuflaj</div>
-          </div>
-        </div>
-        <div class="product-full-card tilt-card glow-card" data-category="electronice">
-          <img src="images/products/Web_Photo_Editor%20-%202026-03-02T123004.683.jpg" alt="HomeGate P PRO11 bleumarin" loading="lazy">
-          <div class="product-full-card-overlay">
-            <span class="product-full-card-category">Electronice HomeGate</span>
-            <div class="product-full-card-name">P PRO11 Bleumarin</div>
-          </div>
-        </div>
-        <div class="product-full-card tilt-card glow-card" data-category="electronice">
-          <img src="images/products/Web_Photo_Editor%20-%202026-03-02T125001.972.jpg" alt="HomeGate HA10 albastră" loading="lazy">
-          <div class="product-full-card-overlay">
-            <span class="product-full-card-category">Electronice HomeGate</span>
-            <div class="product-full-card-name">HA10 Albastru</div>
-          </div>
-        </div>
-        <div class="product-full-card tilt-card glow-card" data-category="electronice">
-          <img src="images/products/Web_Photo_Editor%20-%202026-03-02T125142.031.jpg" alt="HomeGate HA10 roșie" loading="lazy">
-          <div class="product-full-card-overlay">
-            <span class="product-full-card-category">Electronice HomeGate</span>
-            <div class="product-full-card-name">HA10 Roșu</div>
-          </div>
-        </div>
-        <div class="product-full-card tilt-card glow-card" data-category="electronice">
-          <img src="images/products/Web_Photo_Editor%20-%202026-03-02T125321.850.jpg" alt="HomeGate HA10" loading="lazy">
-          <div class="product-full-card-overlay">
-            <span class="product-full-card-category">Electronice HomeGate</span>
-            <div class="product-full-card-name">HA10 Negru</div>
-          </div>
-        </div>
-        <div class="product-full-card tilt-card glow-card" data-category="electronice">
-          <img src="images/products/Web_Photo_Editor%20-%202026-03-02T125539.531.jpg" alt="HomeGate Speaker" loading="lazy">
-          <div class="product-full-card-overlay">
-            <span class="product-full-card-category">Electronice HomeGate</span>
-            <div class="product-full-card-name">Speaker HomeGate</div>
-          </div>
-        </div>
-        <div class="product-full-card tilt-card glow-card" data-category="electronice">
-          <img src="images/products/Web_Photo_Editor%20-%202026-03-02T155638.912.jpg" alt="HomeGate BS-13" loading="lazy">
-          <div class="product-full-card-overlay">
-            <span class="product-full-card-category">Electronice HomeGate</span>
-            <div class="product-full-card-name">BS-13</div>
-          </div>
-        </div>
-        <div class="product-full-card tilt-card glow-card" data-category="electronice">
-          <img src="images/products/Web_Photo_Editor%20-%202026-03-02T161339.536.jpg" alt="HomeGate BS-13 colecție" loading="lazy">
-          <div class="product-full-card-overlay">
-            <span class="product-full-card-category">Electronice HomeGate</span>
-            <div class="product-full-card-name">BS-13 Colecție</div>
-          </div>
-        </div>
-        <div class="product-full-card tilt-card glow-card" data-category="electronice">
-          <img src="images/products/Web_Photo_Editor%20-%202026-03-02T161917.791.jpg" alt="HomeGate Speaker" loading="lazy">
-          <div class="product-full-card-overlay">
-            <span class="product-full-card-category">Electronice HomeGate</span>
-            <div class="product-full-card-name">Speaker Premium</div>
-          </div>
-        </div>
+      <div style="text-align: center; margin-top: var(--space-xl);">
+        <button id="load-more-btn" class="btn btn--outline btn--shimmer" style="display:none;">
+          <span data-i18n="prod.loadmore">Încarcă Mai Multe</span> <span class="btn-arrow">→</span>
+        </button>
+        <p id="products-count" style="margin-top: 0.75rem; font-size: 0.8rem; color: var(--color-text-secondary);"></p>
       </div>
     </div>
   </section>
@@ -308,11 +177,11 @@
     <div class="container">
       <div class="homegate-grid">
         <div class="homegate-content">
-          <span class="section-label">Brandul Nostru</span>
-          <h3>HomeGate — Inovație și Calitate</h3>
-          <p>HomeGate este brandul propriu Business Brands, lansat cu misiunea de a oferi produse electronice și articole pentru casă la standarde internaționale de calitate, la prețuri accesibile. Disponibil exclusiv prin rețeaua noastră de distribuție și pe homegate.ro.</p>
+          <span class="section-label" data-i18n="prod.homegate.label">Brand Partener</span>
+          <h3 data-i18n="prod.homegate.title">HomeGate — Inovație și Calitate</h3>
+          <p data-i18n="prod.homegate.text">HomeGate.ro este un brand partener al Business Brands SRL, cu misiunea de a oferi produse electronice și articole pentru casă la standarde internaționale de calitate, la prețuri accesibile. Disponibil prin rețeaua noastră de distribuție și pe homegate.ro.</p>
           <a href="https://homegate.ro" target="_blank" rel="noopener" class="btn btn--gold btn--shimmer">
-            Vizitează HomeGate.ro
+            <span data-i18n="prod.homegate.btn">Vizitează HomeGate.ro</span>
             <span class="btn-arrow">→</span>
           </a>
         </div>
@@ -334,6 +203,23 @@
     </div>
   </section>
 
+  <!-- PRODUCT MODAL -->
+  <div id="product-modal" class="product-modal" style="display:none;">
+    <div class="product-modal-overlay"></div>
+    <div class="product-modal-content">
+      <button class="product-modal-close" aria-label="Închide">&times;</button>
+      <div class="product-modal-gallery">
+        <img id="product-modal-img" src="" alt="" class="product-modal-main-img">
+        <div id="product-modal-thumbs" class="product-modal-thumbs"></div>
+      </div>
+      <div class="product-modal-info">
+        <span id="product-modal-category" class="product-modal-cat"></span>
+        <h3 id="product-modal-name"></h3>
+        <p id="product-modal-brand"></p>
+      </div>
+    </div>
+  </div>
+
   <!-- FOOTER -->
   <footer class="site-footer">
     <div class="footer-top-line"></div>
@@ -342,42 +228,46 @@
         <div class="footer-grid">
           <div class="footer-brand">
             <div class="footer-logo-wrap"><img src="images/products/logo.png" alt="Business Brands SRL" class="footer-logo"></div>
-            <p class="footer-tagline">Distribuție națională de produse FMCG de calitate</p>
-            <p class="footer-description">Construim punți între producătorii internaționali de renume și piața românească.</p>
+            <p class="footer-tagline" data-i18n="footer.tagline">Distribuție națională de produse FMCG de calitate</p>
+            <p class="footer-description" data-i18n="footer.description.short">Construim punți între producătorii internaționali de renume și piața românească.</p>
           </div>
           <div class="footer-column">
-            <h4>Navigare</h4>
+            <h4 data-i18n="footer.nav">Navigare</h4>
             <ul>
-              <li><a href="index.html">Acasă</a></li>
-              <li><a href="despre.html">Despre Noi</a></li>
-              <li><a href="servicii.html">Servicii</a></li>
-              <li><a href="produse.html">Produse & Branduri</a></li>
-              <li><a href="contact.html">Contact</a></li>
+              <li><a href="index.html" data-i18n="nav.home">Acasă</a></li>
+              <li><a href="despre.html" data-i18n="nav.about">Despre Noi</a></li>
+              <li><a href="servicii.html" data-i18n="nav.services">Servicii</a></li>
+              <li><a href="produse.html" data-i18n="nav.products">Produse & Branduri</a></li>
+              <li><a href="contact.html" data-i18n="nav.contact">Contact</a></li>
             </ul>
           </div>
           <div class="footer-column">
-            <h4>Contact</h4>
+            <h4 data-i18n="footer.contact">Contact</h4>
             <ul>
               <li class="footer-contact-item">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
-                <a href="tel:+40792628227">0792 628 227</a>
+                <a href="tel:+40787747939">0787 747 939</a>
               </li>
               <li class="footer-contact-item">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 7l-10 7L2 7"/></svg>
-                <a href="mailto:comenzi@homegate.ro">comenzi@homegate.ro</a>
+                <a href="mailto:businessbrand40@yahoo.com">businessbrand40@yahoo.com</a>
               </li>
               <li class="footer-contact-item">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
-                <span>București, România</span>
+                <span data-i18n="footer.location">Voluntari, Ilfov, România</span>
               </li>
             </ul>
           </div>
           <div class="footer-column">
-            <h4>Hai Să Colaborăm</h4>
-            <p class="footer-cta-text">Sunteți interesat de un parteneriat? Contactați-ne pentru a discuta despre oportunitățile de colaborare.</p>
+            <h4 data-i18n="footer.collaborate">Hai Să Colaborăm</h4>
+            <p class="footer-cta-text" data-i18n="footer.cta.text">CEO: Husein Adnan<br>Sunteți interesat de un parteneriat? Contactați-ne pentru a discuta despre oportunitățile de colaborare.</p>
             <a href="contact.html" class="btn btn--outline btn--shimmer" style="margin-top: 0.75rem; font-size: 0.8rem; padding: 0.5rem 1.2rem;">
-              Contactați-ne
+              <span data-i18n="footer.cta.btn">Contactați-ne</span>
               <span class="btn-arrow">→</span>
+            </a>
+            <a href="https://www.google.com/maps/place/Bd.+Voluntari+86,+Voluntari+077190" target="_blank" rel="noopener noreferrer" class="btn btn--outline btn--shimmer" style="margin-top: 0.5rem; font-size: 0.75rem; padding: 0.4rem 1rem; display: inline-flex; align-items: center; gap: 0.4rem;">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              <span data-i18n="footer.map.btn">Locația pe Hartă</span> <span class="btn-arrow">→</span>
             </a>
           </div>
         </div>
@@ -386,8 +276,8 @@
     <div class="footer-bottom">
       <div class="container">
         <div class="footer-bottom-inner">
-          <span class="footer-copyright">© 2026 Business Brands SRL. Toate drepturile rezervate.</span>
-          <span class="footer-legal"><a href="https://homegate.ro" target="_blank" rel="noopener">homegate.ro</a></span>
+          <span class="footer-copyright" data-i18n="footer.copyright">© 2026 Business Brands SRL. Toate drepturile rezervate.</span>
+          <span class="footer-legal"><a href="https://homegate.ro" target="_blank" rel="noopener">homegate.ro (Brand Partener)</a></span>
         </div>
       </div>
     </div>
@@ -395,7 +285,9 @@
 
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+  <script src="js/translations.js"></script>
   <script src="js/global.js"></script>
+  <script src="js/products-data.js"></script>
   <script src="js/produse.js"></script>
 </body>
 </html>

@@ -9,11 +9,8 @@ document.addEventListener('DOMContentLoaded', function () {
     var preloader = document.getElementById('preloader');
     if (!preloader) return;
 
-    // Skip preloader if coming from another page via internal navigation
-    var skipPreloader = sessionStorage.getItem('bb-skip-preloader');
-    sessionStorage.removeItem('bb-skip-preloader');
-
-    if (window.bbTransitioningIn || skipPreloader) {
+    // Skip preloader only if coming via panel transition from another page
+    if (window.bbTransitioningIn) {
       preloader.style.display = 'none';
       initHeroAnimations();
       return;

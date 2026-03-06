@@ -27,24 +27,40 @@
   <nav id="navbar">
       <div class="nav-container">
         <ul class="nav-links-left">
-          <li><a href="index.html" data-page="home">Acasă</a></li>
-          <li><a href="despre.html" data-page="despre">Despre Noi</a></li>
+          <li><a href="index.html" data-page="home" data-i18n="nav.home">Acasă</a></li>
+          <li><a href="despre.html" data-page="despre" data-i18n="nav.about">Despre Noi</a></li>
         </ul>
         <a href="index.html" class="nav-logo">
           <img src="images/products/logo.png" alt="Business Brands SRL" style="width: auto; object-fit: contain;">
         </a>
         <ul class="nav-links-right">
-          <li><a href="servicii.html" data-page="servicii">Servicii</a></li>
-          <li><a href="produse.html" data-page="produse">Produse &amp; Branduri</a></li>
-          <li><a href="contact.html" data-page="contact" class="nav-cta">Contact</a></li>
+          <li><a href="servicii.html" data-page="servicii" data-i18n="nav.services">Servicii</a></li>
+          <li><a href="produse.html" data-page="produse" data-i18n="nav.products">Produse &amp; Branduri</a></li>
+          <li><a href="contact.html" data-page="contact" class="nav-cta" data-i18n="nav.contact">Contact</a></li>
         </ul>
+        <div class="lang-switcher">
+          <button class="lang-btn" aria-expanded="false" aria-label="Schimbă limba">
+            <img src="images/flags/ro.svg" alt="" class="lang-flag"> RO
+            <svg class="lang-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <ul class="lang-dropdown">
+            <li><a href="#" data-lang="ro"><img src="images/flags/ro.svg" alt="" class="lang-flag"> Română</a></li>
+            <li><a href="#" data-lang="en"><img src="images/flags/gb.svg" alt="" class="lang-flag"> English</a></li>
+            <li><a href="#" data-lang="ar"><img src="images/flags/ae.svg" alt="" class="lang-flag"> العربية</a></li>
+          </ul>
+        </div>
         <button class="nav-hamburger" aria-label="Meniu"><span></span><span></span><span></span></button>
         <ul class="nav-mobile-links">
-          <li><a href="index.html">Acasă</a></li>
-          <li><a href="despre.html">Despre Noi</a></li>
-          <li><a href="servicii.html">Servicii</a></li>
-          <li><a href="produse.html">Produse &amp; Branduri</a></li>
-          <li><a href="contact.html" class="nav-cta">Contact</a></li>
+          <li><a href="index.html" data-i18n="nav.home">Acasă</a></li>
+          <li><a href="despre.html" data-i18n="nav.about">Despre Noi</a></li>
+          <li><a href="servicii.html" data-i18n="nav.services">Servicii</a></li>
+          <li><a href="produse.html" data-i18n="nav.products">Produse &amp; Branduri</a></li>
+          <li><a href="contact.html" class="nav-cta" data-i18n="nav.contact">Contact</a></li>
+          <li class="lang-mobile-switcher">
+            <a href="#" data-lang="ro"><img src="images/flags/ro.svg" alt="" class="lang-flag"> RO</a>
+            <a href="#" data-lang="en"><img src="images/flags/gb.svg" alt="" class="lang-flag"> EN</a>
+            <a href="#" data-lang="ar"><img src="images/flags/ae.svg" alt="" class="lang-flag"> AR</a>
+          </li>
         </ul>
       </div>
     </nav>
@@ -56,16 +72,16 @@
       <div class="noise-overlay"></div>
       <div class="particles-container" data-particles="12"></div>
     </div>
-    <h1 class="page-hero-title">Despre Business Brands</h1>
-    <p class="page-hero-subtitle">O poveste scrisă cu dedicare și excelență</p>
+    <h1 class="page-hero-title" data-i18n="despre.hero.title">Despre Business Brands</h1>
+    <p class="page-hero-subtitle" data-i18n="despre.hero.subtitle">O poveste scrisă cu dedicare și excelență</p>
   </section>
 
   <!-- TIMELINE -->
   <section class="section">
     <div class="container">
       <div style="text-align:center; margin-bottom: var(--space-2xl);">
-        <span class="section-label" style="justify-content:center;">Parcursul Nostru</span>
-        <h2 class="section-title">Ani de <span class="text-chrome text-chrome--animated">Istorie</span></h2>
+        <span class="section-label" style="justify-content:center;" data-i18n="despre.timeline.label">Parcursul Nostru</span>
+        <h2 class="section-title"><span data-i18n="despre.timeline.title">Ani de</span> <span class="text-chrome text-chrome--animated" data-i18n="despre.timeline.title.accent">Istorie</span></h2>
       </div>
 
       <div class="timeline">
@@ -75,8 +91,8 @@
 
         <div class="timeline-node">
           <div class="timeline-node-content">
-            <div class="timeline-year">Începuturi</div>
-            <p class="timeline-desc">Fondatorii noștri își încep cariera în comerțul internațional. Primii pași pe piața de import-export, cu viziunea de a aduce branduri internaționale de prestigiu pe piața românească.</p>
+            <div class="timeline-year" data-i18n="despre.t1.year">Începuturi</div>
+            <p class="timeline-desc" data-i18n="despre.t1.desc">Fondatorii noștri își încep cariera în comerțul internațional. Primii pași pe piața de import-export, cu viziunea de a aduce branduri internaționale de prestigiu pe piața românească.</p>
           </div>
           <div class="timeline-node-dot"></div>
           <div class="timeline-node-spacer"></div>
@@ -85,7 +101,7 @@
         <div class="timeline-node">
           <div class="timeline-node-content">
             <div class="timeline-year">2000</div>
-            <p class="timeline-desc">Expansiune regională și consolidarea parteneriatelor strategice cu producătorii europeni de top. Construirea unei rețele solide de distribuție.</p>
+            <p class="timeline-desc" data-i18n="despre.t2.desc">Expansiune regională și consolidarea parteneriatelor strategice cu producătorii europeni de top. Construirea unei rețele solide de distribuție.</p>
           </div>
           <div class="timeline-node-dot"></div>
           <div class="timeline-node-spacer"></div>
@@ -94,7 +110,7 @@
         <div class="timeline-node">
           <div class="timeline-node-content">
             <div class="timeline-year">2010</div>
-            <p class="timeline-desc">Acoperire națională completă. Distribuție în toate cele 42 de județe ale României, cu o rețea logistică performantă și stocuri permanente.</p>
+            <p class="timeline-desc" data-i18n="despre.t3.desc">Acoperire națională completă. Distribuție în toate cele 42 de județe ale României, cu o rețea logistică performantă și stocuri permanente.</p>
           </div>
           <div class="timeline-node-dot"></div>
           <div class="timeline-node-spacer"></div>
@@ -103,7 +119,7 @@
         <div class="timeline-node">
           <div class="timeline-node-content">
             <div class="timeline-year">2018</div>
-            <p class="timeline-desc">Lansarea brandului propriu HomeGate. Diversificarea portofoliului cu produse electronice și articole pentru casă de înaltă calitate.</p>
+            <p class="timeline-desc" data-i18n="despre.t4.desc">Lansarea brandului propriu HomeGate. Diversificarea portofoliului cu produse electronice și articole pentru casă de înaltă calitate.</p>
           </div>
           <div class="timeline-node-dot"></div>
           <div class="timeline-node-spacer"></div>
@@ -112,7 +128,7 @@
         <div class="timeline-node">
           <div class="timeline-node-content">
             <div class="timeline-year">2024</div>
-            <p class="timeline-desc">Transformare digitală completă. Lansarea platformei online homegate.ro, aducând întregul portofoliu premium la un click distanță de consumatorul final.</p>
+            <p class="timeline-desc" data-i18n="despre.t5.desc">Transformare digitală completă. Lansarea platformei online homegate.ro, aducând întregul portofoliu premium la un click distanță de consumatorul final.</p>
           </div>
           <div class="timeline-node-dot"></div>
           <div class="timeline-node-spacer"></div>
@@ -125,8 +141,8 @@
   <section class="section section--dark">
     <div class="container">
       <div style="text-align:center; margin-bottom: var(--space-2xl);">
-        <span class="section-label" style="justify-content:center;">Principiile Noastre</span>
-        <h2 class="section-title">Misiune, Viziune, <span class="text-chrome text-chrome--animated">Valori</span></h2>
+        <span class="section-label" style="justify-content:center;" data-i18n="despre.values.label">Principiile Noastre</span>
+        <h2 class="section-title"><span data-i18n="despre.values.title">Misiune, Viziune,</span> <span class="text-chrome text-chrome--animated" data-i18n="despre.values.title.accent">Valori</span></h2>
       </div>
 
       <div class="values-grid">
@@ -134,24 +150,24 @@
           <div class="value-card-icon">
             <svg viewBox="0 0 48 48" fill="none"><circle cx="24" cy="24" r="20" stroke="#C8A45C" stroke-width="1.5" stroke-dasharray="3 3"/><path d="M24 8v32M8 24h32" stroke="#C8A45C" stroke-width="1"/><circle cx="24" cy="24" r="8" stroke="#DFC07A" stroke-width="1.5"/></svg>
           </div>
-          <h3>Misiunea Noastră</h3>
-          <p>Să conectăm România cu cele mai prestigioase branduri internaționale, oferind excelență în fiecare etapă a lanțului de distribuție. Fiecare produs pe care îl distribuim poartă amprenta calității absolute.</p>
+          <h3 data-i18n="despre.v1.title">Misiunea Noastră</h3>
+          <p data-i18n="despre.v1.text">Să conectăm România cu cele mai prestigioase branduri internaționale, oferind excelență în fiecare etapă a lanțului de distribuție. Fiecare produs pe care îl distribuim poartă amprenta calității absolute.</p>
         </div>
 
         <div class="value-card glass-card tilt-card glow-card">
           <div class="value-card-icon">
             <svg viewBox="0 0 48 48" fill="none"><path d="M24 4l6 12 13 2-9.5 9 2.5 13L24 34l-12 6 2.5-13L5 18l13-2z" stroke="#C8A45C" stroke-width="1.5" fill="none"/></svg>
           </div>
-          <h3>Viziunea Noastră</h3>
-          <p>Să fim liderul incontestabil al distribuției FMCG în România, recunoscut pentru inovație, fiabilitate și parteneriate de durată. Un viitor construit pe fundația solidă a trei decenii de succes.</p>
+          <h3 data-i18n="despre.v2.title">Viziunea Noastră</h3>
+          <p data-i18n="despre.v2.text">Să fim liderul incontestabil al distribuției FMCG în România, recunoscut pentru inovație, fiabilitate și parteneriate de durată. Un viitor construit pe fundația solidă a trei decenii de succes.</p>
         </div>
 
         <div class="value-card glass-card tilt-card glow-card">
           <div class="value-card-icon">
             <svg viewBox="0 0 48 48" fill="none"><path d="M24 4L4 18v24h40V18z" stroke="#C8A45C" stroke-width="1.5" fill="none"/><rect x="18" y="26" width="12" height="16" stroke="#DFC07A" stroke-width="1"/></svg>
           </div>
-          <h3>Valorile Noastre</h3>
-          <p>Integritate absolută, dedicare față de calitate, respect pentru parteneriate și angajament necondiționat față de excelență. Aceste valori ne ghidează în fiecare decizie și acțiune.</p>
+          <h3 data-i18n="despre.v3.title">Valorile Noastre</h3>
+          <p data-i18n="despre.v3.text">Integritate absolută, dedicare față de calitate, respect pentru parteneriate și angajament necondiționat față de excelență. Aceste valori ne ghidează în fiecare decizie și acțiune.</p>
         </div>
       </div>
     </div>
@@ -161,49 +177,45 @@
   <section class="section">
     <div class="container">
       <div style="text-align:center; margin-bottom: var(--space-2xl);">
-        <span class="section-label" style="justify-content:center;">Informații Oficiale</span>
-        <h2 class="section-title">Detalii <span class="text-chrome text-chrome--animated">Companie</span></h2>
+        <span class="section-label" style="justify-content:center;" data-i18n="despre.info.label">Informații Oficiale</span>
+        <h2 class="section-title"><span data-i18n="despre.info.title">Detalii</span> <span class="text-chrome text-chrome--animated" data-i18n="despre.info.title.accent">Companie</span></h2>
       </div>
 
       <div class="company-grid">
         <div>
           <div class="company-info-item">
-            <div class="company-info-label">Denumire Comercială</div>
-            <div class="company-info-value">Business Brands SRL</div>
+            <div class="company-info-label" data-i18n="despre.info.label1">Denumire Comercială</div>
+            <div class="company-info-value" data-i18n="despre.info.value1">Business Brands SRL</div>
           </div>
           <div class="company-info-item">
-            <div class="company-info-label">Sediu Social</div>
-            <div class="company-info-value">București, România</div>
+            <div class="company-info-label" data-i18n="despre.info.label2">Sediu Social</div>
+            <div class="company-info-value" data-i18n="despre.info.value2">Voluntari, Ilfov, România</div>
           </div>
           <div class="company-info-item">
-            <div class="company-info-label">Anul Înființării</div>
-            <div class="company-info-value">Experiență vastă în domeniu</div>
-          </div>
-          <div class="company-info-item">
-            <div class="company-info-label">Domeniu de Activitate</div>
-            <div class="company-info-value">Import-Export & Distribuție Națională FMCG</div>
+            <div class="company-info-label" data-i18n="despre.info.label3">Domeniu de Activitate</div>
+            <div class="company-info-value" data-i18n="despre.info.value3">Import-Export & Distribuție Națională FMCG</div>
           </div>
         </div>
         <div>
           <div class="company-info-item">
-            <div class="company-info-label">Magazin Online</div>
-            <div class="company-info-value"><a href="https://homegate.ro" target="_blank" rel="noopener" style="color: var(--color-gold);">homegate.ro</a></div>
+            <div class="company-info-label" data-i18n="despre.info.label4">Magazin Online (Partener)</div>
+            <div class="company-info-value"><a href="https://homegate.ro" target="_blank" rel="noopener" style="color: var(--color-gold);">homegate.ro (Brand Partener)</a></div>
           </div>
           <div class="company-info-item">
-            <div class="company-info-label">Acoperire Geografică</div>
-            <div class="company-info-value">42 de județe — acoperire națională completă</div>
+            <div class="company-info-label" data-i18n="despre.info.label5">Acoperire Geografică</div>
+            <div class="company-info-value" data-i18n="despre.info.value5">42 de județe — acoperire națională completă</div>
           </div>
           <div class="company-info-item">
-            <div class="company-info-label">Portofoliu Branduri</div>
-            <div class="company-info-value">50+ branduri internaționale de prestigiu</div>
+            <div class="company-info-label" data-i18n="despre.info.label6">Portofoliu Branduri</div>
+            <div class="company-info-value" data-i18n="despre.info.value6">50+ branduri internaționale de prestigiu</div>
           </div>
           <div class="company-info-item">
-            <div class="company-info-label">Parteneri Comerciali</div>
-            <div class="company-info-value">5.000+ clienți activi</div>
+            <div class="company-info-label" data-i18n="despre.info.label7">Parteneri Comerciali</div>
+            <div class="company-info-value" data-i18n="despre.info.value7">5.000+ clienți activi</div>
           </div>
           <div class="company-info-item">
-            <div class="company-info-label">Contact</div>
-            <div class="company-info-value">0792 628 227 · comenzi@homegate.ro</div>
+            <div class="company-info-label" data-i18n="despre.info.label8">Contact</div>
+            <div class="company-info-value" data-i18n="despre.info.value8">0787 747 939 · businessbrand40@yahoo.com</div>
           </div>
         </div>
       </div>
@@ -216,22 +228,22 @@
       <div class="stats-bar">
         <div class="stat-item">
           <div class="stat-number" data-count="30" data-suffix="+">0</div>
-          <div class="stat-label">Ani de Experiență</div>
+          <div class="stat-label" data-i18n="despre.stats.years">Ani de Experiență</div>
         </div>
         <div class="stat-sep"></div>
         <div class="stat-item">
           <div class="stat-number" data-count="50" data-suffix="+">0</div>
-          <div class="stat-label">Branduri Partenere</div>
+          <div class="stat-label" data-i18n="despre.stats.brands">Branduri Partenere</div>
         </div>
         <div class="stat-sep"></div>
         <div class="stat-item">
           <div class="stat-number" data-count="5000" data-suffix="+">0</div>
-          <div class="stat-label">Clienți Activi</div>
+          <div class="stat-label" data-i18n="despre.stats.clients">Clienți Activi</div>
         </div>
         <div class="stat-sep"></div>
         <div class="stat-item">
           <div class="stat-number" data-count="42">0</div>
-          <div class="stat-label">Județe Acoperite</div>
+          <div class="stat-label" data-i18n="despre.stats.counties">Județe Acoperite</div>
         </div>
       </div>
     </div>
@@ -245,42 +257,46 @@
         <div class="footer-grid">
           <div class="footer-brand">
             <div class="footer-logo-wrap"><img src="images/products/logo.png" alt="Business Brands SRL" class="footer-logo"></div>
-            <p class="footer-tagline">Distribuție națională de produse FMCG de calitate</p>
-            <p class="footer-description">Construim punți între producătorii internaționali de renume și piața românească. Excelență în fiecare detaliu al lanțului de distribuție.</p>
+            <p class="footer-tagline" data-i18n="footer.tagline">Distribuție națională de produse FMCG de calitate</p>
+            <p class="footer-description" data-i18n="footer.description">Construim punți între producătorii internaționali de renume și piața românească. Excelență în fiecare detaliu al lanțului de distribuție.</p>
           </div>
           <div class="footer-column">
-            <h4>Navigare</h4>
+            <h4 data-i18n="footer.nav">Navigare</h4>
             <ul>
-              <li><a href="index.html">Acasă</a></li>
-              <li><a href="despre.html">Despre Noi</a></li>
-              <li><a href="servicii.html">Servicii</a></li>
-              <li><a href="produse.html">Produse & Branduri</a></li>
-              <li><a href="contact.html">Contact</a></li>
+              <li><a href="index.html" data-i18n="nav.home">Acasă</a></li>
+              <li><a href="despre.html" data-i18n="nav.about">Despre Noi</a></li>
+              <li><a href="servicii.html" data-i18n="nav.services">Servicii</a></li>
+              <li><a href="produse.html" data-i18n="nav.products">Produse & Branduri</a></li>
+              <li><a href="contact.html" data-i18n="nav.contact">Contact</a></li>
             </ul>
           </div>
           <div class="footer-column">
-            <h4>Contact</h4>
+            <h4 data-i18n="footer.contact">Contact</h4>
             <ul>
               <li class="footer-contact-item">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
-                <a href="tel:+40792628227">0792 628 227</a>
+                <a href="tel:+40787747939">0787 747 939</a>
               </li>
               <li class="footer-contact-item">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 7l-10 7L2 7"/></svg>
-                <a href="mailto:comenzi@homegate.ro">comenzi@homegate.ro</a>
+                <a href="mailto:businessbrand40@yahoo.com">businessbrand40@yahoo.com</a>
               </li>
               <li class="footer-contact-item">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
-                <span>București, România</span>
+                <span data-i18n="footer.location">Voluntari, Ilfov, România</span>
               </li>
             </ul>
           </div>
           <div class="footer-column">
-            <h4>Hai Să Colaborăm</h4>
-            <p class="footer-cta-text">Sunteți interesat de un parteneriat? Contactați-ne pentru a discuta despre oportunitățile de colaborare.</p>
+            <h4 data-i18n="footer.collaborate">Hai Să Colaborăm</h4>
+            <p class="footer-cta-text" data-i18n="footer.cta.text">CEO: Husein Adnan<br>Sunteți interesat de un parteneriat? Contactați-ne pentru a discuta despre oportunitățile de colaborare.</p>
             <a href="contact.html" class="btn btn--outline btn--shimmer" style="margin-top: 0.75rem; font-size: 0.8rem; padding: 0.5rem 1.2rem;">
-              Contactați-ne
+              <span data-i18n="footer.cta.btn">Contactați-ne</span>
               <span class="btn-arrow">→</span>
+            </a>
+            <a href="https://www.google.com/maps/place/Bd.+Voluntari+86,+Voluntari+077190" target="_blank" rel="noopener noreferrer" class="btn btn--outline btn--shimmer" style="margin-top: 0.5rem; font-size: 0.75rem; padding: 0.4rem 1rem; display: inline-flex; align-items: center; gap: 0.4rem;">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              <span data-i18n="footer.map.btn">Locația pe Hartă</span> <span class="btn-arrow">→</span>
             </a>
           </div>
         </div>
@@ -289,8 +305,8 @@
     <div class="footer-bottom">
       <div class="container">
         <div class="footer-bottom-inner">
-          <span class="footer-copyright">© 2026 Business Brands SRL. Toate drepturile rezervate.</span>
-          <span class="footer-legal"><a href="https://homegate.ro" target="_blank" rel="noopener">homegate.ro</a></span>
+          <span class="footer-copyright" data-i18n="footer.copyright">© 2026 Business Brands SRL. Toate drepturile rezervate.</span>
+          <span class="footer-legal"><a href="https://homegate.ro" target="_blank" rel="noopener">homegate.ro (Brand Partener)</a></span>
         </div>
       </div>
     </div>
@@ -298,6 +314,7 @@
 
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+  <script src="js/translations.js"></script>
   <script src="js/global.js"></script>
   <script src="js/despre.js"></script>
 </body>

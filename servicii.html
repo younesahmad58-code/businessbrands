@@ -28,24 +28,40 @@
     <nav id="navbar">
       <div class="nav-container">
         <ul class="nav-links-left">
-          <li><a href="index.html" data-page="home">Acasă</a></li>
-          <li><a href="despre.html" data-page="despre">Despre Noi</a></li>
+          <li><a href="index.html" data-page="home" data-i18n="nav.home">Acasă</a></li>
+          <li><a href="despre.html" data-page="despre" data-i18n="nav.about">Despre Noi</a></li>
         </ul>
         <a href="index.html" class="nav-logo">
           <img src="images/products/logo.png" alt="Business Brands SRL" style="width: auto; object-fit: contain;">
         </a>
         <ul class="nav-links-right">
-          <li><a href="servicii.html" data-page="servicii">Servicii</a></li>
-          <li><a href="produse.html" data-page="produse">Produse &amp; Branduri</a></li>
-          <li><a href="contact.html" data-page="contact" class="nav-cta">Contact</a></li>
+          <li><a href="servicii.html" data-page="servicii" data-i18n="nav.services">Servicii</a></li>
+          <li><a href="produse.html" data-page="produse" data-i18n="nav.products">Produse &amp; Branduri</a></li>
+          <li><a href="contact.html" data-page="contact" class="nav-cta" data-i18n="nav.contact">Contact</a></li>
         </ul>
+        <div class="lang-switcher">
+          <button class="lang-btn" aria-expanded="false" aria-label="Schimbă limba">
+            <img src="images/flags/ro.svg" alt="" class="lang-flag"> RO
+            <svg class="lang-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <ul class="lang-dropdown">
+            <li><a href="#" data-lang="ro"><img src="images/flags/ro.svg" alt="" class="lang-flag"> Română</a></li>
+            <li><a href="#" data-lang="en"><img src="images/flags/gb.svg" alt="" class="lang-flag"> English</a></li>
+            <li><a href="#" data-lang="ar"><img src="images/flags/ae.svg" alt="" class="lang-flag"> العربية</a></li>
+          </ul>
+        </div>
         <button class="nav-hamburger" aria-label="Meniu"><span></span><span></span><span></span></button>
         <ul class="nav-mobile-links">
-          <li><a href="index.html">Acasă</a></li>
-          <li><a href="despre.html">Despre Noi</a></li>
-          <li><a href="servicii.html">Servicii</a></li>
-          <li><a href="produse.html">Produse &amp; Branduri</a></li>
-          <li><a href="contact.html" class="nav-cta">Contact</a></li>
+          <li><a href="index.html" data-i18n="nav.home">Acasă</a></li>
+          <li><a href="despre.html" data-i18n="nav.about">Despre Noi</a></li>
+          <li><a href="servicii.html" data-i18n="nav.services">Servicii</a></li>
+          <li><a href="produse.html" data-i18n="nav.products">Produse &amp; Branduri</a></li>
+          <li><a href="contact.html" class="nav-cta" data-i18n="nav.contact">Contact</a></li>
+          <li class="lang-mobile-switcher">
+            <a href="#" data-lang="ro"><img src="images/flags/ro.svg" alt="" class="lang-flag"> RO</a>
+            <a href="#" data-lang="en"><img src="images/flags/gb.svg" alt="" class="lang-flag"> EN</a>
+            <a href="#" data-lang="ar"><img src="images/flags/ae.svg" alt="" class="lang-flag"> AR</a>
+          </li>
         </ul>
       </div>
     </nav>
@@ -58,8 +74,8 @@
         <div class="particles-container" data-particles="12"></div>
       </div>
 
-      <h1 class="page-hero-title">Serviciile Noastre</h1>
-      <p class="page-hero-subtitle">
+      <h1 class="page-hero-title" data-i18n="serv.hero.title">Serviciile Noastre</h1>
+      <p class="page-hero-subtitle" data-i18n="serv.hero.subtitle">
         Soluții complete de import, distribuție și comerț pentru piața
         românească
       </p>
@@ -71,31 +87,31 @@
         <div class="service-full-grid">
           <div class="service-full-content">
             <div class="service-full-number" aria-hidden="true">01</div>
-            <h2 class="service-full-title">Import Direct</h2>
-            <p class="service-full-desc">
+            <h2 class="service-full-title" data-i18n="serv.s1.title">Import Direct</h2>
+            <p class="service-full-desc" data-i18n="serv.s1.desc">
               Colaborăm direct cu cei mai importanți producători europeni,
               eliminând intermediarii și asigurând cele mai competitive prețuri.
               Controlul total al lanțului de aprovizionare ne permite să
               garantăm autenticitatea fiecărui produs.
             </p>
             <div class="service-bullets">
-              <div class="service-bullet">
+              <div class="service-bullet" data-i18n="serv.s1.b1">
                 Parteneriate directe cu producători europeni de renume
               </div>
-              <div class="service-bullet">
+              <div class="service-bullet" data-i18n="serv.s1.b2">
                 Prețuri competitive fără intermediari
               </div>
-              <div class="service-bullet">
+              <div class="service-bullet" data-i18n="serv.s1.b3">
                 Control total al calității și autenticității
               </div>
-              <div class="service-bullet">
+              <div class="service-bullet" data-i18n="serv.s1.b4">
                 Acces prioritar la cele mai noi produse de pe piață
               </div>
             </div>
             <a
               href="contact.html"
               class="btn btn--gold btn--shimmer"
-            >Solicită Ofertă <span class="btn-arrow">→</span></a>
+            ><span data-i18n="serv.s1.btn">Solicită Ofertă</span> <span class="btn-arrow">→</span></a>
           </div>
           <div class="service-icon-wrapper">
             <img src="images/icons/import.png" alt="Import Direct" style="width: 100%; height: auto; border-radius: 16px; object-fit: cover; box-shadow: 0 20px 40px rgba(0,0,0,0.4); border: 1px solid rgba(212,175,55,0.3); max-height: 400px;">
@@ -110,28 +126,28 @@
         <div class="service-full-grid">
           <div class="service-full-content">
             <div class="service-full-number" aria-hidden="true">02</div>
-            <h2 class="service-full-title">Distribuție Națională</h2>
-            <p class="service-full-desc">
+            <h2 class="service-full-title" data-i18n="serv.s2.title">Distribuție Națională</h2>
+            <p class="service-full-desc" data-i18n="serv.s2.desc">
               O rețea logistică performantă ce acoperă toate cele 42 de județe
               ale României. Livrări rapide, stocuri permanente și o
               infrastructură de distribuție fără precedent pe piața locală.
             </p>
             <div class="service-bullets">
-              <div class="service-bullet">
+              <div class="service-bullet" data-i18n="serv.s2.b1">
                 Acoperire completă în 42 de județe
               </div>
-              <div class="service-bullet">
+              <div class="service-bullet" data-i18n="serv.s2.b2">
                 Livrări rapide cu stocuri permanente
               </div>
-              <div class="service-bullet">
+              <div class="service-bullet" data-i18n="serv.s2.b3">
                 Logistică optimizată și eficientă
               </div>
-              <div class="service-bullet">
+              <div class="service-bullet" data-i18n="serv.s2.b4">
                 Urmărire în timp real a comenzilor
               </div>
             </div>
-            <a href="contact.html" class="btn btn--gold btn--shimmer">Începe
-              Colaborarea <span class="btn-arrow">→</span></a>
+            <a href="contact.html" class="btn btn--gold btn--shimmer"><span data-i18n="serv.s2.btn">Începe
+              Colaborarea</span> <span class="btn-arrow">→</span></a>
           </div>
           <div class="service-icon-wrapper">
             <img src="images/icons/distribution.png" alt="Distributie Nationala" style="width: 100%; height: auto; border-radius: 16px; object-fit: cover; box-shadow: 0 20px 40px rgba(0,0,0,0.4); border: 1px solid rgba(212,175,55,0.3); max-height: 400px;">
@@ -146,26 +162,26 @@
         <div class="service-full-grid">
           <div class="service-full-content">
             <div class="service-full-number" aria-hidden="true">03</div>
-            <h2 class="service-full-title">Vânzări En-Gros</h2>
-            <p class="service-full-desc">
+            <h2 class="service-full-title" data-i18n="serv.s3.title">Vânzări En-Gros</h2>
+            <p class="service-full-desc" data-i18n="serv.s3.desc">
               Prețuri de producător, cantități adaptate nevoilor dumneavoastră.
               Experiență vastă în comerțul angro, cu condiții comerciale de
               excepție și suport dedicat pentru fiecare partener.
             </p>
             <div class="service-bullets">
-              <div class="service-bullet">
+              <div class="service-bullet" data-i18n="serv.s3.b1">
                 Prețuri competitive direct de la producător
               </div>
-              <div class="service-bullet">
+              <div class="service-bullet" data-i18n="serv.s3.b2">
                 Cantități flexibile, adaptate cerințelor
               </div>
-              <div class="service-bullet">
+              <div class="service-bullet" data-i18n="serv.s3.b3">
                 Condiții comerciale personalizate
               </div>
-              <div class="service-bullet">Suport dedicat pentru parteneri</div>
+              <div class="service-bullet" data-i18n="serv.s3.b4">Suport dedicat pentru parteneri</div>
             </div>
-            <a href="contact.html" class="btn btn--gold btn--shimmer">Cere
-              Ofertă <span class="btn-arrow">→</span></a>
+            <a href="contact.html" class="btn btn--gold btn--shimmer"><span data-i18n="serv.s3.btn">Cere
+              Ofertă</span> <span class="btn-arrow">→</span></a>
           </div>
           <div class="service-icon-wrapper">
             <img src="images/icons/engros.png" alt="Vanzari En-Gros" style="width: 100%; height: auto; border-radius: 16px; object-fit: cover; box-shadow: 0 20px 40px rgba(0,0,0,0.4); border: 1px solid rgba(212,175,55,0.3); max-height: 400px;">
@@ -180,22 +196,22 @@
         <div class="service-full-grid">
           <div class="service-full-content">
             <div class="service-full-number" aria-hidden="true">04</div>
-            <h2 class="service-full-title">Retail Online — HomeGate.ro</h2>
-            <p class="service-full-desc">
-              Magazinul nostru online, HomeGate.ro, pune la dispoziția
+            <h2 class="service-full-title" data-i18n="serv.s4.title">Retail Online — HomeGate.ro (Brand Partener)</h2>
+            <p class="service-full-desc" data-i18n="serv.s4.desc">
+              HomeGate.ro, brand partener al Business Brands SRL, pune la dispoziția
               consumatorului final întregul portofoliu de produse premium.
               Comoditatea cumpărăturilor online, combinată cu calitatea și
               prețurile unui distribuitor direct.
             </p>
             <div class="service-bullets">
-              <div class="service-bullet">
+              <div class="service-bullet" data-i18n="serv.s4.b1">
                 Portofoliu complet disponibil online, 24/7
               </div>
-              <div class="service-bullet">Livrare rapidă în toată România</div>
-              <div class="service-bullet">
+              <div class="service-bullet" data-i18n="serv.s4.b2">Livrare rapidă în toată România</div>
+              <div class="service-bullet" data-i18n="serv.s4.b3">
                 Prețuri accesibile direct de la sursă
               </div>
-              <div class="service-bullet">
+              <div class="service-bullet" data-i18n="serv.s4.b4">
                 Suport clienți profesionist și dedicat
               </div>
             </div>
@@ -204,7 +220,7 @@
               target="_blank"
               rel="noopener"
               class="btn btn--gold btn--shimmer"
-            >Vizitează HomeGate.ro <span class="btn-arrow">→</span></a>
+            ><span data-i18n="serv.s4.btn">Vizitează HomeGate.ro</span> <span class="btn-arrow">→</span></a>
           </div>
           <div class="service-icon-wrapper">
             <img src="images/icons/retail.png" alt="Retail Online" style="width: 100%; height: auto; border-radius: 16px; object-fit: cover; box-shadow: 0 20px 40px rgba(0,0,0,0.4); border: 1px solid rgba(212,175,55,0.3); max-height: 400px;">
@@ -219,10 +235,10 @@
       <div class="noise-overlay"></div>
       <div class="particles-container" data-particles="10"></div>
       <div class="container" style="position: relative; z-index: 2">
-        <h2 class="services-cta-title">
+        <h2 class="services-cta-title" data-i18n="serv.cta.title">
           Pregătiți pentru o colaborare de succes?
         </h2>
-        <a href="contact.html" class="btn btn--gold btn--shimmer">Contactați-ne
+        <a href="contact.html" class="btn btn--gold btn--shimmer"><span data-i18n="serv.cta.btn">Contactați-ne</span>
           <span class="btn-arrow">→</span></a>
       </div>
     </section>
@@ -241,26 +257,26 @@
                   class="footer-logo"
                 >
               </div>
-              <p class="footer-tagline">
+              <p class="footer-tagline" data-i18n="footer.tagline">
                 Distribuție națională de produse FMCG de calitate
               </p>
-              <p class="footer-description">
+              <p class="footer-description" data-i18n="footer.description.short">
                 Construim punți între producătorii internaționali de renume și
                 piața românească.
               </p>
             </div>
             <div class="footer-column">
-              <h4>Navigare</h4>
+              <h4 data-i18n="footer.nav">Navigare</h4>
               <ul>
-                <li><a href="index.html">Acasă</a></li>
-                <li><a href="despre.html">Despre Noi</a></li>
-                <li><a href="servicii.html">Servicii</a></li>
-                <li><a href="produse.html">Produse & Branduri</a></li>
-                <li><a href="contact.html">Contact</a></li>
+                <li><a href="index.html" data-i18n="nav.home">Acasă</a></li>
+                <li><a href="despre.html" data-i18n="nav.about">Despre Noi</a></li>
+                <li><a href="servicii.html" data-i18n="nav.services">Servicii</a></li>
+                <li><a href="produse.html" data-i18n="nav.products">Produse & Branduri</a></li>
+                <li><a href="contact.html" data-i18n="nav.contact">Contact</a></li>
               </ul>
             </div>
             <div class="footer-column">
-              <h4>Contact</h4>
+              <h4 data-i18n="footer.contact">Contact</h4>
               <ul>
                 <li class="footer-contact-item">
                   <svg
@@ -273,7 +289,7 @@
                       d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"
                     />
                   </svg>
-                  <a href="tel:+40792628227">0792 628 227</a>
+                  <a href="tel:+40787747939">0787 747 939</a>
                 </li>
                 <li class="footer-contact-item">
                   <svg
@@ -285,7 +301,7 @@
                     <rect x="2" y="4" width="20" height="16" rx="2" />
                     <path d="M22 7l-10 7L2 7" />
                   </svg>
-                  <a href="mailto:comenzi@homegate.ro">comenzi@homegate.ro</a>
+                  <a href="mailto:businessbrand40@yahoo.com">businessbrand40@yahoo.com</a>
                 </li>
                 <li class="footer-contact-item">
                   <svg
@@ -297,13 +313,14 @@
                     <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z" />
                     <circle cx="12" cy="10" r="3" />
                   </svg>
-                  <span>București, România</span>
+                  <span data-i18n="footer.location">Voluntari, Ilfov, România</span>
                 </li>
               </ul>
             </div>
             <div class="footer-column">
-              <h4>Hai Să Colaborăm</h4>
-              <p class="footer-cta-text">
+              <h4 data-i18n="footer.collaborate">Hai Să Colaborăm</h4>
+              <p class="footer-cta-text" data-i18n="footer.cta.text">
+                CEO: Husein Adnan<br>
                 Sunteți interesat de un parteneriat? Contactați-ne pentru a
                 discuta despre oportunitățile de colaborare.
               </p>
@@ -312,8 +329,12 @@
                 class="btn btn--outline btn--shimmer"
                 style="margin-top: 0.75rem; font-size: 0.8rem; padding: 0.5rem 1.2rem"
               >
-                Contactați-ne
+                <span data-i18n="footer.cta.btn">Contactați-ne</span>
                 <span class="btn-arrow">→</span>
+              </a>
+              <a href="https://www.google.com/maps/place/Bd.+Voluntari+86,+Voluntari+077190" target="_blank" rel="noopener noreferrer" class="btn btn--outline btn--shimmer" style="margin-top: 0.5rem; font-size: 0.75rem; padding: 0.4rem 1rem; display: inline-flex; align-items: center; gap: 0.4rem;">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                <span data-i18n="footer.map.btn">Locația pe Hartă</span> <span class="btn-arrow">→</span>
               </a>
             </div>
           </div>
@@ -322,13 +343,12 @@
       <div class="footer-bottom">
         <div class="container">
           <div class="footer-bottom-inner">
-            <span class="footer-copyright"
-            >© 2026 Business Brands SRL. Toate drepturile rezervate.</span>
+            <span class="footer-copyright" data-i18n="footer.copyright">© 2026 Business Brands SRL. Toate drepturile rezervate.</span>
             <span class="footer-legal"><a
                 href="https://homegate.ro"
                 target="_blank"
                 rel="noopener"
-              >homegate.ro</a></span>
+              >homegate.ro (Brand Partener)</a></span>
           </div>
         </div>
       </div>
@@ -340,6 +360,7 @@
     <script
       src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"
     ></script>
+    <script src="js/translations.js"></script>
     <script src="js/global.js"></script>
     <script src="js/servicii.js"></script>
   </body>
