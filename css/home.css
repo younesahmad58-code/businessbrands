@@ -672,7 +672,7 @@
 
 @media (max-width: 768px) {
   .cta-banner-title {
-    font-size: clamp(1.5rem, 5.5vw, 2rem);
+    font-size: clamp(0.95rem, 4.2vw, 2rem);
     line-height: 1.35;
     padding: 0 0.5rem;
     white-space: nowrap;
@@ -835,8 +835,9 @@
   }
 
   .cta-banner-title {
-    font-size: clamp(1.2rem, 5vw, 1.5rem);
+    font-size: clamp(0.95rem, 4.2vw, 1.5rem);
     line-height: 1.4;
+    white-space: nowrap;
   }
 
   .brands-stat {
