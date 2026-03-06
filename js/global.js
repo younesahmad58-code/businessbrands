@@ -11,16 +11,18 @@ function splitText(element) {
   const text = element.textContent;
   element.innerHTML = '';
   element.setAttribute('aria-label', text);
+  element.style.textAlign = element.style.textAlign || getComputedStyle(element).textAlign;
 
   const chars = [];
   const words = text.split(' ');
 
   words.forEach(function(word, wi) {
-    // Create word wrapper to prevent mid-word line breaks
+    // Create word wrapper — inline-block keeps word together
     var wordSpan = document.createElement('span');
     wordSpan.classList.add('word');
     wordSpan.style.display = 'inline-block';
     wordSpan.style.whiteSpace = 'nowrap';
+    wordSpan.style.verticalAlign = 'top';
 
     for (var i = 0; i < word.length; i++) {
       var span = document.createElement('span');
@@ -36,7 +38,7 @@ function splitText(element) {
     // Add space between words (not after last word)
     if (wi < words.length - 1) {
       var space = document.createElement('span');
-      space.classList.add('char');
+      space.classList.add('char', 'char-space');
       space.style.display = 'inline-block';
       space.setAttribute('aria-hidden', 'true');
       space.innerHTML = '&nbsp;';
@@ -272,7 +274,7 @@ function initTiltCards(selector) {
     
     if (isHome) {
       // Fade out for Home/Logo — skip preloader on internal navigation
-      sessionStorage.setItem('bb-skip-preloader', 'true');
+      sessionStorage.setItem('bb-skip-preloader', '1');
       gsap.to(document.body, {opacity: 0, duration: 0.2, ease: 'power2.out', onComplete: function() {
         window.location.href = href;
       }});

@@ -195,14 +195,24 @@
     text-align: center;
   }
 
+  .service-full-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
   .service-full-desc {
     max-width: 100%;
     margin-left: auto;
     margin-right: auto;
+    text-align: center;
   }
 
   .service-bullets {
-    align-items: center;
+    align-items: flex-start;
+    text-align: left;
+    max-width: 420px;
+    margin: 0 auto 2rem;
   }
 
   .service-icon-wrapper {
@@ -213,11 +223,87 @@
     width: 150px;
     height: 150px;
   }
+
+  .service-icon-wrapper img {
+    max-height: 280px !important;
+  }
 }
 
 @media (max-width: 768px) {
   .page-hero {
-    min-height: 40vh;
-    padding: calc(var(--nav-height) + 2rem) 1.5rem 3rem;
+    min-height: 35vh;
+    padding: calc(var(--nav-height) + 2rem) 1.5rem 2.5rem;
+  }
+
+  .page-hero-title {
+    font-size: clamp(2rem, 7vw, 3rem);
+  }
+
+  .page-hero-subtitle {
+    font-size: clamp(0.9rem, 3.5vw, 1.1rem);
+    max-width: 100%;
+    padding: 0 0.5rem;
+  }
+
+  .service-full {
+    padding: var(--space-xl) 0;
+  }
+
+  .service-full-number {
+    font-size: clamp(4rem, 12vw, 6rem);
+    margin-bottom: 1rem;
+  }
+
+  .service-full-title {
+    font-size: clamp(1.4rem, 5vw, 2rem);
+  }
+
+  .service-full-desc {
+    font-size: 0.92rem;
+    line-height: 1.7;
+  }
+
+  .service-bullet {
+    font-size: 0.88rem;
+  }
+
+  .service-icon-wrapper img {
+    max-height: 220px !important;
+  }
+
+  .services-cta {
+    padding: clamp(3rem, 10vh, 6rem) 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .page-hero {
+    min-height: 30vh;
+    padding: calc(var(--nav-height) + 1.5rem) 1rem 2rem;
+  }
+
+  .page-hero-title {
+    font-size: clamp(1.6rem, 6.5vw, 2.2rem);
+  }
+
+  .service-full-number {
+    font-size: clamp(3rem, 10vw, 5rem);
+  }
+
+  .service-full-title {
+    font-size: clamp(1.3rem, 5vw, 1.7rem);
+  }
+
+  .service-icon-wrapper img {
+    max-height: 180px !important;
+  }
+
+  .services-cta-title {
+    font-size: clamp(1.1rem, 5vw, 1.4rem);
+    line-height: 1.4;
+  }
+
+  .service-bullets {
+    max-width: 100%;
   }
 }

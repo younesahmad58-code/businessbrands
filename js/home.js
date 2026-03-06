@@ -9,13 +9,18 @@ document.addEventListener('DOMContentLoaded', function () {
     var preloader = document.getElementById('preloader');
     if (!preloader) return;
 
-    // Skip preloader if coming from another page (transition already covers entry)
-    if (window.bbTransitioningIn || sessionStorage.getItem('bb-skip-preloader')) {
+    // Skip preloader if coming from another page via internal navigation
+    var skipPreloader = sessionStorage.getItem('bb-skip-preloader');
+    sessionStorage.removeItem('bb-skip-preloader');
+
+    if (window.bbTransitioningIn || skipPreloader) {
       preloader.style.display = 'none';
-      sessionStorage.removeItem('bb-skip-preloader');
       initHeroAnimations();
       return;
     }
+
+    // Mark that preloader has been shown this session
+    sessionStorage.setItem('bb-preloader-shown', '1');
 
     // Animate preloader text letters
     var textEl = preloader.querySelector('.preloader-text');
@@ -34,6 +39,9 @@ document.addEventListener('DOMContentLoaded', function () {
     // Safety timeout — if GSAP or clipPath fails, force-hide after 4s
     var preloaderTimeout = setTimeout(function () {
       preloader.style.display = 'none';
+      // Ensure hero content is visible as fallback
+      var heroContent = document.querySelector('.hero-content');
+      if (heroContent) heroContent.style.opacity = '1';
       initHeroAnimations();
     }, 4000);
 

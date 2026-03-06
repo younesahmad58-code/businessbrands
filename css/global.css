@@ -446,4 +446,42 @@ html.bb-entering .transition-logo {
   .section {
     padding: clamp(3rem, 8vh, 5rem) 0;
   }
+
+  .section-title {
+    font-size: clamp(2rem, 6vw, 3rem);
+    line-height: 1.15;
+  }
+
+  .section-subtitle {
+    font-size: clamp(0.9rem, 3vw, 1.05rem);
+    max-width: 100%;
+  }
+
+  .section-label {
+    font-size: 0.65rem;
+    margin-bottom: var(--space-sm);
+  }
+
+  .btn {
+    padding: 0.85rem 1.75rem;
+    font-size: 0.78rem;
+    max-width: 100%;
+    text-align: center;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .section-title {
+    font-size: clamp(1.6rem, 5.5vw, 2.2rem);
+  }
+
+  .btn {
+    padding: 0.75rem 1.5rem;
+    font-size: 0.72rem;
+  }
+
+  .container {
+    padding: 0 clamp(1rem, 4vw, 1.5rem);
+  }
 }

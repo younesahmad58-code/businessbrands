@@ -180,11 +180,46 @@
 @media (max-width: 640px) {
   .footer-grid {
     grid-template-columns: 1fr;
-    gap: 2.5rem;
+    gap: 2rem;
+  }
+
+  .footer-brand {
+    text-align: center;
+    align-items: center;
+  }
+
+  .footer-description {
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .footer-column {
+    text-align: center;
+  }
+
+  .footer-column ul {
+    align-items: center;
+  }
+
+  .footer-contact-item {
+    justify-content: center;
+  }
+
+  .footer-cta-text {
+    text-align: center;
+  }
+
+  .footer-column .btn {
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .footer-bottom-inner {
     flex-direction: column;
     text-align: center;
+  }
+
+  .footer-logo {
+    height: 90px;
   }
 }
