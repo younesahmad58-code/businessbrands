@@ -587,7 +587,7 @@
   position: relative;
 }
 
-.why-item:nth-child(even) {
+.why-item:nth-child(odd) {
   flex-direction: row-reverse;
   text-align: right;
 }
@@ -668,16 +668,14 @@
   margin-right: auto;
   padding: 0 2rem;
   text-align: center;
-  white-space: nowrap;
 }
 
 @media (max-width: 768px) {
   .cta-banner-title {
-    font-size: clamp(1.3rem, 5vw, 2rem);
+    font-size: clamp(1.5rem, 5.5vw, 2rem);
     line-height: 1.35;
     padding: 0 0.5rem;
-    white-space: normal;
-    overflow-wrap: break-word;
+    white-space: nowrap;
   }
 }
 
@@ -771,7 +769,7 @@
   }
 
   .why-item,
-  .why-item:nth-child(even) {
+  .why-item:nth-child(odd) {
     flex-direction: column;
     text-align: center;
     gap: 0.5rem;

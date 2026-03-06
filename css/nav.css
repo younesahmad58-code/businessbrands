@@ -26,6 +26,23 @@
     background: rgba(255, 255, 255, 0.92);
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.06);
   }
+
+  #navbar.scrolled .nav-links-left a,
+  #navbar.scrolled .nav-links-right a {
+    color: #4A5568;
+  }
+
+  #navbar.scrolled .nav-links-left a:hover,
+  #navbar.scrolled .nav-links-left a.active,
+  #navbar.scrolled .nav-links-right a:hover,
+  #navbar.scrolled .nav-links-right a.active {
+    color: var(--color-accent);
+  }
+
+  #navbar.scrolled .nav-cta {
+    color: var(--color-accent) !important;
+    border-color: var(--color-accent) !important;
+  }
 }
 
 .nav-container {
