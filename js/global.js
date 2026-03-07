@@ -24,6 +24,12 @@ function splitText(element) {
     wordSpan.style.whiteSpace = 'nowrap';
     wordSpan.style.verticalAlign = 'top';
 
+    // Fix RTL letter reversal for Latin text
+    if (/[a-zA-Z]/.test(word)) {
+      wordSpan.style.direction = 'ltr';
+      wordSpan.style.unicodeBidi = 'isolate';
+    }
+
     for (var i = 0; i < word.length; i++) {
       var span = document.createElement('span');
       span.classList.add('char');

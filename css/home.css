@@ -58,6 +58,8 @@
   text-transform: uppercase;
   color: #3b82f6;
   overflow: hidden;
+  direction: ltr;
+  unicode-bidi: isolate;
 }
 
 .preloader-text span {
