@@ -13,7 +13,11 @@
       content="Business Brands, distribuție națională, import export, FMCG, România, HomeGate, produse curățenie, produse îngrijire"
     >
     <link rel="icon" type="image/png" href="images/products/logo.png">
-    <script>if(sessionStorage.getItem('bb-transitioning'))document.documentElement.classList.add('bb-entering');</script>
+    <script>
+      if (sessionStorage.getItem("bb-transitioning")) {
+        document.documentElement.classList.add("bb-entering");
+      }
+    </script>
 
     <!-- Stylesheets -->
     <link rel="stylesheet" href="css/global.css">
@@ -60,39 +64,116 @@
     <nav id="navbar">
       <div class="nav-container">
         <ul class="nav-links-left">
-          <li><a href="index.html" data-page="home" data-i18n="nav.home">Acasă</a></li>
-          <li><a href="despre.html" data-page="despre" data-i18n="nav.about">Despre Noi</a></li>
+          <li>
+            <a href="index.html" data-page="home" data-i18n="nav.home">Acasă</a>
+          </li>
+          <li>
+            <a href="despre.html" data-page="despre" data-i18n="nav.about"
+            >Despre Noi</a>
+          </li>
         </ul>
         <a href="index.html" class="nav-logo">
-          <img src="images/products/logo.png" alt="Business Brands SRL" style="width: auto; object-fit: contain;">
+          <img
+            src="images/products/logo.png"
+            alt="Business Brands SRL"
+            style="width: auto; object-fit: contain"
+          >
         </a>
         <ul class="nav-links-right">
-          <li><a href="servicii.html" data-page="servicii" data-i18n="nav.services">Servicii</a></li>
-          <li><a href="produse.html" data-page="produse" data-i18n="nav.products">Produse &amp; Branduri</a></li>
-          <li><a href="contact.html" data-page="contact" class="nav-cta" data-i18n="nav.contact">Contact</a></li>
+          <li>
+            <a
+              href="servicii.html"
+              data-page="servicii"
+              data-i18n="nav.services"
+            >Servicii</a>
+          </li>
+          <li>
+            <a href="produse.html" data-page="produse" data-i18n="nav.products"
+            >Produse &amp; Branduri</a>
+          </li>
+          <li>
+            <a
+              href="contact.html"
+              data-page="contact"
+              class="nav-cta"
+              data-i18n="nav.contact"
+            >Contact</a>
+          </li>
         </ul>
         <div class="lang-switcher">
-          <button class="lang-btn" aria-expanded="false" aria-label="Schimbă limba">
+          <button
+            class="lang-btn"
+            aria-expanded="false"
+            aria-label="Schimbă limba"
+          >
             <img src="images/flags/ro.svg" alt="" class="lang-flag"> RO
-            <svg class="lang-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><polyline points="6 9 12 15 18 9"/></svg>
+            <svg
+              class="lang-chevron"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              width="14"
+              height="14"
+            >
+              <polyline points="6 9 12 15 18 9" />
+            </svg>
           </button>
           <ul class="lang-dropdown">
-            <li><a href="#" data-lang="ro"><img src="images/flags/ro.svg" alt="" class="lang-flag"> Română</a></li>
-            <li><a href="#" data-lang="en"><img src="images/flags/gb.svg" alt="" class="lang-flag"> English</a></li>
-            <li><a href="#" data-lang="ar"><img src="images/flags/ae.svg" alt="" class="lang-flag"> العربية</a></li>
+            <li>
+              <a href="#" data-lang="ro"><img
+                  src="images/flags/ro.svg"
+                  alt=""
+                  class="lang-flag"
+                > Română</a>
+            </li>
+            <li>
+              <a href="#" data-lang="en"><img
+                  src="images/flags/gb.svg"
+                  alt=""
+                  class="lang-flag"
+                > English</a>
+            </li>
+            <li>
+              <a href="#" data-lang="ar"><img
+                  src="images/flags/ae.svg"
+                  alt=""
+                  class="lang-flag"
+                > العربية</a>
+            </li>
           </ul>
         </div>
-        <button class="nav-hamburger" aria-label="Meniu"><span></span><span></span><span></span></button>
+        <button class="nav-hamburger" aria-label="Meniu">
+          <span></span><span></span><span></span>
+        </button>
         <ul class="nav-mobile-links">
           <li><a href="index.html" data-i18n="nav.home">Acasă</a></li>
           <li><a href="despre.html" data-i18n="nav.about">Despre Noi</a></li>
           <li><a href="servicii.html" data-i18n="nav.services">Servicii</a></li>
-          <li><a href="produse.html" data-i18n="nav.products">Produse &amp; Branduri</a></li>
-          <li><a href="contact.html" class="nav-cta" data-i18n="nav.contact">Contact</a></li>
+          <li>
+            <a href="produse.html" data-i18n="nav.products"
+            >Produse &amp; Branduri</a>
+          </li>
+          <li>
+            <a href="contact.html" class="nav-cta" data-i18n="nav.contact"
+            >Contact</a>
+          </li>
           <li class="lang-mobile-switcher">
-            <a href="#" data-lang="ro"><img src="images/flags/ro.svg" alt="" class="lang-flag"> RO</a>
-            <a href="#" data-lang="en"><img src="images/flags/gb.svg" alt="" class="lang-flag"> EN</a>
-            <a href="#" data-lang="ar"><img src="images/flags/ae.svg" alt="" class="lang-flag"> AR</a>
+            <a href="#" data-lang="ro"><img
+                src="images/flags/ro.svg"
+                alt=""
+                class="lang-flag"
+              > RO</a>
+            <a href="#" data-lang="en"><img
+                src="images/flags/gb.svg"
+                alt=""
+                class="lang-flag"
+              > EN</a>
+            <a href="#" data-lang="ar"><img
+                src="images/flags/ae.svg"
+                alt=""
+                class="lang-flag"
+              > AR</a>
           </li>
         </ul>
       </div>
@@ -106,12 +187,28 @@
         <div class="particles-container" data-particles="18"></div>
       </div>
 
-      <div class="hero-slideshow">
+      <div class="hero-slideshow" dir="ltr">
         <div class="hero-slideshow-track">
-          <img src="images/icons/import.png" alt="Import Direct" loading="eager">
-          <img src="images/icons/distribution.png" alt="Distribuție Națională" loading="eager">
-          <img src="images/icons/engros.png" alt="Vânzări En-Gros" loading="eager">
-          <img src="images/icons/retail.png" alt="Retail Online" loading="eager">
+          <img
+            src="images/icons/import.png"
+            alt="Import Direct"
+            loading="eager"
+          >
+          <img
+            src="images/icons/distribution.png"
+            alt="Distribuție Națională"
+            loading="eager"
+          >
+          <img
+            src="images/icons/engros.png"
+            alt="Vânzări En-Gros"
+            loading="eager"
+          >
+          <img
+            src="images/icons/retail.png"
+            alt="Retail Online"
+            loading="eager"
+          >
           <img src="images/icons/import.png" alt="" loading="eager">
           <img src="images/icons/distribution.png" alt="" loading="eager">
           <img src="images/icons/engros.png" alt="" loading="eager">
@@ -124,12 +221,19 @@
       </div>
 
       <div class="hero-content">
-        <div class="hero-badge" data-i18n="home.hero.badge">VOLUNTARI, ILFOV — DISTRIBUȚIE FMCG</div>
+        <div class="hero-badge" data-i18n="home.hero.badge">
+          VOLUNTARI, ILFOV — DISTRIBUȚIE FMCG
+        </div>
 
         <h1 class="hero-title">
-          <span class="hero-title-line" data-i18n="home.hero.title1">Expertiză și</span><br>
-          <span class="hero-title-line hero-title-highlight" data-i18n="home.hero.title2">Excelență</span><br>
-          <span class="hero-title-line" data-i18n="home.hero.title3">în Distribuția Națională</span>
+          <span class="hero-title-line" data-i18n="home.hero.title1"
+          >Expertiză și</span><br>
+          <span
+            class="hero-title-line hero-title-highlight"
+            data-i18n="home.hero.title2"
+          >Excelență</span><br>
+          <span class="hero-title-line" data-i18n="home.hero.title3"
+          >în Distribuția Națională</span>
         </h1>
 
         <p class="hero-subtitle" data-i18n="home.hero.subtitle">
@@ -187,12 +291,19 @@
     <!-- ==================== SERVICES ==================== -->
     <section class="section section--dark services-section">
       <div class="container">
-        <span class="section-label" data-i18n="home.services.label">Ce Facem</span>
+        <span class="section-label" data-i18n="home.services.label"
+        >Ce Facem</span>
         <h2 class="section-title">
-          <span data-i18n="home.services.title">Servicii de</span> <span class="text-chrome text-chrome--animated" data-i18n="home.services.title.accent"
+          <span data-i18n="home.services.title">Servicii de</span> <span
+            class="text-chrome text-chrome--animated"
+            data-i18n="home.services.title.accent"
           >Elită</span>
         </h2>
-        <p class="section-subtitle" style="margin: 0 auto" data-i18n="home.services.subtitle">
+        <p
+          class="section-subtitle"
+          style="margin: 0 auto"
+          data-i18n="home.services.subtitle"
+        >
           Soluții complete de import, distribuție și comerț pentru piața
           românească
         </p>
@@ -234,11 +345,13 @@
           <div class="service-card glass-card">
             <div class="service-card-accent-line"></div>
             <div class="service-card-number">04</div>
-            <h3 data-i18n="home.services.card4.title">Retail Online — HomeGate.ro (Brand Partener)</h3>
+            <h3 data-i18n="home.services.card4.title">
+              Retail Online — HomeGate.ro (Brand Partener)
+            </h3>
             <p data-i18n="home.services.card4.text">
-              HomeGate.ro, brand partener al Business Brands SRL, pune la dispoziția consumatorului final
-              întregul portofoliu de produse premium, cu livrare rapidă în toată
-              România.
+              HomeGate.ro, brand partener al Business Brands SRL, pune la
+              dispoziția consumatorului final întregul portofoliu de produse
+              premium, cu livrare rapidă în toată România.
             </p>
           </div>
         </div>
@@ -255,51 +368,184 @@
     <!-- ==================== BRANDS SHOWCASE ==================== -->
     <section class="section brands-section">
       <div class="container brands-header">
-        <span class="section-label" data-i18n="home.brands.label">Parteneri de Renume</span>
+        <span class="section-label" data-i18n="home.brands.label"
+        >Parteneri de Renume</span>
         <h2 class="section-title">
           <span data-i18n="home.brands.title">Branduri de</span> <span
-            class="kinetic-word text-chrome text-chrome--animated" data-i18n="home.brands.title.accent"
+            class="kinetic-word text-chrome text-chrome--animated"
+            data-i18n="home.brands.title.accent"
           >Încredere</span>
         </h2>
       </div>
 
       <!-- Marquee Row 1: Parent Companies -->
-      <div class="marquee-wrapper">
+      <div class="marquee-wrapper" dir="ltr">
         <div class="marquee-track" style="--duration: 45s">
-          <span class="marquee-item marquee-item--logo"><img src="images/brands/P&G_logo.png" alt="Procter & Gamble" class="marquee-logo" loading="lazy"><span>Procter & Gamble</span></span><span class="diamond-sep"></span>
-          <span class="marquee-item marquee-item--logo"><img src="images/brands/Henkel-Logo.svg.png" alt="Henkel" class="marquee-logo" loading="lazy"><span>Henkel</span></span><span class="diamond-sep"></span>
-          <span class="marquee-item marquee-item--logo"><img src="images/brands/Unilever-Logo.wine.png" alt="Unilever" class="marquee-logo" loading="lazy"><span>Unilever</span></span><span class="diamond-sep"></span>
-          <span class="marquee-item marquee-item--logo"><img src="images/brands/images%20(1).png" alt="Reckitt" class="marquee-logo" loading="lazy"><span>Reckitt</span></span><span class="diamond-sep"></span>
-          <span class="marquee-item marquee-item--logo"><img src="images/brands/Duracell_logo.svg" alt="Duracell" class="marquee-logo" loading="lazy"><span>Duracell</span></span><span class="diamond-sep"></span>
-          <span class="marquee-item marquee-item--logo"><img src="images/brands/images%20(3).png" alt="BIC" class="marquee-logo" loading="lazy"><span>BIC</span></span><span class="diamond-sep"></span>
+          <span class="marquee-item marquee-item--logo"><img
+              src="images/brands/P&G_logo.png"
+              alt="Procter & Gamble"
+              class="marquee-logo"
+              loading="lazy"
+            ><span>Procter & Gamble</span></span><span
+            class="diamond-sep"
+          ></span>
+          <span class="marquee-item marquee-item--logo"><img
+              src="images/brands/Henkel-Logo.svg.png"
+              alt="Henkel"
+              class="marquee-logo"
+              loading="lazy"
+            ><span>Henkel</span></span><span class="diamond-sep"></span>
+          <span class="marquee-item marquee-item--logo"><img
+              src="images/brands/Unilever-Logo.wine.png"
+              alt="Unilever"
+              class="marquee-logo"
+              loading="lazy"
+            ><span>Unilever</span></span><span class="diamond-sep"></span>
+          <span class="marquee-item marquee-item--logo"><img
+              src="images/brands/images%20(1).png"
+              alt="Reckitt"
+              class="marquee-logo"
+              loading="lazy"
+            ><span>Reckitt</span></span><span class="diamond-sep"></span>
+          <span class="marquee-item marquee-item--logo"><img
+              src="images/brands/Duracell_logo.svg"
+              alt="Duracell"
+              class="marquee-logo"
+              loading="lazy"
+            ><span>Duracell</span></span><span class="diamond-sep"></span>
+          <span class="marquee-item marquee-item--logo"><img
+              src="images/brands/images%20(3).png"
+              alt="BIC"
+              class="marquee-logo"
+              loading="lazy"
+            ><span>BIC</span></span><span class="diamond-sep"></span>
           <!-- Duplicate for seamless loop -->
-          <span class="marquee-item marquee-item--logo"><img src="images/brands/P&G_logo.png" alt="" class="marquee-logo" loading="lazy"><span>Procter & Gamble</span></span><span class="diamond-sep"></span>
-          <span class="marquee-item marquee-item--logo"><img src="images/brands/Henkel-Logo.svg.png" alt="" class="marquee-logo" loading="lazy"><span>Henkel</span></span><span class="diamond-sep"></span>
-          <span class="marquee-item marquee-item--logo"><img src="images/brands/Unilever-Logo.wine.png" alt="" class="marquee-logo" loading="lazy"><span>Unilever</span></span><span class="diamond-sep"></span>
-          <span class="marquee-item marquee-item--logo"><img src="images/brands/images%20(1).png" alt="" class="marquee-logo" loading="lazy"><span>Reckitt</span></span><span class="diamond-sep"></span>
-          <span class="marquee-item marquee-item--logo"><img src="images/brands/Duracell_logo.svg" alt="" class="marquee-logo" loading="lazy"><span>Duracell</span></span><span class="diamond-sep"></span>
-          <span class="marquee-item marquee-item--logo"><img src="images/brands/images%20(3).png" alt="" class="marquee-logo" loading="lazy"><span>BIC</span></span><span class="diamond-sep"></span>
+          <span class="marquee-item marquee-item--logo"><img
+              src="images/brands/P&G_logo.png"
+              alt=""
+              class="marquee-logo"
+              loading="lazy"
+            ><span>Procter & Gamble</span></span><span
+            class="diamond-sep"
+          ></span>
+          <span class="marquee-item marquee-item--logo"><img
+              src="images/brands/Henkel-Logo.svg.png"
+              alt=""
+              class="marquee-logo"
+              loading="lazy"
+            ><span>Henkel</span></span><span class="diamond-sep"></span>
+          <span class="marquee-item marquee-item--logo"><img
+              src="images/brands/Unilever-Logo.wine.png"
+              alt=""
+              class="marquee-logo"
+              loading="lazy"
+            ><span>Unilever</span></span><span class="diamond-sep"></span>
+          <span class="marquee-item marquee-item--logo"><img
+              src="images/brands/images%20(1).png"
+              alt=""
+              class="marquee-logo"
+              loading="lazy"
+            ><span>Reckitt</span></span><span class="diamond-sep"></span>
+          <span class="marquee-item marquee-item--logo"><img
+              src="images/brands/Duracell_logo.svg"
+              alt=""
+              class="marquee-logo"
+              loading="lazy"
+            ><span>Duracell</span></span><span class="diamond-sep"></span>
+          <span class="marquee-item marquee-item--logo"><img
+              src="images/brands/images%20(3).png"
+              alt=""
+              class="marquee-logo"
+              loading="lazy"
+            ><span>BIC</span></span><span class="diamond-sep"></span>
         </div>
       </div>
 
       <!-- Marquee Row 2 (Reverse): More Partners -->
-      <div class="marquee-wrapper">
-        <div class="marquee-track marquee-track--reverse" style="--duration: 50s">
-          <span class="marquee-item marquee-item--logo"><img src="images/brands/images%20(2).png" alt="Fater" class="marquee-logo" loading="lazy"><span>Fater</span></span><span class="diamond-sep"></span>
-          <span class="marquee-item marquee-item--logo"><img src="images/brands/Logo_Mirato_italia_web.png" alt="Mirato" class="marquee-logo" loading="lazy"><span>Mirato</span></span><span class="diamond-sep"></span>
-          <span class="marquee-item marquee-item--logo"><img src="images/brands/real-chimica.png" alt="Realchimica" class="marquee-logo" loading="lazy"><span>Realchimica</span></span><span class="diamond-sep"></span>
-          <span class="marquee-item marquee-item--logo"><img src="images/brands/dermomed%20logo.jpg" alt="Dermomed" class="marquee-logo" loading="lazy"><span>Dermomed</span></span><span class="diamond-sep"></span>
-          <span class="marquee-item marquee-item--logo"><img src="images/brands/images.jpg" alt="Pons Químicas" class="marquee-logo" loading="lazy"><span>Pons Químicas</span></span><span class="diamond-sep"></span>
-          <span class="marquee-item marquee-item--logo"><img src="images/brands/Farmec_logo.svg.png" alt="Farmec" class="marquee-logo" loading="lazy"><span>Farmec</span></span><span class="diamond-sep"></span>
-          <span class="marquee-item">HomeGate (Partner)</span><span class="diamond-sep"></span>
+      <div class="marquee-wrapper" dir="ltr">
+        <div
+          class="marquee-track marquee-track--reverse"
+          style="--duration: 50s"
+        >
+          <span class="marquee-item marquee-item--logo"><img
+              src="images/brands/images%20(2).png"
+              alt="Fater"
+              class="marquee-logo"
+              loading="lazy"
+            ><span>Fater</span></span><span class="diamond-sep"></span>
+          <span class="marquee-item marquee-item--logo"><img
+              src="images/brands/Logo_Mirato_italia_web.png"
+              alt="Mirato"
+              class="marquee-logo"
+              loading="lazy"
+            ><span>Mirato</span></span><span class="diamond-sep"></span>
+          <span class="marquee-item marquee-item--logo"><img
+              src="images/brands/real-chimica.png"
+              alt="Realchimica"
+              class="marquee-logo"
+              loading="lazy"
+            ><span>Realchimica</span></span><span class="diamond-sep"></span>
+          <span class="marquee-item marquee-item--logo"><img
+              src="images/brands/dermomed%20logo.jpg"
+              alt="Dermomed"
+              class="marquee-logo"
+              loading="lazy"
+            ><span>Dermomed</span></span><span class="diamond-sep"></span>
+          <span class="marquee-item marquee-item--logo"><img
+              src="images/brands/images.jpg"
+              alt="Pons Químicas"
+              class="marquee-logo"
+              loading="lazy"
+            ><span>Pons Químicas</span></span><span class="diamond-sep"></span>
+          <span class="marquee-item marquee-item--logo"><img
+              src="images/brands/Farmec_logo.svg.png"
+              alt="Farmec"
+              class="marquee-logo"
+              loading="lazy"
+            ><span>Farmec</span></span><span class="diamond-sep"></span>
+          <span class="marquee-item">HomeGate (Partner)</span><span
+            class="diamond-sep"
+          ></span>
           <!-- Duplicate -->
-          <span class="marquee-item marquee-item--logo"><img src="images/brands/images%20(2).png" alt="" class="marquee-logo" loading="lazy"><span>Fater</span></span><span class="diamond-sep"></span>
-          <span class="marquee-item marquee-item--logo"><img src="images/brands/Logo_Mirato_italia_web.png" alt="" class="marquee-logo" loading="lazy"><span>Mirato</span></span><span class="diamond-sep"></span>
-          <span class="marquee-item marquee-item--logo"><img src="images/brands/real-chimica.png" alt="" class="marquee-logo" loading="lazy"><span>Realchimica</span></span><span class="diamond-sep"></span>
-          <span class="marquee-item marquee-item--logo"><img src="images/brands/dermomed%20logo.jpg" alt="" class="marquee-logo" loading="lazy"><span>Dermomed</span></span><span class="diamond-sep"></span>
-          <span class="marquee-item marquee-item--logo"><img src="images/brands/images.jpg" alt="" class="marquee-logo" loading="lazy"><span>Pons Químicas</span></span><span class="diamond-sep"></span>
-          <span class="marquee-item marquee-item--logo"><img src="images/brands/Farmec_logo.svg.png" alt="" class="marquee-logo" loading="lazy"><span>Farmec</span></span><span class="diamond-sep"></span>
-          <span class="marquee-item">HomeGate (Partner)</span><span class="diamond-sep"></span>
+          <span class="marquee-item marquee-item--logo"><img
+              src="images/brands/images%20(2).png"
+              alt=""
+              class="marquee-logo"
+              loading="lazy"
+            ><span>Fater</span></span><span class="diamond-sep"></span>
+          <span class="marquee-item marquee-item--logo"><img
+              src="images/brands/Logo_Mirato_italia_web.png"
+              alt=""
+              class="marquee-logo"
+              loading="lazy"
+            ><span>Mirato</span></span><span class="diamond-sep"></span>
+          <span class="marquee-item marquee-item--logo"><img
+              src="images/brands/real-chimica.png"
+              alt=""
+              class="marquee-logo"
+              loading="lazy"
+            ><span>Realchimica</span></span><span class="diamond-sep"></span>
+          <span class="marquee-item marquee-item--logo"><img
+              src="images/brands/dermomed%20logo.jpg"
+              alt=""
+              class="marquee-logo"
+              loading="lazy"
+            ><span>Dermomed</span></span><span class="diamond-sep"></span>
+          <span class="marquee-item marquee-item--logo"><img
+              src="images/brands/images.jpg"
+              alt=""
+              class="marquee-logo"
+              loading="lazy"
+            ><span>Pons Químicas</span></span><span class="diamond-sep"></span>
+          <span class="marquee-item marquee-item--logo"><img
+              src="images/brands/Farmec_logo.svg.png"
+              alt=""
+              class="marquee-logo"
+              loading="lazy"
+            ><span>Farmec</span></span><span class="diamond-sep"></span>
+          <span class="marquee-item">HomeGate (Partner)</span><span
+            class="diamond-sep"
+          ></span>
         </div>
       </div>
 
@@ -310,26 +556,34 @@
             <div class="brands-stat-number" data-count="50" data-suffix="+">
               0
             </div>
-            <div class="brands-stat-label" data-i18n="home.brands.stat1">Branduri Partenere</div>
+            <div class="brands-stat-label" data-i18n="home.brands.stat1">
+              Branduri Partenere
+            </div>
           </div>
           <div class="brands-stat-sep"></div>
           <div class="brands-stat">
             <div class="brands-stat-number" data-count="42">0</div>
-            <div class="brands-stat-label" data-i18n="home.brands.stat2">Județe Acoperite</div>
+            <div class="brands-stat-label" data-i18n="home.brands.stat2">
+              Județe Acoperite
+            </div>
           </div>
           <div class="brands-stat-sep"></div>
           <div class="brands-stat">
             <div class="brands-stat-number" data-count="5000" data-suffix="+">
               0
             </div>
-            <div class="brands-stat-label" data-i18n="home.brands.stat3">Clienți Activi</div>
+            <div class="brands-stat-label" data-i18n="home.brands.stat3">
+              Clienți Activi
+            </div>
           </div>
           <div class="brands-stat-sep"></div>
           <div class="brands-stat">
             <div class="brands-stat-number" data-count="30" data-suffix="+">
               0
             </div>
-            <div class="brands-stat-label" data-i18n="home.brands.stat4">Ani de Experiență</div>
+            <div class="brands-stat-label" data-i18n="home.brands.stat4">
+              Ani de Experiență
+            </div>
           </div>
         </div>
       </div>
@@ -338,9 +592,13 @@
     <!-- ==================== PRODUCTS TEASER ==================== -->
     <section class="section section--dark products-teaser">
       <div class="container">
-        <span class="section-label" data-i18n="home.products.label">Portofoliu</span>
+        <span class="section-label" data-i18n="home.products.label"
+        >Portofoliu</span>
         <h2 class="section-title">
-          <span data-i18n="home.products.title">Produse de</span> <span class="text-chrome text-chrome--animated" data-i18n="home.products.title.accent">Prestigiu</span>
+          <span data-i18n="home.products.title">Produse de</span> <span
+            class="text-chrome text-chrome--animated"
+            data-i18n="home.products.title.accent"
+          >Prestigiu</span>
         </h2>
         <p class="section-subtitle" data-i18n="home.products.subtitle">
           Cele mai apreciate branduri internaționale, disponibile prin rețeaua
@@ -440,7 +698,8 @@
 
         <div class="products-cta">
           <a href="produse.html" class="btn btn--outline btn--shimmer">
-            <span data-i18n="home.products.btn">Explorează Portofoliul Complet</span>
+            <span data-i18n="home.products.btn"
+            >Explorează Portofoliul Complet</span>
             <span class="btn-arrow">→</span>
           </a>
         </div>
@@ -451,9 +710,17 @@
     <section class="section why-section">
       <div class="container">
         <div style="text-align: center; margin-bottom: var(--space-2xl)">
-          <span class="section-label" style="justify-content: center" data-i18n="home.why.label">De Ce Noi</span>
+          <span
+            class="section-label"
+            style="justify-content: center"
+            data-i18n="home.why.label"
+          >De Ce Noi</span>
           <h2 class="section-title">
-            <span data-i18n="home.why.title1">Excelență Confirmată</span> <br><span data-i18n="home.why.title2">prin</span> <span class="text-chrome text-chrome--animated" data-i18n="home.why.title.accent">Rezultate</span>
+            <span data-i18n="home.why.title1">Excelență Confirmată</span>
+            <br><span data-i18n="home.why.title2">prin</span> <span
+              class="text-chrome text-chrome--animated"
+              data-i18n="home.why.title.accent"
+            >Rezultate</span>
           </h2>
         </div>
 
@@ -467,7 +734,9 @@
               <div class="why-item-number" data-count="30" data-suffix="+">
                 0
               </div>
-              <div class="why-item-label" data-i18n="home.why.item1">Ani de Experiență Neîntreruptă</div>
+              <div class="why-item-label" data-i18n="home.why.item1">
+                Ani de Experiență Neîntreruptă
+              </div>
             </div>
             <div class="why-item-dot"></div>
             <div class="why-item-spacer"></div>
@@ -489,7 +758,9 @@
           <div class="why-item">
             <div class="why-item-content">
               <div class="why-item-number" data-count="42">0</div>
-              <div class="why-item-label" data-i18n="home.why.item3">Județe cu Acoperire Completă</div>
+              <div class="why-item-label" data-i18n="home.why.item3">
+                Județe cu Acoperire Completă
+              </div>
             </div>
             <div class="why-item-dot"></div>
             <div class="why-item-spacer"></div>
@@ -500,7 +771,9 @@
               <div class="why-item-number" data-count="5000" data-suffix="+">
                 0
               </div>
-              <div class="why-item-label" data-i18n="home.why.item4">Parteneri Comerciali Activi</div>
+              <div class="why-item-label" data-i18n="home.why.item4">
+                Parteneri Comerciali Activi
+              </div>
             </div>
             <div class="why-item-dot"></div>
             <div class="why-item-spacer"></div>
@@ -582,10 +855,19 @@
               <h4 data-i18n="footer.nav">Navigare</h4>
               <ul>
                 <li><a href="index.html" data-i18n="nav.home">Acasă</a></li>
-                <li><a href="despre.html" data-i18n="nav.about">Despre Noi</a></li>
-                <li><a href="servicii.html" data-i18n="nav.services">Servicii</a></li>
-                <li><a href="produse.html" data-i18n="nav.products">Produse & Branduri</a></li>
-                <li><a href="contact.html" data-i18n="nav.contact">Contact</a></li>
+                <li>
+                  <a href="despre.html" data-i18n="nav.about">Despre Noi</a>
+                </li>
+                <li>
+                  <a href="servicii.html" data-i18n="nav.services">Servicii</a>
+                </li>
+                <li>
+                  <a href="produse.html" data-i18n="nav.products"
+                  >Produse & Branduri</a>
+                </li>
+                <li>
+                  <a href="contact.html" data-i18n="nav.contact">Contact</a>
+                </li>
               </ul>
             </div>
 
@@ -616,7 +898,8 @@
                     <rect x="2" y="4" width="20" height="16" rx="2" />
                     <path d="M22 7l-10 7L2 7" />
                   </svg>
-                  <a href="mailto:businessbrand40@yahoo.com">businessbrand40@yahoo.com</a>
+                  <a href="mailto:businessbrand40@yahoo.com"
+                  >businessbrand40@yahoo.com</a>
                 </li>
                 <li class="footer-contact-item">
                   <svg
@@ -628,7 +911,8 @@
                     <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z" />
                     <circle cx="12" cy="10" r="3" />
                   </svg>
-                  <span data-i18n="footer.location">Voluntari, Ilfov, România</span>
+                  <span data-i18n="footer.location"
+                  >Voluntari, Ilfov, România</span>
                 </li>
                 <li class="footer-contact-item">
                   <svg
@@ -660,7 +944,7 @@
               <a
                 href="contact.html"
                 class="btn btn--outline btn--shimmer"
-                style="margin-top: 0.8rem; font-size: 0.8rem; padding: 0.5rem 1.2rem; display: inline-flex; align-items: center; justify-content: center; box-sizing: border-box; min-height: 42px;"
+                style="margin-top: 0.8rem; font-size: 0.8rem; padding: 0.5rem 1.2rem; display: inline-flex; align-items: center; justify-content: center; box-sizing: border-box; min-height: 42px"
               >
                 <span data-i18n="footer.cta.btn">Contactați-ne</span>
                 <span class="btn-arrow">→</span>
@@ -670,9 +954,19 @@
                 target="_blank"
                 rel="noopener noreferrer"
                 class="btn btn--outline btn--shimmer"
-                style="margin-top: 0.8rem; font-size: 0.8rem; padding: 0.5rem 1.2rem; display: inline-flex; align-items: center; justify-content: center; gap: 0.4rem; box-sizing: border-box; min-height: 42px;"
+                style="margin-top: 0.8rem; font-size: 0.8rem; padding: 0.5rem 1.2rem; display: inline-flex; align-items: center; justify-content: center; gap: 0.4rem; box-sizing: border-box; min-height: 42px"
               >
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  width="14"
+                  height="14"
+                >
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z" />
+                  <circle cx="12" cy="10" r="3" />
+                </svg>
                 <span data-i18n="footer.map.btn">Locația pe Hartă</span>
                 <span class="btn-arrow">→</span>
               </a>
@@ -684,7 +978,8 @@
       <div class="footer-bottom">
         <div class="container">
           <div class="footer-bottom-inner">
-            <span class="footer-copyright" data-i18n="footer.copyright">© 2026 Business Brands SRL. Toate drepturile rezervate.</span>
+            <span class="footer-copyright" data-i18n="footer.copyright"
+            >© 2026 Business Brands SRL. Toate drepturile rezervate.</span>
             <span class="footer-legal"><a
                 href="https://homegate.ro"
                 target="_blank"
