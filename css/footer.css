@@ -29,6 +29,8 @@
 .footer-brand {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  text-align: center;
   gap: 1.25rem;
 }
 
@@ -41,7 +43,7 @@
 }
 
 .footer-logo {
-  height: 110px;
+  height: 180px;
   width: auto;
   filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.3));
 }
@@ -220,6 +222,6 @@
   }
 
   .footer-logo {
-    height: 90px;
+    height: 130px;
   }
 }
