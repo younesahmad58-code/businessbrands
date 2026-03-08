@@ -122,17 +122,29 @@ function initTiltCards(selector) {
   if (!window.matchMedia('(hover: hover)').matches) return;
 
   document.querySelectorAll(selector).forEach(function(card) {
+    var cachedRect = null;
+    var rafId = null;
+
+    card.addEventListener('mouseenter', function() {
+      cachedRect = card.getBoundingClientRect();
+    });
+
     card.addEventListener('mousemove', function(e) {
-      var rect = card.getBoundingClientRect();
-      var x = (e.clientX - rect.left) / rect.width - 0.5;
-      var y = (e.clientY - rect.top) / rect.height - 0.5;
-      card.style.transform = 'perspective(800px) rotateY(' + (x * 10) + 'deg) rotateX(' + (-y * 10) + 'deg) scale3d(1.02, 1.02, 1.02)';
-      // Update glow position
-      card.style.setProperty('--glow-x', (e.clientX - rect.left) + 'px');
-      card.style.setProperty('--glow-y', (e.clientY - rect.top) + 'px');
+      if (rafId) return;
+      rafId = requestAnimationFrame(function() {
+        if (!cachedRect) cachedRect = card.getBoundingClientRect();
+        var x = (e.clientX - cachedRect.left) / cachedRect.width - 0.5;
+        var y = (e.clientY - cachedRect.top) / cachedRect.height - 0.5;
+        card.style.transform = 'perspective(800px) rotateY(' + (x * 10) + 'deg) rotateX(' + (-y * 10) + 'deg) scale3d(1.02, 1.02, 1.02)';
+        card.style.setProperty('--glow-x', (e.clientX - cachedRect.left) + 'px');
+        card.style.setProperty('--glow-y', (e.clientY - cachedRect.top) + 'px');
+        rafId = null;
+      });
     });
 
     card.addEventListener('mouseleave', function() {
+      cachedRect = null;
+      if (rafId) { cancelAnimationFrame(rafId); rafId = null; }
       gsap.to(card, {
         transform: 'perspective(800px) rotateY(0deg) rotateX(0deg) scale3d(1, 1, 1)',
         duration: 0.5,
@@ -147,15 +159,26 @@ function initTiltCards(selector) {
   if (!window.matchMedia('(hover: hover)').matches) return;
 
   document.querySelectorAll('.nav-links-left a, .nav-links-right a, .nav-mobile-links a, .btn').forEach(function(el) {
+    var magRaf = null;
+    var magRect = null;
+
+    el.addEventListener('mouseenter', function() {
+      magRect = el.getBoundingClientRect();
+    });
+
     el.addEventListener('mousemove', function(e) {
-      var rect = el.getBoundingClientRect();
-      var x = e.clientX - rect.left - rect.width / 2;
-      var y = e.clientY - rect.top - rect.height / 2;
-      gsap.to(el, {
-        x: x * 0.2,
-        y: y * 0.2,
-        duration: 0.3,
-        ease: 'power2.out'
+      if (magRaf) return;
+      magRaf = requestAnimationFrame(function() {
+        if (!magRect) magRect = el.getBoundingClientRect();
+        var x = e.clientX - magRect.left - magRect.width / 2;
+        var y = e.clientY - magRect.top - magRect.height / 2;
+        gsap.to(el, {
+          x: x * 0.2,
+          y: y * 0.2,
+          duration: 0.3,
+          ease: 'power2.out'
+        });
+        magRaf = null;
       });
     });
 
@@ -229,11 +252,18 @@ function initTiltCards(selector) {
   var bar = document.getElementById('scroll-progress');
   if (!bar) return;
 
+  var ticking = false;
   window.addEventListener('scroll', function() {
-    var scrollTop = window.scrollY;
-    var docHeight = document.documentElement.scrollHeight - window.innerHeight;
-    var progress = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
-    bar.style.width = progress + '%';
+    if (!ticking) {
+      requestAnimationFrame(function() {
+        var scrollTop = window.scrollY;
+        var docHeight = document.documentElement.scrollHeight - window.innerHeight;
+        var progress = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+        bar.style.width = progress + '%';
+        ticking = false;
+      });
+      ticking = true;
+    }
   }, { passive: true });
 })();
 

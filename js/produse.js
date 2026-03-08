@@ -50,10 +50,10 @@ document.addEventListener('DOMContentLoaded', function () {
 
   var categoryLabels = {
     curatenie: 'Curățenie',
-    ingrijire: 'Îngrijire',
+    detergenti: 'Detergenți Rufe',
+    ingrijire: 'Îngrijire Personală',
     casa: 'Casă & Grădină',
-    electronice: 'Electronice HomeGate',
-    altele: 'Altele'
+    electronice: 'Electronice'
   };
 
   function getFilteredProducts() {

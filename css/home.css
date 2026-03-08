@@ -605,7 +605,7 @@
   color: #dbeafe;
   padding: 0.25rem 0.6rem;
   background: rgba(30, 64, 175, 0.3);
-  backdrop-filter: blur(8px);
+  backdrop-filter: blur(4px);
   border-radius: 4px;
   display: inline-block;
 }
