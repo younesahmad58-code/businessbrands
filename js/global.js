@@ -13,33 +13,49 @@ function splitText(element) {
   element.setAttribute('aria-label', text);
   element.style.textAlign = element.style.textAlign || getComputedStyle(element).textAlign;
 
+  // Detect Arabic script — animate by word to preserve cursive connections
+  var isArabic = /[\u0600-\u06FF]/.test(text);
+
   const chars = [];
   const words = text.split(' ');
 
   words.forEach(function(word, wi) {
-    // Create word wrapper — inline-block keeps word together
-    var wordSpan = document.createElement('span');
-    wordSpan.classList.add('word');
-    wordSpan.style.display = 'inline-block';
-    wordSpan.style.whiteSpace = 'nowrap';
-    wordSpan.style.verticalAlign = 'top';
+    if (isArabic) {
+      // Arabic: keep whole word in one span to preserve letter shaping
+      var wordSpan = document.createElement('span');
+      wordSpan.classList.add('word', 'char');
+      wordSpan.style.display = 'inline-block';
+      wordSpan.style.whiteSpace = 'nowrap';
+      wordSpan.style.verticalAlign = 'top';
+      wordSpan.setAttribute('aria-hidden', 'true');
+      wordSpan.textContent = word;
+      element.appendChild(wordSpan);
+      chars.push(wordSpan);
+    } else {
+      // Latin/other: split character-by-character
+      var wordSpan = document.createElement('span');
+      wordSpan.classList.add('word');
+      wordSpan.style.display = 'inline-block';
+      wordSpan.style.whiteSpace = 'nowrap';
+      wordSpan.style.verticalAlign = 'top';
 
-    // Fix RTL letter reversal for Latin text
-    if (/[a-zA-Z]/.test(word)) {
-      wordSpan.style.direction = 'ltr';
-      wordSpan.style.unicodeBidi = 'isolate';
-    }
+      // Fix RTL letter reversal for Latin text
+      if (/[a-zA-Z]/.test(word)) {
+        wordSpan.style.direction = 'ltr';
+        wordSpan.style.unicodeBidi = 'isolate';
+      }
 
-    for (var i = 0; i < word.length; i++) {
-      var span = document.createElement('span');
-      span.classList.add('char');
-      span.style.display = 'inline-block';
-      span.setAttribute('aria-hidden', 'true');
-      span.textContent = word[i];
-      wordSpan.appendChild(span);
-      chars.push(span);
+      for (var i = 0; i < word.length; i++) {
+        var span = document.createElement('span');
+        span.classList.add('char');
+        span.style.display = 'inline-block';
+        span.setAttribute('aria-hidden', 'true');
+        span.textContent = word[i];
+        wordSpan.appendChild(span);
+        chars.push(span);
+      }
+      element.appendChild(wordSpan);
     }
-    element.appendChild(wordSpan);
 
     // Add space between words (not after last word)
     if (wi < words.length - 1) {
